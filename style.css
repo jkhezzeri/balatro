@@ -1,3 +1,42 @@
+:root {
+
+    --color-dark: #3a5055;
+    --color-light: #b1b1b1;
+
+    --background-dark: #3a5055;
+
+    --border-color: #b9c2d2;
+    --shadow: #1e2e32;
+
+    --red: #ff4c40;
+    --blue: #0093ff;
+    --yellow: #f5b244;
+    --green: #35bd86;
+    --orange: #ff8f00;
+
+    --heart: #fa2315;
+    --club: #0081e6;
+    --diamond: #e18400;
+    --spade: #3a17b2;
+
+    --tarot: #9e74ce;
+    --planet: #00a7ca;
+    --spectral: #2e76fd;
+
+    --legendary: #ab5bb5;
+    --voucher: #ff5611;
+    --booster: #525db0;
+    --enhancement: #757cdc;
+
+    --gold-seal: #eaba44;
+    --purple-seal: #7b559c;
+
+    --popup-background: #3f4a4d;
+    --popup-border: #dee2ea;
+    --popup-mini-background: #677b7e;
+
+}
+
 html {
     background-image: url("assets/background.webp");
     background-repeat: no-repeat;
@@ -21,6 +60,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 img {
@@ -31,6 +71,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 
 /* header {
     width: 100%;
@@ -68,7 +109,7 @@ footer .imgLogo {
     background-color: white;
     border-radius: 12px;
     padding: 12px;
-    box-shadow: #1e2e32 0 4px 0 0;
+    box-shadow: var(--shadow) 0 4px 0 0;
     transition: 0.2s;
 }
 
@@ -80,4 +121,31 @@ footer .imgLogo {
 #content {
     /* padding-top: 50px; */
     /* display: flex;     */
+}
+
+nav {
+    margin-top: 12px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: flex;
+    gap: 12px;
+}
+
+nav li a {
+    font-size: 32px;
+    background-color: var(--red);
+    padding: 12px 48px;
+    border-radius: 12px;
+    display: inline-block;
 }
