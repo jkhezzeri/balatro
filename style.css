@@ -15,5 +15,69 @@ body {
     margin: 0;
     user-select: none;
     font-family: "m6x11Plus";
+    color: white;
+    font-size: 24px;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+
+header .imgLogo {
+    width: 120px;
+    height: 48px;
+} */
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    gap: 12px;
+}
+
+footer .imgLogo {
+    width: 200px;
+    height: 80px;
+}
+
+.imgFooter {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: #1e2e32 0 4px 0 0;
+    transition: 0.2s;
+}
+
+.imgFooter:hover {
+    box-shadow: transparent 0 0 0 0;
+    transform: translateY(4px);
+}
+
+#content {
+    /* padding-top: 50px; */
+    /* display: flex;     */
+}
