@@ -51,16 +51,26 @@
         <section id="jokers">
             <div class="section">
                 <div>
-                    <ul>
+                    <ul class="jokersSlide">
                         <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                        <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                        <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                    </ul>
+                    <ul class="jokersSlide">
+                        <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                        <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                        <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                    </ul>
+                    <ul class="jokersSlide">
+                        <li><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
                         <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
                         <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
                     </ul>
                 </div>
                 <div id="jokersPagination" class="pagination">
-                    <div id="jokersPrev" class="arrowPage"><</div>
-                    <div id="jokersPage" class="currentPage">Page 1/10</div>
-                    <div id="jokersNext" class="arrowPage">></div>
+                    <div id="jokersPrev" class="arrowPage" onclick="changeJokersSlide(-1)"><</div>
+                    <div id="jokersPage" class="currentPage">Page <span id="pageJokers"></span>/<span id="pagesJokers"></span></div>
+                    <div id="jokersNext" class="arrowPage" onclick="changeJokersSlide(1)">></div>
                 </div>
             </div>
         </section>
