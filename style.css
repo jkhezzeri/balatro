@@ -201,10 +201,11 @@ section {
     gap: 12px;
 }
 
-section img {
-    width: 138px;
-    height: 186px;
-    background-color: white;
+#jokersData img {
+    width: 142px;
+    height: 190px;
+    object-fit: none;
+    /* background-color: green; */
 }
 
 .pagination {

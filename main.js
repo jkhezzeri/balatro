@@ -1,5 +1,46 @@
 
 
+const jokers_data = document.querySelector("#jokersData");
+
+
+
+let html = '<ul class="jokersSlide"><li>';
+
+
+jokers.forEach(joker => {
+    let img_name = joker.name.replaceAll(" ", "_");
+
+    
+    if (joker.id % 5 == 1 && joker.id != 1) {
+        html += "</li>";
+        if (joker.id % 15 == 1 && joker.id != 1) {
+            html += '</ul><ul class="jokersSlide">';
+        }
+        html += "<li>";
+    }
+    
+    html += '<img src="assets/jokers/'+img_name+'.webp" alt="'+joker.name+'">';
+
+    
+});
+
+html += "</li></ul>";
+console.log(html);
+jokers_data.innerHTML = html;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const jokers_slide = document.querySelectorAll(".jokersSlide");
 const page_jokers = document.querySelector("#pageJokers");
 const pages_jokers = document.querySelector("#pagesJokers");
@@ -26,4 +67,14 @@ function changeJokersSlide(page) {
     page_jokers.innerHTML = current_page_jokers;
     jokers_slide[current_page_jokers-1].style.display = "flex";
 }
+
+
+
+
+
+
+
+
+
+
 
