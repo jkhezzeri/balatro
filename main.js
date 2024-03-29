@@ -1,43 +1,51 @@
 
-
 const jokers_data = document.querySelector("#jokersData");
 
+// let html = '<ul class="jokersSlide"><li>';
 
+// jokers.forEach(joker => {
+//     let img_name = joker.name.replaceAll(" ", "_");
 
-let html = '<ul class="jokersSlide"><li>';
+//     if (joker.id % 5 == 1 && joker.id != 1) {
+//         html += "</li>";
+//         if (joker.id % 15 == 1 && joker.id != 1) {
+//             html += '</ul><ul class="jokersSlide">';
+//         }
+//         html += "<li>";
+//     }
+    
+//     html += '<img src="assets/jokers/'+img_name+'.webp" alt="'+joker.name+'">';
 
+// });
+
+// html += "</li></ul>";
+// console.log(html);
+// jokers_data.innerHTML = html;
+
+const ul = document.createElement("ul");
+ul.classList.add("jokersSlide");
+const li = document.createElement("li");
+jokers_data.appendChild(ul);
+ul.appendChild(li);
 
 jokers.forEach(joker => {
     let img_name = joker.name.replaceAll(" ", "_");
 
+    let img = document.createElement("img");
+    img.src = "assets/jokers/"+img_name+".webp";
+    img.alt = joker.name;
     
     if (joker.id % 5 == 1 && joker.id != 1) {
-        html += "</li>";
         if (joker.id % 15 == 1 && joker.id != 1) {
-            html += '</ul><ul class="jokersSlide">';
+            jokers_data.appendChild(document.createElement("ul"));
+            jokers_data.lastChild.classList.add("jokersSlide");
         }
-        html += "<li>";
+        jokers_data.lastChild.appendChild(document.createElement("li"));
     }
-    
-    html += '<img src="assets/jokers/'+img_name+'.webp" alt="'+joker.name+'">';
 
-    
+    jokers_data.lastChild.lastChild.appendChild(img);
+
 });
-
-html += "</li></ul>";
-console.log(html);
-jokers_data.innerHTML = html;
-
-
-
-
-
-
-
-
-
-
-
 
 
 
