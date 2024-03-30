@@ -29,11 +29,33 @@ jokers_data.appendChild(ul);
 ul.appendChild(li);
 
 jokers.forEach(joker => {
-    let img_name = joker.name.replaceAll(" ", "_");
-
+    
+    let joker_div = document.createElement("div");
+    joker_div.classList.add("joker");
+    
     let img = document.createElement("img");
+    let img_name = joker.name.replaceAll(" ", "_");
     img.src = "assets/jokers/"+img_name+".webp";
     img.alt = joker.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = joker.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    popup_text.innerText = "+4 Mult";
+    popup.appendChild(popup_text);
+
+    let popup_rarity = document.createElement("div");
+    popup_rarity.classList.add("popupRarity");
+    popup_rarity.classList.add(rarity[joker.rarity - 1].toLowerCase());
+    popup_rarity.innerText = rarity[joker.rarity - 1];
+    popup.appendChild(popup_rarity);
     
     if (joker.id % 5 == 1 && joker.id != 1) {
         if (joker.id % 15 == 1 && joker.id != 1) {
@@ -43,8 +65,15 @@ jokers.forEach(joker => {
         jokers_data.lastChild.appendChild(document.createElement("li"));
     }
 
-    jokers_data.lastChild.lastChild.appendChild(img);
+    // jokers_data.lastChild.lastChild.appendChild(img);
+    // jokers_data.lastChild.lastChild.appendChild(popup);
 
+
+    joker_div.appendChild(img);
+    joker_div.appendChild(popup);
+
+    // jokers_data.appendChild(joker_div);
+    jokers_data.lastChild.lastChild.appendChild(joker_div);
 });
 
 

@@ -55,6 +55,7 @@ body {
     margin: 0;
     user-select: none;
     font-family: "m6x11Plus";
+    /* letter-spacing: 1px; */
     color: white;
     font-size: 24px;
     overflow-x: hidden;
@@ -203,12 +204,6 @@ section {
     gap: 12px;
 }
 
-#jokersData img {
-    width: 142px;
-    height: 190px;
-    object-fit: none;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -234,9 +229,6 @@ section {
     height: 64px;
     line-height: 64px;
     text-align: center;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     border-radius: 12px;
     box-shadow: var(--shadow) 0 4px 0 0;
 }
@@ -252,3 +244,93 @@ section {
 
 
 
+
+
+
+
+
+
+
+
+.joker {
+    width: 142px;
+    height: 190px;
+    position: relative;
+    /* background-color: blue; */
+}
+
+
+
+.joker img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* object-fit: none; */
+}
+
+
+
+.popup {
+    /* visibility: hidden; */
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    padding: 4px;
+    bottom: calc(100% + 24px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    border: 2px solid var(--popup-border);
+    border-radius: 12px;
+    background-color: var(--popup-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.joker img:hover + .popup {
+    visibility: visible;
+}
+
+.popupName {
+    font-size: 40px;
+}
+
+.popupText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    border-radius: 12px;
+    color: var(--color-dark);
+    background-color: white;
+}
+
+.popupRarity {
+    font-size: 32px;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.common {
+    background-color: var(--blue);
+}
+
+.uncommon {
+    background-color: var(--green);
+}
+
+.rare {
+    background-color: var(--red);
+}
+
+.legendary {
+    background-color: var(--legendary);
+}
