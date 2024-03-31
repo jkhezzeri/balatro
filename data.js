@@ -1,10 +1,37 @@
 
 
+
+
+const text_chip = "<span class='textChip'>";
+const text_mult = "<span class='textMult'>";
+const text_prod = "<span class='textProd'>";
+const text_num = "<span class='textNum'>";
+const text_money = "<span class='textMoney'>";
+const text_prob = "<span class='textProb'>";
+
+const text_more = "<span class='textMore'>";
+
+const text_heart = "<span class='textHeart'>Heart</span>";
+const text_club = "<span class='textClub'>Club</span>";
+const text_diamond = "<span class='textDiamond'>Diamond</span>";
+const text_spade = "<span class='textSpade'>Spade</span>";
+
+const text_tarot = "<span class='textTarot'>Tarot</span>";
+const text_planet = "<span class='textPlanet'>Planet</span>";
+const text_spectral = "<span class='textSpectral'>Spectral</span>";
+
+const text_end = "</span>";
+
+
+
+
+
+
 const jokers = [
     {
         id:1,
         name:"Joker",
-        text:"",
+        text:`${text_mult}+4${text_end} Mult`,
         rarity:1,
         price:2
     },
@@ -1052,6 +1079,199 @@ const jokers = [
         price:0
     }
 ];
+
+
+
+
+
+
+
+
+// [
+//     ['Joker', '${text_mult}+4${text_end} Mult'],
+//     ['Chaos the Clown', '${text_num}1${text_end} free ${text_prob}Reroll${text_end}<br>per shop'],
+//     ['Jolly Joker', '${text_mult}+8${text_end} Mult if played<br>hand contains<br>a ${text_num}Pair${text_end}'],
+//     ['Zany Joker', '${text_mult}+12${text_end} Mult if played<br>hand contains<br>a ${text_num}Three of a Kind${text_end}'],
+//     ['Mad Joker', '${text_mult}+20${text_end} Mult if played<br>hand contains<br>a ${text_num}Four of a Kind${text_end}'],
+//     ['Crazy Joker', '${text_mult}+12${text_end} Mult if played<br>hand contains<br>a ${text_num}Straight${text_end}'],
+//     ['Droll Joker', '${text_mult}+10${text_end} Mult if played<br>hand contains<br>a ${text_num}Flush${text_end}'],
+
+//     ['Half Joker', '${text_mult}+20${text_end} Mult if played<br>hand contains<br>${text_num}3${text_end} or fewer cards'],
+//     ['Merry Andy', '${text_mult}+3${text_end} discards,<br>${text_mult}-1${text_end} hand size'],
+//     ['Stone Joker', 'This Joker gains ${text_chip}+25${text_end} Chips<br>for each ${text_num}Stone Card${text_end} in your full deck<br>${text_more}(Currently ${text_chip}+${25*jokerValue}${text_end} Chips)${text_end}']
+//   ],
+//   [
+//     ['Juggler', '${text_num}+1${text_end} hand size'],
+//     ['Drunkard', '${text_mult}+1${text_end} discard'],
+//     ['Acrobat', '${text_prod}X3${text_end} Mult on ${text_num}final<br>hand${text_end} of round' + toggleJokerc],
+//     ['Sock and Buskin', 'Retrigger all<br>played ${text_num}face${text_end} cards'],
+//     ['Mime', 'Retrigger all<br>card ${text_num}held in<br>hand${text_end} abilities'],
+//     ['Credit Card', 'Go up to<br>${text_mult}-$20${text_end} in debt'],
+//     ['Greedy Joker', 'Played cards with<br>${text_diamond} suit give<br>${text_mult}+4${text_end} Mult when scored'],
+//     ['Lusty Joker', 'Played cards with<br>${text_heart} suit give<br>${text_mult}+4${text_end} Mult when scored'],
+//     ['Wrathful Joker', 'Played cards with<br>${text_spade} suit give<br>${text_mult}+4${text_end} Mult when scored'],
+//     ['Gluttonous Joker', 'Played cards with<br>${text_club} suit give<br>${text_mult}+4${text_end} Mult when scored']
+//   ],
+//   [
+//     ['Troubadour', '${text_num}+2${text_end} hand size,<br>${text_mult}-1${text_end} hands per round'],
+//     ['Banner', '${text_chip}+40${text_end} Chips for<br>each remaining<br>${text_num}discard${text_end}<br>${text_more}(Currently ${text_chip}+${jokerValue * 40}${text_end} Chips)${text_end}'],
+//     ['Mystic Summit', '${text_mult}+15${text_end} Mult when<br>${text_num}0${text_end} discards<br>remaining' + toggleJokerc],
+//     ['Marble Joker', 'Adds one ${text_num}Stone${text_end} card<br>to deck when<br>${text_num}Blind${text_end} is selected'],
+//     ['Loyalty Card', '${text_prod}X4${text_end} Mult every<br>${text_num}6${text_end} hands played<br>${text_more}(${jokerValue % 6} remaining)${text_end}'],
+//     ['Hack', 'Retrigger<br>each played<br>${text_num}2${text_end}, ${text_num}3${text_end}, ${text_num}4${text_end}, or ${text_num}5${text_end}'],
+//     ['Misprint', '${text_mult}+0${text_end} - ${text_mult}+23${text_end} Mult'],
+//     ['Steel Joker', 'This Joker gains ${text_prod}X0.25${text_end} Mult<br>for each ${text_num}Steel Card${text_end}<br>in your full deck<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.25}${text_end} Mult)${text_end}'],
+//     ['Raised Fist', 'Adds ${text_num}double${text_end} the rank<br>of ${text_num}lowest${text_end} card held in hand to Mult'],
+//     ['Golden Joker', 'Earn ${text_money}$4${text_end} at<br>end of round']
+//   ],
+//   [
+//     ['Blueprint', 'Copies ability of<br>${text_num}Joker${text_end} to the right'],
+//     ['Glass Joker', 'Gains ${text_prod}X0.5${text_end} Mult<br>for every ${text_num}Glass Card${text_end}<br>that is destroyed<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end} Mult)${text_end}'],
+//     ['Scary Face', 'Played ${text_num}face${text_end} cards<br>give ${text_chip}+30${text_end} Chips<br>when scored'],
+//     ['Abstract Joker', '${text_mult}+3${text_end} Mult for<br>each ${text_num}Joker${text_end} card'],
+//     ['Delayed Gratification', 'Earn ${text_money}$2${text_end} per ${text_num}discard${text_end} if<br>no discards are used<br>by end of the round'],
+//     ['Golden Ticket', 'Played ${text_money}Gold${text_end} cards<br>earn ${text_money}$3${text_end} when scored'],
+//     ['Pareidolia', 'All cards are<br>considered<br>${text_num}Face${text_end} cards'],
+//     ['Cartomancer', 'Create a ${text_tarot} card<br>when ${text_num}Blind${text_end} is selected${roomc}'],
+//     ['Even Steven', 'Played cards with<br>${text_num}even${text_end} rank give<br>${text_mult}+4${text_end} Mult when scored<br>${text_more}(10, 8, 6, 4, 2)${text_end}'],
+//     ['Odd Todd', 'Played cards with<br>${text_num}odd${text_end} rank give<br>${text_chip}+30${text_end} Chips when scored<br>${text_more}(A, 9, 7, 5, 3)${text_end}']
+//   ],
+//   [
+//     ['Wee Joker', 'This Joker gains<br>${text_chip}+8${text_end} Chips when each<br>played ${text_num}2${text_end} is scored<br>${text_more}(Currently ${text_chip}+${10 + jokerValue * 8}${text_end} Chips)${text_end}'],
+//     ['Business Card', 'Played ${text_num}Face${text_end} cards have<br>a ${text_prob}1 in 2${text_end} chance to<br>give ${text_money}$2${text_end} when scored'],
+//     ['Supernova', 'Adds the number of<br>times ${text_num}poker hand${text_end} has<br>been played to Mult'],
+//     ['Mr. Bones', 'Prevents Death<br>if chips scored<br>are at least ${text_num}25%${text_end}<br>of required chips<br>${text_mult}self destructs${text_end}'],
+//     ['Seeing Double', '${text_prod}X2${text_end} Mult if played<br>hand has a scoring<br>Club card and a scoring<br>card of any other ${text_num}suit${text_end}'],
+//     ['The Duo', '${text_prod}X2${text_end} Mult if played<br>hand contains<br>a ${text_num}Pair${text_end}'],
+//     ['The Trio', '${text_prod}X3${text_end} Mult if played<br>hand contains<br>a ${text_num}Three of a Kind${text_end}'],
+//     ['The Family', '${text_prod}X4${text_end} Mult if played<br>hand contains<br>a ${text_num}Four of a Kind${text_end}'],
+//     ['The Order', '${text_prod}X3${text_end} Mult if played<br>hand contains<br>a ${text_num}Straight${text_end}'],
+//     ['The Tribe', '${text_prod}X2${text_end} Mult if played<br>hand contains<br>a ${text_num}Flush${text_end}']
+//   ],
+//   [
+//     ['8 Ball', 'Create a ${text_planet} card<br>if played hand contains<br>2 or more ${text_num}8s${text_end}${roomc}'],
+//     ['Fibonacci', 'Each plaed ${text_num}Ace${text_end},<br>${text_num}2${text_end}, ${text_num}3${text_end}, ${text_num}5${text_end}, or ${text_num}8${text_end} gives<br>${text_mult}+8${text_end} Mult when scored'],
+//     ['Joker Stencil', '${text_prod}X1${text_end} Mult for each<br>empty ${text_num}Joker${text_end} slot<br>Joker stencil included<br>${text_more}(Currently ${text_prod}X${1 + jokerValue}${text_end})${text_end}'],
+//     ['Space Joker', '${text_prob}1 in 4${text_end} chane to<br>upgrade level of<br>played ${text_num}poker hand${text_end}'],
+//     ['Matador', 'Earn ${text_money}$8${text_end} if played<br>hand triggers the<br>${text_num}Boss Blind${text_end} ability'],
+//     ['Ceremonial Dagger', 'When ${text_num}Blind${text_end} is selected,<br>destroy Joker to the right<br>and permanently add ${text_num}double${text_end}<br>its sell value to this ${text_mult}Mult${text_end}<br>${text_more}(Currently ${text_mult}+${jokerValue * 2}${text_end} Mult)${text_end}'],
+//     ['Showman', '${text_num}Joker${text_end}, ${text_tarot}, ${text_planet},<br>and ${text_spectral} cards may<br>appear multiple times'],
+//     ['Fortune Teller', '${text_mult}+1${text_end} Mult per ${text_tarot}<br>card used this run<br>${text_more}(Currently ${text_mult}${jokerValue}${text_end})${text_end}'],
+//     ['Hit the Road', 'Gains ${text_prod}X0.5${text_end} Mult<br>per discarded<br>${text_num}Jack${text_end} this round<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end})${text_end}'],
+//     ['Swashbuckler', 'Adds the sell value of<br>all owned ${text_num}Jokers${text_end} left<br>of this card to Mult'],
+//   ],
+//   [
+//     ['Flower Pot', '${text_prod}X3${text_end} Mult if played<br>hand has a scoring<br>${text_diamond} card, ${text_club} card,<br>${text_heart} card, and ${text_spade} card'],
+//     ['Ride the Bus', '${text_mult}+1${text_end} Mult per<br>consecutive hand<br>played without a<br>scoring ${text_num}face${text_end} card<br>${text_more}(Currently ${text_mult}+${jokerValue}${text_end})${text_end}'],
+//     ['Shoot the Moon', '${text_mult}+13${text_end} Mult for<br>each ${text_num}Queen${text_end}<br>held in hand'],
+//     ['Scholar', 'Played ${text_num}Aces${text_end}<br>give ${text_chip}+20${text_end} Chips<br>and ${text_mult}+4${text_end} Mult<br>when scored'],
+//     ['Smeared Joker', '${text_heart} and ${text_diamond}<br>count as the same suit,<br>${text_spade} and ${text_club}<br>count as the same suit'],
+//     ['Oops! All 6s', 'Double all ${text_num}listed${text_end}<br>${text_prob}probabilities${text_end}<br>${text_more}(ex: ${text_prob}1 in 3${text_end} -> ${text_prob}2 in 3${text_end})${text_end}'],
+//     ['Four Fingers', 'All ${text_num}Flushes${text_end} and<br>${text_num}Straights${text_end} can be<br>made with ${text_num}4${text_end} cards'],
+//     ['Gros Michel', '${text_mult}+15${text_end} Mult<br>${text_prob}1 in 4${text_end} chance this card is destroyed<br>at the end of the round'],
+//     ['Stuntman', '${text_chip}+300${text_end} Chips,<br>${text_num}-2${text_end} hand size'],
+//     ['Hanging Chad', 'Retrigger ${text_num}first${text_end} played<br>card used in scoring'],
+//   ],
+//   [
+//     ["Driver's License", '${text_prod}X3${text_end} Mult if you have<br>at least ${text_num}16${text_end} Enhanced<br>cards in your full deck<br>${text_more}(Currently ${text_num}${jokerValue}${text_end})${text_end}'],
+//     ['Invisible Joker', 'After 3 rounds,<br>sell this card to<br>${text_num}duplicate${text_end} a random Joker<br>${text_more}(Currently ${text_num}${jokerValue}${text_end}/3)${text_end}'],
+//     ['Astronomer', 'All ${text_planet} cards and<br>${celestialc} in<br>the shop are ${text_num}free${text_end}'],
+//     ['Burnt Joker', 'Upgrade the level of<br>the first ${text_num}discarded${text_end}<br>poker hand each round'],
+//     ['Dusk', 'Retrigger all played<br>cards in ${text_num}final<br>hand${text_end} of round' + toggleJokerc],
+//     ['Throwback', '${text_prod}X0.25${text_end} Mult for each<br>${text_num}Blind${text_end} skipped this run<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.25}${text_end} Mult)${text_end}'],
+//     ['The Idol', 'Each played ${text_num}${rankNames[Math.floor(Math.abs(jokerValue)/4) % 13]}${text_end}<br>of ${suitNames[Math.abs(jokerValue) % 4]} gives<br>${text_prod}X2${text_end} Mult when scored<br>${text_more}Card changes every round${text_end}'],
+//     ['Brainstorm', 'Copies the ability<br>of the leftmost Joker'],
+//     ['Satellite', 'Earn ${text_money}$1${text_end} at the end of<br>round per unique ${text_planet}<br>card used this run<br>${text_more}(Currently ${text_money}$${jokerValue}${text_end})${text_end}'],
+//     ['Rough Gem', 'Played cards with<br>${text_diamond} suit earn<br>${text_money}$1${text_end} when scored']
+//   ],
+//   [
+//     ['Bloodstone', '${text_prob}1 in 3${text_end} chance for<br>played cards with<br>${text_heart} suit to give<br>${text_prod}X2${text_end} Mult when scored'],
+//     ['Arrowhead', 'Played cards with<br>${text_spade} suit give<br>${text_chip}+50${text_end} Chips when scored'],
+//     ['Onyx Agate', 'Played cards with<br>${text_club} suit give<br>${text_mult}+8${text_end} Mult when scored'],
+//     ['Caino', 'Gains ${text_prod}X1${text_end} Mult when<br>a ${text_num}face${text_end} card<br>is destroyed<br>${text_more}(Currently ${text_prod}X${1 + jokerValue}${text_end} Mult)${text_end}'],
+//     ['Triboulet', 'Played ${text_num}Kings${text_end} and<br>${text_num}Queens${text_end} each give<br>${text_prod}X2${text_end} Mult when scored'],
+//     ['Yorick', '${text_prod}X5${text_end} Mult only after<br>using 23 discards<br>${text_more}(Discards left ${text_num}${jokerValue}${text_end})${text_end}'],
+//     ['Chicot', 'Disables effect of<br>every ${text_num}Boss Blind${text_end}'],
+//     ['Perkeo', 'Creates a ${negativec} copy of<br>${text_num}1${text_end} random ${text_num}consumable${text_end}<br>card in your possession<br>at the end of the ${text_num}shop${text_end}'],
+//     ['Certificate', 'When round begins,<br>add a random ${text_num}playing<br>card${text_end} with a random<br>${text_num}seal${text_end} to your hand'],
+//     ['Bootstraps', '${text_mult}+2${text_end} Mult for every<br>${text_money}$5${text_end} you have<br>${text_more}(Currently ${text_mult}+${jokerValue * 2}${text_end} Mult)${text_end}']
+//   ],
+//   [],
+//   [
+//     ['Egg', 'Gains ${text_money}$3${text_end} of<br>${text_num}sell value${text_end} at<br>end of round'],
+//     ['Burglar', 'When ${text_num}Blind${text_end} is selected,<br>gain ${text_chip}+3${text_end} Hands and<br>${text_num}lose all discards${text_end}'],
+//     ['Blackboard', '${text_prod}X3${text_end} Mult if all<br>cards held in hand<br>are ${text_spade} or ${text_club}'],
+//     ['Runner', 'Gains ${text_chip}+10${text_end} Chips<br>if played hand<br>contains a ${text_num}Straight${text_end}<br>${text_more}(Currently ${text_chip}+${20 + jokerValue * 10}${text_end} Chips)${text_end}'],
+//     ['Ice Cream', '${text_chip}${jokerValue > 20 ? "" : "+"}${Math.max(0, 100 - jokerValue * 5)}${text_end} Chips<br>${text_chip}-5${text_end} Chips for<br>every hand played'],
+//     ['DNA', 'If ${text_num}first hand${text_end} of round<br>has only ${text_num}1${text_end} card, add a<br>permanent copy to deck<br>and draw it to ${text_num}hand${text_end}'],
+//     ['Splash', 'Every ${text_num} played card${text_end}<br>counts in scoring'],
+//     ['Blue Joker', '${text_chip}+2${text_end} Chips for each<br>remaining card in ${text_num}Deck${text_end}<br>${text_more}(Currently ${text_chip}+${104 + jokerValue * 2}${text_end} Chips)${text_end}'],
+//     ['Sixth Sense', 'If ${text_num}first hand${text_end} of round is<br>a single ${text_num}6${text_end}, destroy it and<br>create a ${text_spectral} card${roomc}'],
+//     ['Constellation', 'Gains ${text_prod}X0.1${text_end} Mult<br>per ${text_planet} card used<br>${text_more}(Currently ${text_prod}X${(Math.max(0, 10 + jokerValue))/10}${text_end} Mult)${text_end}']
+//   ],
+//   [
+//     ['Hiker', 'Every played ${text_num}card${text_end}<br>permanently gains<br>${text_chip}+4${text_end} Chips when scored'],
+//     ['Faceless Joker', 'Earn ${text_money}$5${text_end} if ${text_num}3${text_end} or<br>more ${text_num}face cards${text_end}<br>are discarded<br>at the same time'],
+//     ['Green Joker', '${text_mult}+1${text_end} Mult per hand played<br>${text_mult}-1${text_end} Mult per discard<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue}${text_end} Mult)${text_end}'],
+//     ['Superposition', 'Create a ${text_tarot} card if<br>poker hand contains an<br>${text_num}Ace${text_end} and a ${text_num}Straight${text_end}${roomc}'],
+//     ['To Do List', 'Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}Pair${text_end},<br>poker hand changes<br>on every payout'],
+//     ['Cavendish', '${text_prod}X3${text_end} Mult<br>${text_prob}1 in 1000${text_end} chance this<br>card is destroy<br>at end of round'],
+//     ['Card Sharp', '${text_prod}X3${text_end} Mult if played<br>${text_num}poker hand${text_end} has already<br>been played this round'],
+//     ['Red Card', 'Gains ${text_mult}+3${text_end} Mult when any<br>${text_num}Booster Pack${text_end} is skipped<br>${text_more}(Currently ${text_mult}+${jokerValue * 3}${text_end} Mult)${text_end}'],
+//     ['Madness', 'When ${text_num}Blind${text_end} is selected,<br>gain ${text_prod}X0.5${text_end} Mult and<br>${text_num}destroy${text_end} a random Joker<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end})${text_end}'],
+//     ['Square Joker', 'Gain ${text_chip}+4${text_end} Chips if<br>played hand has<br>exactly ${text_num}4${text_end} card<br>${text_more}(Currently ${text_chip}+${16 + jokerValue * 4}${text_end} Chips)${text_end}']
+//   ],
+//   [
+//     ['Séance', 'If ${text_num}poker hand${text_end} is a<br>${text_num}Straight Flush${text_end}, craeate a<br>random ${text_spectral} card${roomc}'],
+//     ['Riff-raff', 'When ${text_num}Blind${text_end} is selected,<br>create ${text_num}2${text_end} ${commonc} ${text_num}Jokers${text_end}${roomc}'],
+//     ['Vampire', 'Gains ${text_prod}X0.2${text_end} Mult per<br>${text_num}Enhanced card${text_end} played,<br>removes card ${text_num}Enhancement${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}'],
+//     ['Shortcut', 'Allows ${text_num}Straights${text_end} to be<br>made with gaps of ${text_num}1 rank${text_end}<br>${text_more}(ex: ${text_num}2 3 5 7 8${text_end})${text_end}'],
+//     ['Hologram', 'Gains ${text_prod}X0.25${text_end} Mult<br> per ${text_num}playing card${text_end} added<br>to your deck<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.25}${text_end} Mult)${text_end}'],
+//     ['Vagabond', 'Create a ${text_tarot} card<br>if hand is played<br>with ${text_money}$3${text_end} or less'],
+//     ['Baron', 'Each ${text_num}King${text_end}<br>held in hand<br>gives ${text_prod}X1.5${text_end} Mult'],
+//     ['Cloud 9', 'Earn ${text_money}$1${text_end} for each<br>${text_num}9${text_end} in your ${text_num}full deck${text_end}<br>at end of round<br>${text_more}(Currently ${text_money}$${jokerValue}${text_end})${text_end}'],
+//     ['Rocket', 'Earn ${text_money}$${1 + jokerValue * 2}${text_end} at end of<br>round. Gains ${text_money}$2${text_end} when<br>${text_num}Boss Blind${text_end} is defeated'],
+//     ['Obelisk', '${text_prod}X0.2${text_end} Mult per<br>consecutive hand played<br>without playing your<br>must played ${text_num}poker hand${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}']
+//   ],
+//   [
+//     ['Midas Mask', 'All ${text_num}face${text_end} cards<br>become ${text_num}Gold${text_end} cards<br>when played'],
+//     ['Luchador', 'Sell this card to<br>disable the current<br>${text_num}Boss Blind${text_end}'],
+//     ['Photograph', 'First played ${text_num}face${text_end}<br>card gives ${text_prod}X2${text_end} Mult<br>when scored'],
+//     ['Gift Card', 'Add ${text_money}$1${text_end} of ${text_num}sell value${text_end}<br>to every ${text_num}Joker${text_end} and<br>${text_num}Consumable${text_end} card at<br>end of round'],
+//     ['Turtle Bean', '${text_num}${5 - jokerValue >= 0 ? "+" : ""}${5 - jokerValue}${text_end} hand size,<br>reduces by<br>${text_mult}1${text_end} every round'],
+//     ['Erosion', '${text_mult}+4${text_end} Mult for each<br>card below ${text_num}52${text_end}<br>in your full deck<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue * 4}${text_end})${text_end}'],
+//     ['Reserved Parking', 'Each ${text_num}face${text_end} card<br>held in hand has<br>a ${text_prob}1 in 2${text_end} chance<br>to give ${text_money}$1${text_end}'],
+//     ['Mail-In Rebate', 'Earn ${text_money}$3${text_end} for each<br>discarded ${text_num}${rankNames[Math.abs(jokerValue % 13)]}${text_end}, rank<br>changes every round'],
+//     ['To the Moon', 'Earn an extra ${text_money}$1${text_end} of<br>${text_num}interest${text_end} for every ${text_money}$5${text_end} you<br>have at end of round'],
+//     ['Hallucination', '${text_prob}1 in 2${text_end} chance to create<br>a ${text_tarot} card when any<br>${text_num}Booster Pack${text_end} is opened${roomc}']
+//   ],
+//   [
+//     ['Sly Joker',  '${text_chip}+50${text_end} Chips if played<br>hand contains<br>a ${text_num}Pair${text_end}'],
+//     ['Wily Joker',  '${text_chip}+100${text_end} Chips if played<br>hand contains<br>a ${text_num}Three of a Kind${text_end}'],
+//     ['Clever Joker',  '${text_chip}+150${text_end} Chips if played<br>hand contains<br>a ${text_num}Four of a Kind${text_end}'],
+//     ['Devious Joker',  '${text_chip}+100${text_end} Chips if played<br>hand contains<br>a ${text_num}Straight${text_end}'],
+//     ['Crafty Joker',  '${text_chip}+80${text_end} Chips if played<br>hand contains<br>a ${text_num}Flush${text_end}'],
+//     ['Lucky Cat', 'Gains ${text_prod}X0.2${text_end} Mult each<br>time a ${text_num}Lucky${text_end} card<br>${text_prob}successfully${text_end} triggers<br>${text_more}(currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}'],
+//     ['Baseball Card', '${text_prob}Uncommon${text_end} Jokers<br>each give ${text_prod}X1.5${text_end} Mult'],
+//     ['Bull', '${text_chip}+2${text_end} Chips for each<br>${text_money}dollar${text_end} you have<br>${text_more}(Currently ${text_chip}+${Math.max(0, jokerValue * 2)}${text_end} Chips)${text_end}'],
+//     ['Diet Cola', 'Sell this card to<br>create a free<br>${text_num}Double Tag${text_end}'],
+//     ['Trading Card', 'If ${text_num}first discard${text_end} of round<br>has only ${text_num}1${text_end} card, destroy<br>it and earn ${text_money}$3${text_end}']
+//   ],
+//   [
+//     ['Flash Card', '${text_mult}+2${text_end} Mult per<br>${text_num}reroll${text_end} in the shop<br>${text_more}(Currently ${text_mult}+${jokerValue * 2}${text_end} Mult)${text_end}'],
+//     ['Popcorn', '${text_mult}${jokerValue <= 5 ? "+" : ""}${Math.max(0, 20 - jokerValue * 4)}${text_end} Mult<br>${text_mult}-4${text_end} Mult per<br>round played'],
+//     ['Ramen', '${text_prod}X${(Math.max(0, 200 - jokerValue)) / 100}${text_end} Mult,<br>loses ${text_prod}X0.01${text_end} Mult<br>per ${text_num}card${text_end} discarded'],
+//     ['Seltzer', 'Retrigger all<br>cards played for<br>the next ${text_num}10${text_end} hands'],
+//     ['Spare Trousers', 'Gain ${text_mult}+2${text_end} Mult if<br>played hand contains<br>a ${text_num}Two Pair${text_end}<br>${text_more}(Currently ${text_mult}+${jokerValue * 2}${text_end} Mult)${text_end}'],
+//     ['Campfire', 'This Joker gains ${text_prod}X0.5${text_end} Mult<br>for each card ${text_num}sold${text_end}, resets<br>when ${text_num}Boss Blind${text_end} is defeated<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end} Mult)${text_end}'],
+//     ['Smiley Face', 'Played ${text_num}face${text_end} cards<br>give ${text_mult}+4${text_end} Mult<br>when scored'],
+//     ['Ancient Joker', 'Each played card with<br>${[text_heart, text_club, text_diamond, text_spade][Math.abs(jokerValue) % 4]} suit gives<br>${text_prod}X1.5${text_end} Mult when scored<br>${text_more}suit changes at end of round${text_end}'],
+//     ['Walkie Talkie', 'Each played ${text_num}10${text_end} or ${text_num}4${text_end}<br>gives ${text_chip}+10${text_end} Chips and<br>${text_mult}+4${text_end} Mult when scored'],
+//     ['Castle', 'This Joker gains ${text_chip}+3${text_end} Chips<br>per discarded ${[text_heart, text_club, text_diamond, text_spade][Math.abs(jokerValue) % 4]} card,<br>suit changes every round<br>${text_more}(Currently ${text_chip}+${jokerValue * 3}${text_end} Chips)${text_end}']
+//   ]
+
+
+
 
 
 

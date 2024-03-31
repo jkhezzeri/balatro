@@ -1,7 +1,8 @@
 :root {
 
-    --color-dark: #3a5055;
-    --color-light: #b1b1b1;
+    --white: #ffffff;
+    --black: #3a5055;
+    --grey: #b1b1b1;
 
     --background-dark: #3a5055;
     --background-darker: #1e2b2d;
@@ -56,7 +57,7 @@ body {
     user-select: none;
     font-family: "m6x11Plus";
     /* letter-spacing: 1px; */
-    color: white;
+    color: var(--white);
     font-size: 24px;
     overflow-x: hidden;
     min-height: 100vh;
@@ -118,7 +119,7 @@ footer .imgLogo {
 .imgFooter {
     width: 32px;
     height: 32px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 12px;
     padding: 16px;
     box-shadow: var(--shadow) 0 4px 0 0;
@@ -302,11 +303,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: pre-wrap;
     width: 100%;
     min-height: 60px;
     border-radius: 12px;
-    color: var(--color-dark);
-    background-color: white;
+    color: var(--black);
+    background-color: var(--white);
 }
 
 .popupRarity {
@@ -334,3 +336,66 @@ section {
 .legendary {
     background-color: var(--legendary);
 }
+
+
+
+.textChip {
+    color: var(--blue);
+}
+
+.textMult {
+    color: var(--red);
+}
+
+.textProd {
+    color: var(--white);
+    background-color: var(--red);
+    padding: 0 2px 0 4px;
+    border-radius: 4px;
+}
+
+.textNum {
+    color: var(--orange);
+}
+
+.textMoney {
+    color: var(--yellow);
+}
+
+.textProb {
+    color: var(--green);
+}
+
+.textMore {
+    color: var(--grey);
+}
+
+.textHeart {
+    color: var(--heart);
+}
+
+.textClub {
+    color: var(--club);
+}
+
+.textDiamond {
+    color: var(--diamond);
+}
+
+.textSpade {
+    color: var(--spade);
+}
+
+.textTarot {
+    color: var(--tarot);
+}
+
+.textPlanet {
+    color: var(--planet);
+}
+
+.textSpectral {
+    color: var(--spectral);
+}
+
+

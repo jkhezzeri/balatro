@@ -48,7 +48,7 @@ jokers.forEach(joker => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    popup_text.innerText = "+4 Mult";
+    popup_text.innerHTML = joker.text;
     popup.appendChild(popup_text);
 
     let popup_rarity = document.createElement("div");
