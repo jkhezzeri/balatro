@@ -55,7 +55,7 @@ jokers.forEach(joker => {
     popup.appendChild(popup_text);
 
     let popup_rarity = document.createElement("div");
-    popup_rarity.classList.add("popupRarity");
+    popup_rarity.classList.add("tagPrimary");
     popup_rarity.classList.add(rarities[joker.rarity - 1].toLowerCase());
     popup_rarity.innerText = rarities[joker.rarity - 1];
     popup.appendChild(popup_rarity);

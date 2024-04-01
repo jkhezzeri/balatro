@@ -273,7 +273,7 @@ section {
 
 
 .popup {
-    /* visibility: hidden; */
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,13 +316,26 @@ section {
     
 .jokerText {
     width: 100%;
+    line-height: 24px;
 }
 
-.popupRarity {
+.tagPrimary {
     font-size: 32px;
     width: 160px;
     height: 40px;
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagSecondary {
+    width: 160px;
+    height: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -341,6 +354,26 @@ section {
 
 .legendary {
     background-color: var(--legendary);
+}
+
+.voucher {
+    background-color: var(--voucher);
+}
+
+.booster {
+    background-color: var(--booster);
+}
+
+.enhancement {
+    background-color: var(--enhancement);
+}
+
+.sealGold {
+    background-color: var(--gold-seal);
+}
+
+.sealPurple {
+    background-color: var(--purple-seal);
 }
 
 

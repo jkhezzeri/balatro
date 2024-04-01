@@ -110,35 +110,35 @@ const jokers = [
     {
         id:11,
         name:"Sly Joker",
-        text:``,
+        text:`${text_chip}+50${text_end} Chips if played<br>hand contains<br>a ${text_num}Pair${text_end}`,
         rarity:1,
         price:3
     },
     {
         id:12,
         name:"Wily Joker",
-        text:``,
+        text:`${text_chip}+100${text_end} Chips if played<br>hand contains<br>a ${text_num}Three of a Kind${text_end}`,
         rarity:1,
         price:4
     },
     {
         id:13,
         name:"Clever Joker",
-        text:``,
+        text:`${text_chip}+150${text_end} Chips if played<br>hand contains<br>a ${text_num}Four of a Kind${text_end}`,
         rarity:1,
         price:4
     },
     {
         id:14,
         name:"Devious Joker",
-        text:``,
+        text:`${text_chip}+100${text_end} Chips if played<br>hand contains<br>a ${text_num}Straight${text_end}`,
         rarity:1,
         price:4
     },
     {
         id:15,
         name:"Crafty Joker",
-        text:``,
+        text:`${text_chip}+80${text_end} Chips if played<br>hand contains<br>a ${text_num}Flush${text_end}`,
         rarity:1,
         price:4
     },
@@ -390,245 +390,245 @@ const jokers = [
     {
         id:51,
         name:"DNA",
-        text:``,
+        text:`If ${text_num}first hand${text_end} of round<br>has only ${text_num}1${text_end} card, add a<br>permanent copy to deck<br>and draw it to ${text_num}hand${text_end}`,
         rarity:3,
         price:8
     },
     {
         id:52,
         name:"Splash",
-        text:``,
+        text:`Every ${text_num} played card${text_end}<br>counts in scoring`,
         rarity:1,
         price:3
     },
     {
         id:53,
         name:"Blue Joker",
-        text:``,
+        text:`${text_chip}+2${text_end} Chips for each<br>remaining card in ${text_num}Deck${text_end}<br>${text_more}(Currently ${text_chip}+${104 + jokerValue * 2}${text_end} Chips)${text_end}`,
         rarity:1,
         price:5
     },
     {
         id:54,
         name:"Sixth Sense",
-        text:``,
+        text:`If ${text_num}first hand${text_end} of round is<br>a single ${text_num}6${text_end}, destroy it and<br>create a ${text_spectral}Spectral${text_end} card<br>${text_more}(Must have room)${text_end}`,
         rarity:3,
         price:6
     },
     {
         id:55,
         name:"Constellation",
-        text:``,
+        text:`Gains ${text_prod}X0.1${text_end} Mult<br>per ${text_planet}Planet${text_end} card used<br>${text_more}(Currently ${text_prod}X${(Math.max(0, 10 + jokerValue))/10}${text_end} Mult)${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:56,
         name:"Hiker",
-        text:``,
+        text:`Every played ${text_num}card${text_end}<br>permanently gains<br>${text_chip}+4${text_end} Chips when scored`,
         rarity:2,
         price:5
     },
     {
         id:57,
         name:"Faceless Joker",
-        text:``,
+        text:`Earn ${text_money}$5${text_end} if ${text_num}3${text_end} or<br>more ${text_num}face cards${text_end}<br>are discarded<br>at the same time`,
         rarity:1,
         price:4
     },
     {
         id:58,
         name:"Green Joker",
-        text:``,
+        text:`${text_mult}+1${text_end} Mult per hand played<br>${text_mult}-1${text_end} Mult per discard<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue}${text_end} Mult)${text_end}`,
         rarity:1,
         price:4
     },
     {
         id:59,
         name:"Superposition",
-        text:``,
+        text:`Create a ${text_tarot}Tarot${text_end} card if<br>poker hand contains an<br>${text_num}Ace${text_end} and a ${text_num}Straight${text_end}<br>${text_more}(Must have room)${text_end}`,
         rarity:1,
         price:4
     },
     {
         id:60,
         name:"To Do List",
-        text:``,
+        text:`Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}Pair${text_end},<br>poker hand changes<br>on every payout`,
         rarity:1,
         price:4
     },
     {
         id:61,
         name:"Cavendish",
-        text:``,
+        text:`${text_prod}X3${text_end} Mult<br>${text_prob}1 in 1000${text_end} chance this<br>card is destroy<br>at end of round`,
         rarity:1,
         price:4
     },
     {
         id:62,
         name:"Card Sharp",
-        text:``,
+        text:`${text_prod}X3${text_end} Mult if played<br>${text_num}poker hand${text_end} has already<br>been played this round`,
         rarity:2,
         price:6
     },
     {
         id:63,
         name:"Red Card",
-        text:``,
+        text:`Gains ${text_mult}+3${text_end} Mult when any<br>${text_num}Booster Pack${text_end} is skipped<br>${text_more}(Currently ${text_mult}+${jokerValue * 3}${text_end} Mult)${text_end}`,
         rarity:1,
         price:5
     },
     {
         id:64,
         name:"Madness",
-        text:``,
+        text:`When ${text_num}Blind${text_end} is selected,<br>gain ${text_prod}X0.5${text_end} Mult and<br>${text_num}destroy${text_end} a random Joker<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end})${text_end}`,
         rarity:2,
         price:7
     },
     {
         id:65,
         name:"Square Joker",
-        text:``,
+        text:`Gain ${text_chip}+4${text_end} Chips if<br>played hand has<br>exactly ${text_num}4${text_end} card<br>${text_more}(Currently ${text_chip}+${16 + jokerValue * 4}${text_end} Chips)${text_end}`,
         rarity:1,
         price:5
     },
     {
         id:66,
         name:"Séance",
-        text:``,
+        text:`If ${text_num}poker hand${text_end} is a<br>${text_num}Straight Flush${text_end}, craeate a<br>random ${text_spectral}Spectral${text_end} card<br>${text_more}(Must have room)${text_end}`,
         rarity:3,
         price:7
     },
     {
         id:67,
         name:"Riff-Raff",
-        text:``,
+        text:`When ${text_num}Blind${text_end} is selected,<br>create ${text_num}2${text_end} ${text_chip}Common${text_end} ${text_num}Jokers${text_end}<br>${text_more}(Must have room)${text_end}`,
         rarity:1,
         price:4
     },
     {
         id:68,
         name:"Vampire",
-        text:``,
+        text:`Gains ${text_prod}X0.2${text_end} Mult per<br>${text_num}Enhanced card${text_end} played,<br>removes card ${text_num}Enhancement${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}`,
         rarity:2,
         price:7
     },
     {
         id:69,
         name:"Shortcut",
-        text:``,
+        text:`Allows ${text_num}Straights${text_end} to be<br>made with gaps of ${text_num}1 rank${text_end}<br>${text_more}(ex: ${text_num}2 3 5 7 8${text_end})${text_end}`,
         rarity:2,
         price:7
     },
     {
         id:70,
         name:"Hologram",
-        text:``,
+        text:`Gains ${text_prod}X0.25${text_end} Mult<br> per ${text_num}playing card${text_end} added<br>to your deck<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.25}${text_end} Mult)${text_end}`,
         rarity:2,
         price:7
     },
     {
         id:71,
         name:"Vagabond",
-        text:``,
+        text:`Create a ${text_tarot}Tarot${text_end} card<br>if hand is played<br>with ${text_money}$3${text_end} or less`,
         rarity:2,
         price:6
     },
     {
         id:72,
         name:"Baron",
-        text:``,
+        text:`Each ${text_num}King${text_end}<br>held in hand<br>gives ${text_prod}X1.5${text_end} Mult`,
         rarity:3,
         price:8
     },
     {
         id:73,
         name:"Cloud 9",
-        text:``,
+        text:`Earn ${text_money}$1${text_end} for each<br>${text_num}9${text_end} in your ${text_num}full deck${text_end}<br>at end of round<br>${text_more}(Currently ${text_money}$${jokerValue}${text_end})${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:74,
         name:"Rocket",
-        text:``,
+        text:`Earn ${text_money}$${1 + jokerValue * 2}${text_end} at end of<br>round. Gains ${text_money}$2${text_end} when<br>${text_num}Boss Blind${text_end} is defeated`,
         rarity:2,
         price:6
     },
     {
         id:75,
         name:"Obelisk",
-        text:``,
+        text:`${text_prod}X0.2${text_end} Mult per<br>consecutive hand played<br>without playing your<br>must played ${text_num}poker hand${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}`,
         rarity:3,
         price:8
     },
     {
         id:76,
         name:"Midas Mask",
-        text:``,
+        text:`All ${text_num}face${text_end} cards<br>become ${text_num}Gold${text_end} cards<br>when played`,
         rarity:2,
         price:6
     },
     {
         id:77,
         name:"Luchador",
-        text:``,
+        text:`Sell this card to<br>disable the current<br>${text_num}Boss Blind${text_end}`,
         rarity:2,
         price:5
     },
     {
         id:78,
         name:"Photograph",
-        text:``,
+        text:`First played ${text_num}face${text_end}<br>card gives ${text_prod}X2${text_end} Mult<br>when scored`,
         rarity:1,
         price:5
     },
     {
         id:79,
         name:"Gift Card",
-        text:``,
+        text:`Add ${text_money}$1${text_end} of ${text_num}sell value${text_end}<br>to every ${text_num}Joker${text_end} and<br>${text_num}Consumable${text_end} card at<br>end of round`,
         rarity:2,
         price:6
     },
     {
         id:80,
         name:"Turtle Bean",
-        text:``,
+        text:`${text_num}${5 - jokerValue >= 0 ? "+" : ""}${5 - jokerValue}${text_end} hand size,<br>reduces by<br>${text_mult}1${text_end} every round`,
         rarity:2,
         price:6
     },
     {
         id:81,
         name:"Erosion",
-        text:``,
+        text:`${text_mult}+4${text_end} Mult for each<br>card below ${text_num}52${text_end}<br>in your full deck<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue * 4}${text_end})${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:82,
         name:"Reserved Parking",
-        text:``,
+        text:`Each ${text_num}face${text_end} card<br>held in hand has<br>a ${text_prob}1 in 2${text_end} chance<br>to give ${text_money}$1${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:83,
         name:"Mail-In Rebate",
-        text:``,
+        text:`Earn ${text_money}$3${text_end} for each<br>discarded ${text_num}${ranks[Math.abs(jokerValue % 13)]}${text_end}, rank<br>changes every round`,
         rarity:1,
         price:4
     },
     {
         id:84,
         name:"To the Moon",
-        text:``,
+        text:`Earn an extra ${text_money}$1${text_end} of<br>${text_num}interest${text_end} for every ${text_money}$5${text_end} you<br>have at end of round`,
         rarity:2,
         price:5
     },
     {
         id:85,
         name:"Hallucination",
-        text:``,
+        text:`${text_prob}1 in 2${text_end} chance to create<br>a ${text_tarot}Tarot${text_end} card when any<br>${text_num}Booster Pack${text_end} is opened<br>${text_more}(Must have room)${text_end}`,
         rarity:1,
         price:4
     },
@@ -670,35 +670,35 @@ const jokers = [
     {
         id:91,
         name:"Lucky Cat",
-        text:``,
+        text:`Gains ${text_prod}X0.2${text_end} Mult each<br>time a ${text_num}Lucky${text_end} card<br>${text_prob}successfully${text_end} triggers<br>${text_more}(currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:92,
         name:"Baseball Card",
-        text:``,
+        text:`${text_prob}Uncommon${text_end} Jokers<br>each give ${text_prod}X1.5${text_end} Mult`,
         rarity:3,
         price:8
     },
     {
         id:93,
         name:"Bull",
-        text:``,
+        text:`${text_chip}+2${text_end} Chips for each<br>${text_money}dollar${text_end} you have<br>${text_more}(Currently ${text_chip}+${Math.max(0, jokerValue * 2)}${text_end} Chips)${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:94,
         name:"Diet Cola",
-        text:``,
+        text:`Sell this card to<br>create a free<br>${text_num}Double Tag${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:95,
         name:"Trading Card",
-        text:``,
+        text:`If ${text_num}first discard${text_end} of round<br>has only ${text_num}1${text_end} card, destroy<br>it and earn ${text_money}$3${text_end}`,
         rarity:2,
         price:5
     },
@@ -1055,102 +1055,41 @@ const jokers = [
     {
         id:146,
         name:"Canio",
-        text:``,
+        text:`Gains ${text_prod}X1${text_end} Mult when<br>a ${text_num}face${text_end} card<br>is destroyed<br>${text_more}(Currently ${text_prod}X${1 + jokerValue}${text_end} Mult)${text_end}`,
         rarity:4,
         price:0
     },
     {
         id:147,
         name:"Triboulet",
-        text:``,
+        text:`Played ${text_num}Kings${text_end} and<br>${text_num}Queens${text_end} each give<br>${text_prod}X2${text_end} Mult when scored`,
         rarity:4,
         price:0
     },
     {
         id:148,
         name:"Yorick",
-        text:``,
+        text:`${text_prod}X5${text_end} Mult only after<br>using 23 discards<br>${text_more}(Discards left ${text_num}${jokerValue}${text_end})${text_end}`,
         rarity:4,
         price:0
     },
     {
         id:149,
         name:"Chicot",
-        text:``,
+        text:`Disables effect of<br>every ${text_num}Boss Blind${text_end}`,
         rarity:4,
         price:0
     },
     {
         id:150,
         name:"Perkeo",
-        text:``,
+        text:`Creates a ${text_negative}Negative${text_end} copy of<br>${text_num}1${text_end} random ${text_num}consumable${text_end}<br>card in your possession<br>at the end of the ${text_num}shop${text_end}`,
         rarity:4,
         price:0
     }
 ];
 
 
-
-
-
-
-
-
-// [
-//   [
-//     ['DNA', 'If ${text_num}first hand${text_end} of round<br>has only ${text_num}1${text_end} card, add a<br>permanent copy to deck<br>and draw it to ${text_num}hand${text_end}'],
-//     ['Splash', 'Every ${text_num} played card${text_end}<br>counts in scoring'],
-//     ['Blue Joker', '${text_chip}+2${text_end} Chips for each<br>remaining card in ${text_num}Deck${text_end}<br>${text_more}(Currently ${text_chip}+${104 + jokerValue * 2}${text_end} Chips)${text_end}'],
-//     ['Sixth Sense', 'If ${text_num}first hand${text_end} of round is<br>a single ${text_num}6${text_end}, destroy it and<br>create a ${text_spectral}Spectral${text_end} card<br>${text_more}(Must have room)${text_end}'],
-//     ['Constellation', 'Gains ${text_prod}X0.1${text_end} Mult<br>per ${text_planet}Planet${text_end} card used<br>${text_more}(Currently ${text_prod}X${(Math.max(0, 10 + jokerValue))/10}${text_end} Mult)${text_end}']
-//     ['Hiker', 'Every played ${text_num}card${text_end}<br>permanently gains<br>${text_chip}+4${text_end} Chips when scored'],
-//     ['Faceless Joker', 'Earn ${text_money}$5${text_end} if ${text_num}3${text_end} or<br>more ${text_num}face cards${text_end}<br>are discarded<br>at the same time'],
-//     ['Green Joker', '${text_mult}+1${text_end} Mult per hand played<br>${text_mult}-1${text_end} Mult per discard<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue}${text_end} Mult)${text_end}'],
-//     ['Superposition', 'Create a ${text_tarot}Tarot${text_end} card if<br>poker hand contains an<br>${text_num}Ace${text_end} and a ${text_num}Straight${text_end}<br>${text_more}(Must have room)${text_end}'],
-//     ['To Do List', 'Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}Pair${text_end},<br>poker hand changes<br>on every payout'],
-//     ['Cavendish', '${text_prod}X3${text_end} Mult<br>${text_prob}1 in 1000${text_end} chance this<br>card is destroy<br>at end of round'],
-//     ['Card Sharp', '${text_prod}X3${text_end} Mult if played<br>${text_num}poker hand${text_end} has already<br>been played this round'],
-//     ['Red Card', 'Gains ${text_mult}+3${text_end} Mult when any<br>${text_num}Booster Pack${text_end} is skipped<br>${text_more}(Currently ${text_mult}+${jokerValue * 3}${text_end} Mult)${text_end}'],
-//     ['Madness', 'When ${text_num}Blind${text_end} is selected,<br>gain ${text_prod}X0.5${text_end} Mult and<br>${text_num}destroy${text_end} a random Joker<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end})${text_end}'],
-//     ['Square Joker', 'Gain ${text_chip}+4${text_end} Chips if<br>played hand has<br>exactly ${text_num}4${text_end} card<br>${text_more}(Currently ${text_chip}+${16 + jokerValue * 4}${text_end} Chips)${text_end}']
-//     ['Séance', 'If ${text_num}poker hand${text_end} is a<br>${text_num}Straight Flush${text_end}, craeate a<br>random ${text_spectral}Spectral${text_end} card<br>${text_more}(Must have room)${text_end}'],
-//     ['Riff-raff', 'When ${text_num}Blind${text_end} is selected,<br>create ${text_num}2${text_end} ${text_chip}Common${text_end} ${text_num}Jokers${text_end}<br>${text_more}(Must have room)${text_end}'],
-//     ['Vampire', 'Gains ${text_prod}X0.2${text_end} Mult per<br>${text_num}Enhanced card${text_end} played,<br>removes card ${text_num}Enhancement${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}'],
-//     ['Shortcut', 'Allows ${text_num}Straights${text_end} to be<br>made with gaps of ${text_num}1 rank${text_end}<br>${text_more}(ex: ${text_num}2 3 5 7 8${text_end})${text_end}'],
-//     ['Hologram', 'Gains ${text_prod}X0.25${text_end} Mult<br> per ${text_num}playing card${text_end} added<br>to your deck<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.25}${text_end} Mult)${text_end}'],
-//     ['Vagabond', 'Create a ${text_tarot}Tarot${text_end} card<br>if hand is played<br>with ${text_money}$3${text_end} or less'],
-//     ['Baron', 'Each ${text_num}King${text_end}<br>held in hand<br>gives ${text_prod}X1.5${text_end} Mult'],
-//     ['Cloud 9', 'Earn ${text_money}$1${text_end} for each<br>${text_num}9${text_end} in your ${text_num}full deck${text_end}<br>at end of round<br>${text_more}(Currently ${text_money}$${jokerValue}${text_end})${text_end}'],
-//     ['Rocket', 'Earn ${text_money}$${1 + jokerValue * 2}${text_end} at end of<br>round. Gains ${text_money}$2${text_end} when<br>${text_num}Boss Blind${text_end} is defeated'],
-//     ['Obelisk', '${text_prod}X0.2${text_end} Mult per<br>consecutive hand played<br>without playing your<br>must played ${text_num}poker hand${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}']
-//     ['Midas Mask', 'All ${text_num}face${text_end} cards<br>become ${text_num}Gold${text_end} cards<br>when played'],
-//     ['Luchador', 'Sell this card to<br>disable the current<br>${text_num}Boss Blind${text_end}'],
-//     ['Photograph', 'First played ${text_num}face${text_end}<br>card gives ${text_prod}X2${text_end} Mult<br>when scored'],
-//     ['Gift Card', 'Add ${text_money}$1${text_end} of ${text_num}sell value${text_end}<br>to every ${text_num}Joker${text_end} and<br>${text_num}Consumable${text_end} card at<br>end of round'],
-//     ['Turtle Bean', '${text_num}${5 - jokerValue >= 0 ? "+" : ""}${5 - jokerValue}${text_end} hand size,<br>reduces by<br>${text_mult}1${text_end} every round'],
-//     ['Erosion', '${text_mult}+4${text_end} Mult for each<br>card below ${text_num}52${text_end}<br>in your full deck<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue * 4}${text_end})${text_end}'],
-//     ['Reserved Parking', 'Each ${text_num}face${text_end} card<br>held in hand has<br>a ${text_prob}1 in 2${text_end} chance<br>to give ${text_money}$1${text_end}'],
-//     ['Mail-In Rebate', 'Earn ${text_money}$3${text_end} for each<br>discarded ${text_num}${ranks[Math.abs(jokerValue % 13)]}${text_end}, rank<br>changes every round'],
-//     ['To the Moon', 'Earn an extra ${text_money}$1${text_end} of<br>${text_num}interest${text_end} for every ${text_money}$5${text_end} you<br>have at end of round'],
-//     ['Hallucination', '${text_prob}1 in 2${text_end} chance to create<br>a ${text_tarot}Tarot${text_end} card when any<br>${text_num}Booster Pack${text_end} is opened<br>${text_more}(Must have room)${text_end}']
-//     ['Sly Joker',  '${text_chip}+50${text_end} Chips if played<br>hand contains<br>a ${text_num}Pair${text_end}'],
-//     ['Wily Joker',  '${text_chip}+100${text_end} Chips if played<br>hand contains<br>a ${text_num}Three of a Kind${text_end}'],
-//     ['Clever Joker',  '${text_chip}+150${text_end} Chips if played<br>hand contains<br>a ${text_num}Four of a Kind${text_end}'],
-//     ['Devious Joker',  '${text_chip}+100${text_end} Chips if played<br>hand contains<br>a ${text_num}Straight${text_end}'],
-//     ['Crafty Joker',  '${text_chip}+80${text_end} Chips if played<br>hand contains<br>a ${text_num}Flush${text_end}'],
-//     ['Lucky Cat', 'Gains ${text_prod}X0.2${text_end} Mult each<br>time a ${text_num}Lucky${text_end} card<br>${text_prob}successfully${text_end} triggers<br>${text_more}(currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}'],
-//     ['Baseball Card', '${text_prob}Uncommon${text_end} Jokers<br>each give ${text_prod}X1.5${text_end} Mult'],
-//     ['Bull', '${text_chip}+2${text_end} Chips for each<br>${text_money}dollar${text_end} you have<br>${text_more}(Currently ${text_chip}+${Math.max(0, jokerValue * 2)}${text_end} Chips)${text_end}'],
-//     ['Diet Cola', 'Sell this card to<br>create a free<br>${text_num}Double Tag${text_end}'],
-//     ['Trading Card', 'If ${text_num}first discard${text_end} of round<br>has only ${text_num}1${text_end} card, destroy<br>it and earn ${text_money}$3${text_end}']
-//   ]
-//   [
-//     ['Caino', 'Gains ${text_prod}X1${text_end} Mult when<br>a ${text_num}face${text_end} card<br>is destroyed<br>${text_more}(Currently ${text_prod}X${1 + jokerValue}${text_end} Mult)${text_end}'],
-//     ['Triboulet', 'Played ${text_num}Kings${text_end} and<br>${text_num}Queens${text_end} each give<br>${text_prod}X2${text_end} Mult when scored'],
-//     ['Yorick', '${text_prod}X5${text_end} Mult only after<br>using 23 discards<br>${text_more}(Discards left ${text_num}${jokerValue}${text_end})${text_end}'],
-//     ['Chicot', 'Disables effect of<br>every ${text_num}Boss Blind${text_end}'],
-//     ['Perkeo', 'Creates a ${text_negative}Negative{text_end} copy of<br>${text_num}1${text_end} random ${text_num}consumable${text_end}<br>card in your possession<br>at the end of the ${text_num}shop${text_end}']
-//   ]
 
 
 
