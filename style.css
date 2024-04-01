@@ -274,52 +274,58 @@ section {
 
 .popup {
     /* visibility: hidden; */
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    padding: 4px;
-    bottom: calc(100% + 24px);
-    left: 50%;
-    transform: translate(-50%, 0);
-    white-space: nowrap;
-    border: 2px solid var(--popup-border);
-    border-radius: 12px;
-    background-color: var(--popup-background);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    position: absolute;
+    bottom: calc(100% + 24px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 2px solid var(--popup-border);
+    border-radius: 12px;
+    background-color: var(--popup-background);
+    text-align: center;
+    white-space: nowrap;
 }
-
+  
 .joker img:hover + .popup {
     visibility: visible;
 }
-
+  
 .popupName {
     font-size: 40px;
+    padding: 0 8px;
 }
-
+  
 .popupText {
     display: flex;
-    justify-content: center;
     align-items: center;
-    white-space: pre-wrap;
-    width: 100%;
-    min-height: 60px;
     border-radius: 12px;
+    padding: 4px;
+    margin: 0 4px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 60px;
     color: var(--black);
     background-color: var(--white);
+}
+    
+.jokerText {
+    width: 100%;
 }
 
 .popupRarity {
     font-size: 32px;
     width: 160px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 12px;
 }
+
+
 
 .common {
     background-color: var(--blue);
@@ -350,7 +356,7 @@ section {
 .textProd {
     color: var(--white);
     background-color: var(--red);
-    padding: 0 2px 0 4px;
+    padding: 0 3px 1px 4px;
     border-radius: 4px;
 }
 
@@ -397,5 +403,37 @@ section {
 .textSpectral {
     color: var(--spectral);
 }
+
+.textNegative {
+    animation: negative-color 6s infinite;
+}
+
+@keyframes negative-color {
+    0% { color: var(--blue); }
+    25% { color: var(--grey); }
+    50% { color: var(--red); }
+    75% { color: var(--grey); }
+    100% { color: var(--blue); }
+}
+
+
+
+.negative {
+    animation: negative-background 6s infinite;
+}
+
+@keyframes negative-background {
+    0% { background-color: var(--blue); }
+    25% { background-color: var(--grey); }
+    50% { background-color: var(--red); }
+    75% { background-color: var(--grey); }
+    100% { background-color: var(--blue); }
+}
+
+
+
+
+
+
 
 

@@ -48,13 +48,16 @@ jokers.forEach(joker => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    popup_text.innerHTML = joker.text;
+    let joker_text = document.createElement("span")
+    joker_text.classList.add("jokerText");
+    joker_text.innerHTML = joker.text;
+    popup_text.appendChild(joker_text);
     popup.appendChild(popup_text);
 
     let popup_rarity = document.createElement("div");
     popup_rarity.classList.add("popupRarity");
-    popup_rarity.classList.add(rarity[joker.rarity - 1].toLowerCase());
-    popup_rarity.innerText = rarity[joker.rarity - 1];
+    popup_rarity.classList.add(rarities[joker.rarity - 1].toLowerCase());
+    popup_rarity.innerText = rarities[joker.rarity - 1];
     popup.appendChild(popup_rarity);
     
     if (joker.id % 5 == 1 && joker.id != 1) {
