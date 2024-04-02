@@ -33,6 +33,8 @@
     --gold-seal: #eaba44;
     --purple-seal: #7b559c;
 
+    --back: #ff9800;
+
     --popup-background: #3f4a4d;
     --popup-border: #dee2ea;
     --popup-mini-background: #677b7e;
@@ -316,7 +318,7 @@ section {
     
 .jokerText {
     width: 100%;
-    line-height: 24px;
+    line-height: 26px;
 }
 
 .tagPrimary {
@@ -408,6 +410,9 @@ section {
 .textMore {
     color: var(--grey);
 }
+.textMini {
+    font-size: 18px;
+}
 
 .textHeart {
     color: var(--heart);
@@ -467,6 +472,16 @@ section {
 
 
 
+#randNum {
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+}
 
+#randMult {
+    width: 48px;
+    text-align: left;
+    display: inline-block;
+}
 
 

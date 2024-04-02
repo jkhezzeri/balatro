@@ -9,6 +9,7 @@ const text_money = "<span class='textMoney'>";
 const text_prob = "<span class='textProb'>";
 
 const text_more = "<span class='textMore'>";
+const text_mini = "<span class='textMini'>";
 
 const text_heart = "<span class='textHeart'>";
 const text_club = "<span class='textClub'>";
@@ -27,12 +28,28 @@ const text_end = "</span>";
 
 const ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
 
+const hands = ["High Card", "Pair", "Two Pair", "Three of a Kind", "Straight", "Flush", "Full House", "Four of a Kind", "Straight Flush", "Five of a Kind", "Flush House", "Flush Five"];
+
 const rarities = ["Common", "Uncommon", "Rare", "Legendary"];
 
 
 
 const jokerValue = 0;
 const toggleJokerc = 0;
+
+
+let random_number = "<span id='randNum'></span>";
+let random_mult = "<span id='randMult'></span>";
+const arrayRand = ["&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult",`${text_more}rand()${text_end}`,`${text_mult}#@11D${text_end}`];
+
+setInterval(function(){
+    document.querySelector("#randNum").innerHTML = Math.floor(Math.random()*24); // Between 0 and 23
+}, 500);
+setInterval(function(){
+    document.querySelector("#randMult").innerHTML = arrayRand[Math.floor(Math.random() * arrayRand.length)];
+}, 100);
+
+
 
 
 
@@ -152,7 +169,7 @@ const jokers = [
     {
         id:17,
         name:"Joker Stencil",
-        text:`${text_prod}X1${text_end} Mult for each<br>empty ${text_num}Joker${text_end} slot<br>Joker stencil included<br>${text_more}(Currently ${text_prod}X${1 + jokerValue}${text_end})${text_end}`,
+        text:`${text_prod}X1${text_end} Mult for each<br>empty ${text_num}Joker${text_end} slot<br>${text_mini}Joker stencil included${text_end}<br>${text_more}(Currently ${text_prod}X${1 + jokerValue}${text_end})${text_end}`,
         rarity:2,
         price:8
     },
@@ -187,7 +204,7 @@ const jokers = [
     {
         id:22,
         name:"Banner",
-        text:`${text_chip}+40${text_end} Chips for<br>each remaining<br>${text_num}discard${text_end}<br>${text_more}(Currently ${text_chip}+${jokerValue * 40}${text_end} Chips)${text_end}`,
+        text:`${text_chip}+40${text_end} Chips for<br>each remaining<br>${text_num}discard${text_end}`,
         rarity:1,
         price:5
     },
@@ -208,7 +225,7 @@ const jokers = [
     {
         id:25,
         name:"Loyalty Card",
-        text:`${text_prod}X4${text_end} Mult every<br>${text_num}6${text_end} hands played<br>${text_more}(${jokerValue % 6} remaining)${text_end}`,
+        text:`${text_prod}X4${text_end} Mult every<br>${text_num}6${text_end} hands played<br>${text_more}5 remaining${text_end}`,
         rarity:2,
         price:5
     },
@@ -222,7 +239,7 @@ const jokers = [
     {
         id:27,
         name:"Misprint",
-        text:`${text_mult}+0${text_end} - ${text_mult}+23${text_end} Mult`,
+        text:`${text_mult}+${random_number}${text_end}${random_mult}`,
         rarity:1,
         price:4
     },
@@ -236,7 +253,7 @@ const jokers = [
     {
         id:29,
         name:"Raised Fist",
-        text:`Adds ${text_num}double${text_end} the rank<br>of ${text_num}lowest${text_end} card held in hand to Mult`,
+        text:`Adds ${text_num}double${text_end} the rank<br>of ${text_num}lowest${text_end} card held<br>in hand to Mult`,
         rarity:1,
         price:5
     },
@@ -271,7 +288,7 @@ const jokers = [
     {
         id:34,
         name:"Abstract Joker",
-        text:`${text_mult}+3${text_end} Mult for<br>each ${text_num}Joker${text_end} card`,
+        text:`${text_mult}+3${text_end} Mult for<br>each ${text_num}Joker${text_end} card<br>${text_more}(Currently ${text_mult}+${jokerValue * 3}${text_end} Mult)${text_end}`,
         rarity:1,
         price:4
     },
@@ -285,7 +302,7 @@ const jokers = [
     {
         id:36,
         name:"Hack",
-        text:`Retrigger<br>each played<br>${text_num}2${text_end}, ${text_num}3${text_end}, ${text_num}4${text_end} or ${text_num}5${text_end}`,
+        text:`Retrigger<br>each played<br>${text_num}2${text_end}, ${text_num}3${text_end}, ${text_num}4${text_end}, or ${text_num}5${text_end}`,
         rarity:2,
         price:6
     },
@@ -299,7 +316,7 @@ const jokers = [
     {
         id:38,
         name:"Gros Michel",
-        text:`${text_mult}+15${text_end} Mult<br>${text_prob}1 in 4${text_end} chance this card is destroyed<br>at the end of the round`,
+        text:`${text_mult}+15${text_end} Mult<br>${text_prob}1 in 4${text_end} chance this<br>card is destroyed<br>at end of round`,
         rarity:1,
         price:5
     },
@@ -327,7 +344,7 @@ const jokers = [
     {
         id:42,
         name:"Business Card",
-        text:`Played ${text_num}Face${text_end} cards have<br>a ${text_prob}1 in 2${text_end} chance to<br>give ${text_money}$2${text_end} when scored`,
+        text:`Played ${text_num}face${text_end} cards have<br>a ${text_prob}1 in 2${text_end} chance to<br>give ${text_money}$2${text_end} when scored`,
         rarity:1,
         price:4
     },
@@ -341,14 +358,14 @@ const jokers = [
     {
         id:44,
         name:"Ride the Bus",
-        text:`${text_mult}+1${text_end} Mult per<br>consecutive hand<br>played without a<br>scoring ${text_num}face${text_end} card<br>${text_more}(Currently ${text_mult}+${jokerValue}${text_end})${text_end}`,
+        text:`${text_mult}+1${text_end} Mult per<br>consecutive hand<br>played without a<br>scoring ${text_num}face${text_end} card<br>${text_more}(Currently ${text_mult}+${jokerValue}${text_end} Mult)${text_end}`,
         rarity:1,
         price:6
     },
     {
         id:45,
         name:"Space Joker",
-        text:`${text_prob}1 in 4${text_end} chane to<br>upgrade level of<br>played ${text_num}poker hand${text_end}`,
+        text:`${text_prob}1 in 4${text_end} chance to<br>upgrade level of<br>played ${text_num}poker hand${text_end}`,
         rarity:2,
         price:5
     },
@@ -369,7 +386,7 @@ const jokers = [
     {
         id:48,
         name:"Blackboard",
-        text:`${text_prod}X3${text_end} Mult if all<br>cards held in hand<br>are ${text_spade}Spade${text_end} or ${text_club}Club${text_end}`,
+        text:`${text_prod}X3${text_end} Mult if all<br>cards held in hand<br>are ${text_spade}Spades${text_end} or ${text_club}Clubs${text_end}`,
         rarity:2,
         price:6
     },
@@ -453,14 +470,14 @@ const jokers = [
     {
         id:60,
         name:"To Do List",
-        text:`Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}Pair${text_end},<br>poker hand changes<br>on every payout`,
+        text:`Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}${hands[Math.abs(jokerValue % 12)]}${text_end},<br>poker hand changes<br>on every payout`,
         rarity:1,
         price:4
     },
     {
         id:61,
         name:"Cavendish",
-        text:`${text_prod}X3${text_end} Mult<br>${text_prob}1 in 1000${text_end} chance this<br>card is destroy<br>at end of round`,
+        text:`${text_prod}X3${text_end} Mult<br>${text_prob}1 in 1000${text_end} chance this<br>card is destroyed<br>at end of round`,
         rarity:1,
         price:4
     },
@@ -481,21 +498,21 @@ const jokers = [
     {
         id:64,
         name:"Madness",
-        text:`When ${text_num}Blind${text_end} is selected,<br>gain ${text_prod}X0.5${text_end} Mult and<br>${text_num}destroy${text_end} a random Joker<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end})${text_end}`,
+        text:`When ${text_num}Blind${text_end} is selected,<br>gain ${text_prod}X0.5${text_end} Mult and<br>${text_num}destroy${text_end} a random Joker<br>${text_more}(Currently ${text_prod}X${1 + jokerValue * 0.5}${text_end} Mult)${text_end}`,
         rarity:2,
         price:7
     },
     {
         id:65,
         name:"Square Joker",
-        text:`Gain ${text_chip}+4${text_end} Chips if<br>played hand has<br>exactly ${text_num}4${text_end} card<br>${text_more}(Currently ${text_chip}+${16 + jokerValue * 4}${text_end} Chips)${text_end}`,
+        text:`Gain ${text_chip}+4${text_end} Chips if<br>played hand has<br>exactly ${text_num}4${text_end} cards<br>${text_more}(Currently ${text_chip}+${16 + jokerValue * 4}${text_end} Chips)${text_end}`,
         rarity:1,
         price:5
     },
     {
         id:66,
         name:"Séance",
-        text:`If ${text_num}poker hand${text_end} is a<br>${text_num}Straight Flush${text_end}, craeate a<br>random ${text_spectral}Spectral${text_end} card<br>${text_more}(Must have room)${text_end}`,
+        text:`If ${text_num}poker hand${text_end} is a<br>${text_num}Straight Flush${text_end}, create a<br>random ${text_spectral}Spectral${text_end} card<br>${text_more}(Must have room)${text_end}`,
         rarity:3,
         price:7
     },
@@ -558,7 +575,7 @@ const jokers = [
     {
         id:75,
         name:"Obelisk",
-        text:`${text_prod}X0.2${text_end} Mult per<br>consecutive hand played<br>without playing your<br>must played ${text_num}poker hand${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}`,
+        text:`${text_prod}X0.2${text_end} Mult per<br>consecutive hand played<br>without playing your<br>most played ${text_num}poker hand${text_end}<br>${text_more}(Currently ${text_prod}X${(10 + jokerValue * 2) / 10}${text_end} Mult)${text_end}`,
         rarity:3,
         price:8
     },
@@ -600,7 +617,7 @@ const jokers = [
     {
         id:81,
         name:"Erosion",
-        text:`${text_mult}+4${text_end} Mult for each<br>card below ${text_num}52${text_end}<br>in your full deck<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue * 4}${text_end})${text_end}`,
+        text:`${text_mult}+4${text_end} Mult for each<br>card below ${text_num}52${text_end}<br>in your full deck<br>${text_more}(Currently ${text_mult}${jokerValue >= 0 ? "+" : ""}${jokerValue * 4}${text_end} Mult)${text_end}`,
         rarity:2,
         price:6
     },
@@ -635,7 +652,7 @@ const jokers = [
     {
         id:86,
         name:"Fortune Teller",
-        text:`${text_mult}+1${text_end} Mult per ${text_tarot}Tarot${text_end}<br>card used this run<br>${text_more}(Currently ${text_mult}${jokerValue}${text_end})${text_end}`,
+        text:`${text_mult}+1${text_end} Mult per ${text_tarot}Tarot${text_end}<br>card used this run<br>${text_more}(Currently ${text_mult}+${jokerValue}${text_end})${text_end}`,
         rarity:1,
         price:6
     },
@@ -656,7 +673,7 @@ const jokers = [
     {
         id:89,
         name:"Stone Joker",
-        text:`This Joker gains ${text_chip}+25${text_end} Chips<br>for each ${text_num}Stone Card${text_end} in your full deck<br>${text_more}(Currently ${text_chip}+${25*jokerValue}${text_end} Chips)${text_end}`,
+        text:`This Joker gains ${text_chip}+25${text_end} Chips<br>for each ${text_num}Stone Card${text_end}<br>in your full deck<br>${text_more}(Currently ${text_chip}+${25*jokerValue}${text_end} Chips)${text_end}`,
         rarity:2,
         price:6
     },
@@ -726,7 +743,7 @@ const jokers = [
     {
         id:99,
         name:"Ancient Joker",
-        text:`Each played card with<br>${[`${text_heart}Heart${text_end}`, `${text_club}Club${text_end}`, `${text_diamond}Diamond${text_end}`, `${text_spade}Spade${text_end}`][Math.abs(jokerValue) % 4]} suit gives<br>${text_prod}X1.5${text_end} Mult when scored<br>${text_more}suit changes at end of round${text_end}`,
+        text:`Each played card with<br>${[`${text_heart}Heart${text_end}`, `${text_club}Club${text_end}`, `${text_diamond}Diamond${text_end}`, `${text_spade}Spade${text_end}`][Math.abs(jokerValue) % 4]} suit gives<br>${text_prod}X1.5${text_end} Mult when scored,<br>${text_mini}suit changes at end of round${text_end}`,
         rarity:3,
         price:8
     },
@@ -803,7 +820,7 @@ const jokers = [
     {
         id:110,
         name:"Swashbuckler",
-        text:`Adds the sell value of<br>all owned ${text_num}Jokers${text_end} left<br>of this card to Mult`,
+        text:`Adds the sell value of<br>all owned ${text_num}Jokers${text_end} left<br>of this card to Mult<br>${text_more}(Currently ${text_mult}+${jokerValue + 1}${text_end} Mult)${text_end}`,
         rarity:1,
         price:4
     },
@@ -824,7 +841,7 @@ const jokers = [
     {
         id:113,
         name:"Smeared Joker",
-        text:`${text_heart}Heart${text_end} and ${text_diamond}Diamond${text_end}<br>count as the same suit,<br>${text_spade}Spade${text_end} and ${text_club}Club${text_end}<br>count as the same suit`,
+        text:`${text_heart}Hearts${text_end} and ${text_diamond}Diamonds${text_end}<br>count as the same suit,<br>${text_spade}Spades${text_end} and ${text_club}Clubs${text_end}<br>count as the same suit`,
         rarity:2,
         price:7
     },
@@ -915,21 +932,21 @@ const jokers = [
     {
         id:126,
         name:"Oops! All 6s",
-        text:`Double all ${text_num}listed${text_end}<br>${text_prob}probabilities${text_end}<br>${text_more}(ex: ${text_prob}1 in 3${text_end} -> ${text_prob}2 in 3${text_end})${text_end}`,
+        text:`Doubles all ${text_num}listed${text_end}<br>${text_prob}probabilities${text_end}<br>${text_more}(ex: ${text_prob}1 in 3${text_end} -> ${text_prob}2 in 3${text_end})${text_end}`,
         rarity:2,
         price:4
     },
     {
         id:127,
         name:"The Idol",
-        text:`Each played ${text_num}${ranks[Math.abs(jokerValue % 13)]}${text_end}<br>of ${[`${text_heart}Hearts${text_end}`, `${text_club}Clubs${text_end}`, `${text_diamond}Diamonds${text_end}`, `${text_spade}Spades${text_end}`][Math.abs(jokerValue) % 4]} gives<br>${text_prod}X2${text_end} Mult when scored<br>${text_more}Card changes every round${text_end}`,
+        text:`Each played ${text_num}${ranks[Math.abs(jokerValue % 13)]}${text_end}<br>of ${[`${text_heart}Hearts${text_end}`, `${text_club}Clubs${text_end}`, `${text_diamond}Diamonds${text_end}`, `${text_spade}Spades${text_end}`][Math.abs(jokerValue) % 4]} gives<br>${text_prod}X2${text_end} Mult when scored<br>${text_mini}Card changes every round${text_end}`,
         rarity:2,
         price:6
     },
     {
         id:128,
         name:"Seeing Double",
-        text:`${text_prod}X2${text_end} Mult if played<br>hand has a scoring<br>Club card and a scoring<br>card of any other ${text_num}suit${text_end}`,
+        text:`${text_prod}X2${text_end} Mult if played<br>hand has a scoring<br>${text_club}Clubs${text_end} card and a scoring<br>card of any other ${text_num}suit${text_end}`,
         rarity:2,
         price:6
     },
@@ -999,14 +1016,14 @@ const jokers = [
     {
         id:138,
         name:"Brainstorm",
-        text:`Copies the ability<br>of the leftmost Joker`,
+        text:`Copies the ability<br>of leftmost ${text_num}Joker${text_end}`,
         rarity:3,
         price:10
     },
     {
         id:139,
         name:"Satellite",
-        text:`Earn ${text_money}$1${text_end} at the end of<br>round per unique ${text_planet}Planet${text_end}<br>card used this run<br>${text_more}(Currently ${text_money}$${jokerValue}${text_end})${text_end}`,
+        text:`Earn ${text_money}$1${text_end} at end of<br>round per unique ${text_planet}Planet${text_end}<br>card used this run<br>${text_more}(Currently ${text_money}$${jokerValue}${text_end})${text_end}`,
         rarity:2,
         price:6
     },
@@ -1048,7 +1065,7 @@ const jokers = [
     {
         id:145,
         name:"Bootstraps",
-        text:`${text_mult}+2${text_end} Mult for every<br>${text_money}$5${text_end} you have<br>${text_more}(Currently ${text_mult}+${jokerValue * 2}${text_end} Mult)${text_end}`,
+        text:`${text_mult}+2${text_end} Mult for every<br>${text_money}$5${text_end} you have`,
         rarity:2,
         price:7
     },
@@ -1069,7 +1086,7 @@ const jokers = [
     {
         id:148,
         name:"Yorick",
-        text:`${text_prod}X5${text_end} Mult only after<br>using 23 discards<br>${text_more}(Discards left ${text_num}${jokerValue}${text_end})${text_end}`,
+        text:`${text_prod}X5${text_end} Mult only after<br>using ${text_num}23${text_end} discards<br>${text_more}(Discards left: ${text_num}${23 - jokerValue}${text_end})${text_end}`,
         rarity:4,
         price:0
     },
