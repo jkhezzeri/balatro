@@ -1113,9 +1113,79 @@ const jokers = [
 
 
 
-
-
-
-
+const planets = [
+    {
+        id:1,
+        name:"Mercury",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:2,
+        name:"Venus",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:3,
+        name:"Earth",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:4,
+        name:"Mars",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:5,
+        name:"Jupiter",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:6,
+        name:"Saturn",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:7,
+        name:"Uranus",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:8,
+        name:"Neptune",
+        text:``,
+        tag:"Planet"
+    },
+    {
+        id:9,
+        name:"Pluto",
+        text:``,
+        tag:"Dwarf Planet"
+    },
+    {
+        id:10,
+        name:"Planet X",
+        text:``,
+        tag:"Planet?"
+    },
+    {
+        id:11,
+        name:"Ceres",
+        text:``,
+        tag:"Dwarf Planet"
+    },
+    {
+        id:12,
+        name:"Eris",
+        text:``,
+        tag:"Dwarf Planet"
+    }
+];
 
 

@@ -165,10 +165,10 @@ footer .imgLogo {
     transform: translateY(4px);
 }
 
-#content {
-    /* padding-top: 100px; */
-    /* display: flex;     */
-}
+/* #content {
+    padding-top: 100px;
+    display: flex;    
+} */
 
 nav {
     margin: 24px 0;
