@@ -20,6 +20,7 @@ const text_tarot = "<span class='textTarot'>";
 const text_planet = "<span class='textPlanet'>";
 const text_spectral = "<span class='textSpectral'>";
 
+const text_legendary = "<span class='textLegendary'>";
 const text_negative = "<span class='textNegative'>";
 
 const text_end = "</span>";
@@ -1297,5 +1298,112 @@ const planets = [
         tag:"Dwarf Planet"
     }
 ];
+
+
+
+const spectrals = [
+    {
+        id:1,
+        name:"Familiar",
+        text:`Destroy 1 random card in your hand, but add 3 random Enhanced face cards instead`
+    },
+    {
+        id:2,
+        name:"Grim",
+        text:`Destroy 1 random card in your hand, but add 2 random Enhanced Aces instead`
+    },
+    {
+        id:3,
+        name:"Incantation",
+        text:`Destroy 1 random card in your hand, but add 4 random Enhanced numbered cards instead`
+    },
+    {
+        id:4,
+        name:"Talisman",
+        text:`Adds a Gold Seal to 1 selected card`
+    },
+    {
+        id:5,
+        name:"Aura",
+        text:`Adds a Foil, Holographic, or Polychrome edition to 1 selected card in hand`
+    },
+    {
+        id:6,
+        name:"Wraith",
+        text:`Creates a random Rare Joker (must have room), but sets money to $0`
+    },
+    {
+        id:7,
+        name:"Sigil",
+        text:`Converts every card in your hand to a single, random Suit`
+    },
+    {
+        id:8,
+        name:"Ouija",
+        text:`Converts every card in your hand to a single, random Rank, but reduces total hand size by 1`
+    },
+    {
+        id:9,
+        name:"Ectoplasm",
+        text:`Adds Negative to a random Joker, but reduces total hand size by 1`
+    },
+    {
+        id:10,
+        name:"Immolate",
+        text:`Destroys 5 random cards in hand, but gain $20`
+    },
+    {
+        id:11,
+        name:"Ankh",
+        text:`Creates a copy of 1 of your Jokers at random, then destroys the others`
+    },
+    {
+        id:12,
+        name:"Deja Vu",
+        text:`Adds a Red Seal to 1 selected card`
+    },
+    {
+        id:13,
+        name:"Hex",
+        text:`Adds Polychrome to a random Joker, and destroys the rest`
+    },
+    {
+        id:14,
+        name:"Trance",
+        text:`Adds a Blue Seal to 1 selected card`
+    },
+    {
+        id:15,
+        name:"Medium",
+        text:`Adds a Purple Seal to 1 selected card`
+    },
+    {
+        id:16,
+        name:"Cryptid",
+        text:`Creates 2 exact copies of a selected card in your hand`
+    },
+    {
+        id:17,
+        name:"The Soul",
+        text:`Creates a Legendary Joker<br>(Must have room)`
+    },
+    {
+        id:18,
+        name:"Black Hole",
+        text:`Upgrades every poker hand by one level`
+    }
+];
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -504,6 +504,10 @@ section {
     color: var(--spectral);
 }
 
+.textLegendary {
+    color: var(--legendary);
+}
+
 .textNegative {
     animation: negative-color 6s infinite;
 }
@@ -574,7 +578,7 @@ section {
 
 
 
-.tarotsSlide li {
+.tarotsSlide li, .spectralsSlide li {
     display: flex;
     justify-content: center;
 }

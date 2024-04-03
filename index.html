@@ -24,9 +24,9 @@
                     <a href="" draggable="false">Hands</a>
                 </li>
                 <li>
-                    <a href="" draggable="false">Tarots</a>
+                    <a href="#tarots" draggable="false">Tarots</a>
                     <a href="#planets" draggable="false">Planets</a>
-                    <a href="" draggable="false">Spectrals</a>
+                    <a href="#spectrals" draggable="false">Spectrals</a>
                 </li>
                 <li>
                     <a href="" draggable="false">Enhancements</a>
@@ -76,6 +76,17 @@
             <div class="section">
                 <div id="planetsData"></div>
                 <a href="" class="link" title="Planets" draggable="false">Planets Page</a>
+            </div>
+        </section>
+        <section id="spectrals">
+            <div class="section">
+                <div id="spectralsData"></div>
+                <div id="spectralsPagination" class="pagination">
+                    <div id="spectralsPrev" class="arrowPage" onclick="changeSpectralsSlide(-1)"><</div>
+                    <div id="spectralsPage" class="currentPage">Page <span id="pageSpectrals"></span>/<span id="pagesSpectrals"></span></div>
+                    <div id="spectralsNext" class="arrowPage" onclick="changeSpectralsSlide(1)">></div>
+                </div>
+                <a href="" class="link" title="Spectrals" draggable="false">Spectrals Page</a>
             </div>
         </section>
     </div>

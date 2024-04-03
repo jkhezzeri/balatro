@@ -232,3 +232,92 @@ planets.forEach(planet => {
 
 
 
+const spectrals_data = document.querySelector("#spectralsData");
+
+
+
+const ul_spectrals = document.createElement("ul");
+ul_spectrals.classList.add("spectralsSlide");
+const li_spectrals = document.createElement("li");
+spectrals_data.appendChild(ul_spectrals);
+ul_spectrals.appendChild(li_spectrals);
+
+spectrals.forEach(spectral => {
+    
+    let spectral_div = document.createElement("div");
+    spectral_div.classList.add("spectral");
+    
+    let img = document.createElement("img");
+    let img_name = spectral.name.replaceAll(" ", "_");
+    img.src = "assets/spectrals/"+img_name+".webp";
+    img.alt = spectral.name;
+
+//     let popup = document.createElement("span");
+//     popup.classList.add("popup");
+
+//     let popup_name = document.createElement("div");
+//     popup_name.classList.add("popupName");
+//     popup_name.innerText = tarot.name;
+//     popup.appendChild(popup_name);
+
+//     let popup_text = document.createElement("div");
+//     popup_text.classList.add("popupText");
+//     let tarot_text = document.createElement("span")
+//     tarot_text.classList.add("tarotText");
+//     tarot_text.innerHTML = tarot.text;
+//     popup_text.appendChild(tarot_text);
+//     popup.appendChild(popup_text);
+
+//     let popup_tag = document.createElement("div");
+//     popup_tag.classList.add("tagPrimary");
+//     popup_tag.classList.add("tagTarot");
+//     popup_tag.innerText = "Tarot";
+//     popup.appendChild(popup_tag);
+    
+    if (spectral.id == 5 || spectral.id == 10 || spectral.id == 14) {
+        if (spectral.id == 10) {
+            spectrals_data.appendChild(document.createElement("ul"));
+            spectrals_data.lastChild.classList.add("spectralsSlide");
+        }
+        spectrals_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    spectral_div.appendChild(img);
+//     spectral_div.appendChild(popup);
+
+    spectrals_data.lastChild.lastChild.appendChild(spectral_div);
+});
+
+
+
+const spectrals_slide = document.querySelectorAll(".spectralsSlide");
+const page_spectrals = document.querySelector("#pageSpectrals");
+const pages_spectrals = document.querySelector("#pagesSpectrals");
+
+
+spectrals_slide.forEach(slide => {
+    slide.style.display = "none";
+});
+spectrals_slide[0].style.display = "flex";
+page_spectrals.innerHTML = 1;
+pages_spectrals.innerHTML = spectrals_slide.length;
+
+
+function changeSpectralsSlide(page) {
+    let current_page_spectrals = parseInt(page_spectrals.innerHTML);
+    spectrals_slide[current_page_spectrals-1].style.display = "none";
+    if (current_page_spectrals + page == 0) {
+        current_page_spectrals = spectrals_slide.length;
+    } else if (current_page_spectrals + page > spectrals_slide.length) {
+        current_page_spectrals = 1;
+    } else {
+        current_page_spectrals = current_page_spectrals + page;
+    }
+    page_spectrals.innerHTML = current_page_spectrals;
+    spectrals_slide[current_page_spectrals-1].style.display = "flex";
+}
+
+
+
+
+
