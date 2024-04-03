@@ -1117,73 +1117,73 @@ const planets = [
     {
         id:1,
         name:"Mercury",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Pair${text_end}<br>${text_mult}+1${text_end} Mult and<br>${text_chip}+15${text_end} chips`,
         tag:"Planet"
     },
     {
         id:2,
         name:"Venus",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Three of a Kind${text_end}<br>${text_mult}+2${text_end} Mult and<br>${text_chip}+20${text_end} chips`,
         tag:"Planet"
     },
     {
         id:3,
         name:"Earth",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Full House${text_end}<br>${text_mult}+2${text_end} Mult and<br>${text_chip}+25${text_end} chips`,
         tag:"Planet"
     },
     {
         id:4,
         name:"Mars",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Four of a Kind${text_end}<br>${text_mult}+3${text_end} Mult and<br>${text_chip}+30${text_end} chips`,
         tag:"Planet"
     },
     {
         id:5,
         name:"Jupiter",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Flush${text_end}<br>${text_mult}+2${text_end} Mult and<br>${text_chip}+15${text_end} chips`,
         tag:"Planet"
     },
     {
         id:6,
         name:"Saturn",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Straight${text_end}<br>${text_mult}+2${text_end} Mult and<br>${text_chip}+30${text_end} chips`,
         tag:"Planet"
     },
     {
         id:7,
         name:"Uranus",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Two Pair${text_end}<br>${text_mult}+1${text_end} Mult and<br>${text_chip}+20${text_end} chips`,
         tag:"Planet"
     },
     {
         id:8,
         name:"Neptune",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Straight Flush${text_end}<br>${text_mult}+3${text_end} Mult and<br>${text_chip}+40${text_end} chips`,
         tag:"Planet"
     },
     {
         id:9,
         name:"Pluto",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}High Card${text_end}<br>${text_mult}+1${text_end} Mult and<br>${text_chip}+10${text_end} chips`,
         tag:"Dwarf Planet"
     },
     {
         id:10,
         name:"Planet X",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Five of a Kind${text_end}<br>${text_mult}+3${text_end} Mult and<br>${text_chip}+35${text_end} chips`,
         tag:"Planet?"
     },
     {
         id:11,
         name:"Ceres",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Flush House${text_end}<br>${text_mult}+3${text_end} Mult and<br>${text_chip}+40${text_end} chips`,
         tag:"Dwarf Planet"
     },
     {
         id:12,
         name:"Eris",
-        text:``,
+        text:`(lvl1) Level up<br>${text_num}Flush Five${text_end}<br>${text_mult}+3${text_end} Mult and<br>${text_chip}+40${text_end} chips`,
         tag:"Dwarf Planet"
     }
 ];

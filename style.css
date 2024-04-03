@@ -1,3 +1,5 @@
+/* Variables */
+
 :root {
 
     --white: #ffffff;
@@ -40,6 +42,8 @@
     --popup-mini-background: #677b7e;
 
 }
+
+/* Global */
 
 html {
     background-image: url("assets/background.webp");
@@ -88,6 +92,8 @@ li {
     display: flex;
 }
 
+/* Header */
+
 header {
     width: 100%;
     height: 100px;
@@ -135,6 +141,8 @@ header .imgLogo {
     height: 80px;
 }
 
+/* Footer */
+
 footer {
     width: 100%;
     height: 100px;
@@ -164,6 +172,8 @@ footer .imgLogo {
     box-shadow: transparent 0 0 0 0;
     transform: translateY(4px);
 }
+
+/* Content */
 
 /* #content {
     padding-top: 100px;
@@ -359,8 +369,9 @@ section {
 
 .tagPrimary {
     font-size: 32px;
-    width: 160px;
+    min-width: 140px;
     height: 40px;
+    padding: 0 8px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -368,12 +379,27 @@ section {
 }
 
 .tagSecondary {
-    width: 160px;
+    min-width: 140px;
     height: 30px;
+    padding: 0 8px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+.tagPrimary.tagTarot {
+    background-color: var(--tarot);
+}
+
+.tagPrimary.tagPlanet {
+    background-color: var(--planet);
+}
+
+.tagPrimary.tagSpectral {
+    background-color: var(--spectral);
 }
 
 
@@ -543,4 +569,26 @@ section {
     box-shadow: transparent 0 0 0 0;
     transform: translateY(4px);
 }
+
+
+
+
+
+
+
+
+
+.planet {
+    position: relative;
+}
+
+.planet img:hover + .popup {
+    visibility: visible;
+}
+
+.planetText {
+    width: 100%;
+    line-height: 26px;
+}
+
 
