@@ -574,19 +574,25 @@ section {
 
 
 
+.tarotsSlide li {
+    display: flex;
+    justify-content: center;
+}
 
 
 
 
-.planet {
+
+
+.tarot, .planet {
     position: relative;
 }
 
-.planet img:hover + .popup {
+.tarot img:hover + .popup, .planet img:hover + .popup {
     visibility: visible;
 }
 
-.planetText {
+.tarotText, .planetText {
     width: 100%;
     line-height: 26px;
 }

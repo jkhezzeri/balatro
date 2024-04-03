@@ -1111,113 +1111,113 @@ const jokers = [
 const tarots = [
     {
         id:1,
-        name:"",
-        text:``
+        name:"The Fool",
+        text:`Creates the last<br>${text_tarot}Tarot${text_end} or ${text_planet}Planet${text_end} card<br>used during this run<br>${text_mini}${text_tarot}The Fool${text_end} excluded${text_end}`
     },
     {
         id:2,
-        name:"",
-        text:``
+        name:"The Magician",
+        text:`Enhances ${text_num}1${text_end} selected<br>card into a<br>${text_num}Lucky Card${text_end}`
     },
     {
         id:3,
-        name:"",
-        text:``
+        name:"The High Priestess",
+        text:`Creates up to 2<br>random ${text_planet}Planet${text_end} cards<br>${text_more}(Must have room)${text_end}`
     },
     {
         id:4,
-        name:"",
-        text:``
+        name:"The Empress",
+        text:`Enhances ${text_num}2${text_end}<br>selected cards to<br>${text_num}Mult Cards${text_end}`
     },
     {
         id:5,
-        name:"",
-        text:``
+        name:"The Emperor",
+        text:`Creates up to 2<br>random ${text_tarot}Tarot${text_end} cards<br>${text_more}(Must have room)${text_end}`
     },
     {
         id:6,
-        name:"",
-        text:``
+        name:"The Hierophant",
+        text:`Enhances ${text_num}2${text_end}<br>selected cards to<br>${text_num}Bonus Cards${text_end}`
     },
     {
         id:7,
-        name:"",
-        text:``
+        name:"The Lovers",
+        text:`Enhances ${text_num}1${text_end} selected<br>card into a<br>${text_num}Wild Card${text_end}`
     },
     {
         id:8,
-        name:"",
-        text:``
+        name:"The Chariot",
+        text:`Enhances ${text_num}1${text_end} selected<br>card into a<br>${text_num}Steel Card${text_end}`
     },
     {
         id:9,
-        name:"",
-        text:``
+        name:"Justice",
+        text:`Enhances ${text_num}1${text_end} selected<br>card into a<br>${text_num}Glass Card${text_end}`
     },
     {
         id:10,
-        name:"",
-        text:``
+        name:"The Hermit",
+        text:`Doubles money<br>${text_more}(Max of ${text_money}$20${text_end})${text_end}`
     },
     {
         id:11,
-        name:"",
-        text:``
+        name:"The Wheel of Fortune",
+        text:`${text_prob}1 in 4${text_end} chance to add<br>${text_negative}Foil${text_end}, ${text_negative}Holographic${text_end}, or<br>${text_negative}Polychrome${text_end} edition<br>to a random ${text_num}Joker${text_end}`
     },
     {
         id:12,
-        name:"",
-        text:``
+        name:"Strength",
+        text:`Increases rank of<br>up to ${text_num}2${text_end} selected<br>cards by ${text_num}1${text_end}`
     },
     {
         id:13,
-        name:"",
-        text:``
+        name:"The Hanged Man",
+        text:`Destroys up to<br>${text_num}2${text_end} selected cards`
     },
     {
         id:14,
-        name:"",
-        text:``
+        name:"Death",
+        text:`Select ${text_num}2${text_end} cards,<br>convert the ${text_num}left${text_end} card<br>into the ${text_num}right${text_end} card<br>${text_more}(Drag to rearrange)${text_end}`
     },
     {
         id:15,
-        name:"",
-        text:``
+        name:"Temperance",
+        text:`Gives the total sell<br>value of all current<br>Jokers ${text_more}(Max of ${text_money}$50${text_end})${text_end}<br>${text_more}(Currently ${text_money}$0${text_end})${text_end}`
     },
     {
         id:16,
-        name:"",
-        text:``
+        name:"The Devil",
+        text:`Enhances ${text_num}1${text_end} selected<br>card into a<br>${text_num}Gold Card${text_end}`
     },
     {
         id:17,
-        name:"",
-        text:``
+        name:"The Tower",
+        text:`Enhances ${text_num}1${text_end} selected<br>card into a<br>${text_num}Stone Card${text_end}`
     },
     {
         id:18,
-        name:"",
-        text:``
+        name:"The Star",
+        text:`Converts up to<br>3 selected cards<br>to ${text_diamond}Diamonds${text_end}`
     },
     {
         id:19,
-        name:"",
-        text:``
+        name:"The Moon",
+        text:`Converts up to<br>3 selected cards<br>to ${text_club}Clubs${text_end}`
     },
     {
         id:20,
-        name:"",
-        text:``
+        name:"The Sun",
+        text:`Converts up to<br>3 selected cards<br>to ${text_heart}Hearts${text_end}`
     },
     {
         id:21,
-        name:"",
-        text:``
+        name:"Judgement",
+        text:`Creates a random<br>${text_num}Joker${text_end} card<br>${text_more}(Must have room)${text_end}`
     },
     {
         id:22,
-        name:"",
-        text:``
+        name:"The World",
+        text:`Converts up to<br>3 selected cards<br>to ${text_spade}Spades${text_end}`
     }
 ];
 

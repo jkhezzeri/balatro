@@ -89,6 +89,92 @@ function changeJokersSlide(page) {
 
 
 
+const tarots_data = document.querySelector("#tarotsData");
+
+
+
+const ul_tarots = document.createElement("ul");
+ul_tarots.classList.add("tarotsSlide");
+const li_tarots = document.createElement("li");
+tarots_data.appendChild(ul_tarots);
+ul_tarots.appendChild(li_tarots);
+
+tarots.forEach(tarot => {
+    
+    let tarot_div = document.createElement("div");
+    tarot_div.classList.add("tarot");
+    
+    let img = document.createElement("img");
+    let img_name = tarot.name.replaceAll(" ", "_");
+    img.src = "assets/tarots/"+img_name+".webp";
+    img.alt = tarot.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = tarot.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let tarot_text = document.createElement("span")
+    tarot_text.classList.add("tarotText");
+    tarot_text.innerHTML = tarot.text;
+    popup_text.appendChild(tarot_text);
+    popup.appendChild(popup_text);
+
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagPrimary");
+    popup_tag.classList.add("tagTarot");
+    popup_tag.innerText = "Tarot";
+    popup.appendChild(popup_tag);
+    
+    if (tarot.id == 6 || tarot.id == 12 || tarot.id == 17) {
+        if (tarot.id == 12) {
+            tarots_data.appendChild(document.createElement("ul"));
+            tarots_data.lastChild.classList.add("tarotsSlide");
+        }
+        tarots_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    tarot_div.appendChild(img);
+    tarot_div.appendChild(popup);
+
+    tarots_data.lastChild.lastChild.appendChild(tarot_div);
+});
+
+
+
+const tarots_slide = document.querySelectorAll(".tarotsSlide");
+const page_tarots = document.querySelector("#pageTarots");
+const pages_tarots = document.querySelector("#pagesTarots");
+
+
+tarots_slide.forEach(slide => {
+    slide.style.display = "none";
+});
+tarots_slide[0].style.display = "flex";
+page_tarots.innerHTML = 1;
+pages_tarots.innerHTML = tarots_slide.length;
+
+
+function changeTarotsSlide(page) {
+    let current_page_tarots = parseInt(page_tarots.innerHTML);
+    tarots_slide[current_page_tarots-1].style.display = "none";
+    if (current_page_tarots + page == 0) {
+        current_page_tarots = tarots_slide.length;
+    } else if (current_page_tarots + page > tarots_slide.length) {
+        current_page_tarots = 1;
+    } else {
+        current_page_tarots = current_page_tarots + page;
+    }
+    page_tarots.innerHTML = current_page_tarots;
+    tarots_slide[current_page_tarots-1].style.display = "flex";
+}
+
+
 
 
 const planets_data = document.querySelector("#planetsData");
@@ -96,7 +182,6 @@ const planets_data = document.querySelector("#planetsData");
 
 
 const ul_planets = document.createElement("ul");
-ul_planets.classList.add("planetsSlide");
 const li_planets = document.createElement("li");
 planets_data.appendChild(ul_planets);
 ul_planets.appendChild(li_planets);
