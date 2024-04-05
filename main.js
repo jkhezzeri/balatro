@@ -321,3 +321,67 @@ function changeSpectralsSlide(page) {
 
 
 
+
+const seals_data = document.querySelector("#sealsData");
+
+
+
+const ul_seals = document.createElement("ul");
+const li_seals = document.createElement("li");
+seals_data.appendChild(ul_seals);
+ul_seals.appendChild(li_seals);
+
+
+
+seals.forEach(seal => {
+    
+    let seal_div = document.createElement("div");
+    seal_div.classList.add("seal");
+    
+    let img = document.createElement("img");
+    let img_name = seal.name.replaceAll(" ", "_");
+    img.src = "assets/seals/"+img_name+".webp";
+    img.alt = seal.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = seal.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let seal_text = document.createElement("span")
+    seal_text.classList.add("sealText");
+    seal_text.innerHTML = seal.text;
+    popup_text.appendChild(seal_text);
+    popup.appendChild(popup_text);
+
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagSecondary");
+    switch (seal.id) {
+        case 1:
+            popup_tag.classList.add("sealGold");
+            break;
+        case 2:
+            popup_tag.classList.add("rare");
+            break;
+        case 3:
+            popup_tag.classList.add("common");
+            break;
+        case 4:
+            popup_tag.classList.add("sealPurple");
+            break;
+    }
+    popup_tag.classList.add("tagSeal");
+    popup_tag.innerText = seal.name;
+    popup.appendChild(popup_tag);
+
+    seal_div.appendChild(img);
+    seal_div.appendChild(popup);
+
+    seals_data.lastChild.lastChild.appendChild(seal_div);
+});
+

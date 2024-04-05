@@ -588,15 +588,15 @@ section {
 
 
 
-.tarot, .planet, .spectral {
+.tarot, .planet, .spectral, .seal {
     position: relative;
 }
 
-.tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup {
+.tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .seal img:hover + .popup {
     visibility: visible;
 }
 
-.tarotText, .planetText, .spectralText {
+.tarotText, .planetText, .spectralText, .sealText {
     width: 100%;
     line-height: 26px;
 }

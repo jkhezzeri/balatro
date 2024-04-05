@@ -1400,7 +1400,28 @@ const spectrals = [
 
 
 
-
+const seals = [
+    {
+        id:1,
+        name:"Gold Seal",
+        text:`Earn ${text_money}$3${text_end} when this<br>card is played<br>and scores`
+    },
+    {
+        id:2,
+        name:"Red Seal",
+        text:`Retrigger this<br>card ${text_num}1${text_end} time`
+    },
+    {
+        id:3,
+        name:"Blue Seal",
+        text:`Creates a ${text_planet}Planet${text_end} card<br>if this card is ${text_num}held${text_end} in<br>hand at end of round`
+    },
+    {
+        id:4,
+        name:"Purple Seal",
+        text:`Creates a ${text_tarot}Tarot${text_end} card<br>when ${text_num}discarded${text_end}<br>${text_more}(Must have room)${text_end}`
+    }
+];
 
 
 
