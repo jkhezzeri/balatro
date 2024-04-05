@@ -252,27 +252,27 @@ spectrals.forEach(spectral => {
     img.src = "assets/spectrals/"+img_name+".webp";
     img.alt = spectral.name;
 
-//     let popup = document.createElement("span");
-//     popup.classList.add("popup");
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
 
-//     let popup_name = document.createElement("div");
-//     popup_name.classList.add("popupName");
-//     popup_name.innerText = tarot.name;
-//     popup.appendChild(popup_name);
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = spectral.name;
+    popup.appendChild(popup_name);
 
-//     let popup_text = document.createElement("div");
-//     popup_text.classList.add("popupText");
-//     let tarot_text = document.createElement("span")
-//     tarot_text.classList.add("tarotText");
-//     tarot_text.innerHTML = tarot.text;
-//     popup_text.appendChild(tarot_text);
-//     popup.appendChild(popup_text);
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let spectral_text = document.createElement("span")
+    spectral_text.classList.add("spectralText");
+    spectral_text.innerHTML = spectral.text;
+    popup_text.appendChild(spectral_text);
+    popup.appendChild(popup_text);
 
-//     let popup_tag = document.createElement("div");
-//     popup_tag.classList.add("tagPrimary");
-//     popup_tag.classList.add("tagTarot");
-//     popup_tag.innerText = "Tarot";
-//     popup.appendChild(popup_tag);
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagPrimary");
+    popup_tag.classList.add("tagSpectral");
+    popup_tag.innerText = "Spectral";
+    popup.appendChild(popup_tag);
     
     if (spectral.id == 5 || spectral.id == 10 || spectral.id == 14) {
         if (spectral.id == 10) {
@@ -283,7 +283,7 @@ spectrals.forEach(spectral => {
     }
 
     spectral_div.appendChild(img);
-//     spectral_div.appendChild(popup);
+    spectral_div.appendChild(popup);
 
     spectrals_data.lastChild.lastChild.appendChild(spectral_div);
 });

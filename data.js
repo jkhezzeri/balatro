@@ -1305,92 +1305,92 @@ const spectrals = [
     {
         id:1,
         name:"Familiar",
-        text:`Destroy 1 random card in your hand, but add 3 random Enhanced face cards instead`
+        text:`Destroy ${text_num}1${text_end} random<br>card in your hand, add<br>${text_num}3${text_end} random ${text_num}Enhanced face<br>cards${text_end} to your hand`
     },
     {
         id:2,
         name:"Grim",
-        text:`Destroy 1 random card in your hand, but add 2 random Enhanced Aces instead`
+        text:`Destroy ${text_num}1${text_end} random<br>card in your hand,<br>add ${text_num}2${text_end} random ${text_num}Enhanced<br>Aces${text_end} to your hand`
     },
     {
         id:3,
         name:"Incantation",
-        text:`Destroy 1 random card in your hand, but add 4 random Enhanced numbered cards instead`
+        text:`Destroy ${text_num}1${text_end} random<br>card in your hand, add ${text_num}4${text_end}<br>random ${text_num}Enhanced numbered<br>cards${text_end} to your hand`
     },
     {
         id:4,
         name:"Talisman",
-        text:`Adds a Gold Seal to 1 selected card`
+        text:`Add a ${text_num}Gold Seal${text_end}<br>to ${text_num}1${text_end} selected<br>card in your hand`
     },
     {
         id:5,
         name:"Aura",
-        text:`Adds a Foil, Holographic, or Polychrome edition to 1 selected card in hand`
+        text:`Add ${text_negative}Foil${text_end}, ${text_negative}Holographic${text_end},<br>or ${text_negative}Polychrome${text_end} effect to<br>${text_num}1${text_end} selected card in hand`
     },
     {
         id:6,
         name:"Wraith",
-        text:`Creates a random Rare Joker (must have room), but sets money to $0`
+        text:`Creates a random<br>${text_mult}Rare${text_end} ${text_num}Joker${text_end},<br>sets money to ${text_money}$0${text_end}`
     },
     {
         id:7,
         name:"Sigil",
-        text:`Converts every card in your hand to a single, random Suit`
+        text:`Converts all cards<br>in hand to a single<br>random ${text_num}suit${text_end}`
     },
     {
         id:8,
         name:"Ouija",
-        text:`Converts every card in your hand to a single, random Rank, but reduces total hand size by 1`
+        text:`Converts all cards<br>in hand to a single<br>random ${text_num}rank${text_end}<br>${text_mult}-1${text_end} hand size`
     },
     {
         id:9,
         name:"Ectoplasm",
-        text:`Adds Negative to a random Joker, but reduces total hand size by 1`
+        text:`Add ${text_negative}Negative${text_end} to<br>a random ${text_num}Joker${text_end},<br>${text_mult}-1${text_end} hand size`
     },
     {
         id:10,
         name:"Immolate",
-        text:`Destroys 5 random cards in hand, but gain $20`
+        text:`Destroys ${text_num}5${text_end} random cards in hand, gain ${text_money}$20${text_end}`
     },
     {
         id:11,
         name:"Ankh",
-        text:`Creates a copy of 1 of your Jokers at random, then destroys the others`
+        text:`Create a copy of a<br>random ${text_num}Joker${text_end}, destroy<br>all other Jokers`
     },
     {
         id:12,
         name:"Deja Vu",
-        text:`Adds a Red Seal to 1 selected card`
+        text:`Add a ${text_mult}Red${text_end} Seal<br>to ${text_num}1${text_end} selected<br>card in your hand`
     },
     {
         id:13,
         name:"Hex",
-        text:`Adds Polychrome to a random Joker, and destroys the rest`
+        text:`Add ${text_negative}Polychrome${text_end} to a<br>random ${text_num}Joker${text_end}, destroy<br>all other Jokers`
     },
     {
         id:14,
         name:"Trance",
-        text:`Adds a Blue Seal to 1 selected card`
+        text:`Add a ${text_chip}Blue Seal${text_end}<br>to ${text_num}1${text_end} selected<br>card in your hand`
     },
     {
         id:15,
         name:"Medium",
-        text:`Adds a Purple Seal to 1 selected card`
+        text:`Add a ${text_legendary}Purple Seal${text_end}<br>to ${text_num}1${text_end} selected<br>card in your hand`
     },
     {
         id:16,
         name:"Cryptid",
-        text:`Creates 2 exact copies of a selected card in your hand`
+        text:`Create ${text_num}2${text_end} copies of<br>${text_num}1${text_end} selected card<br>in your hand`
     },
     {
         id:17,
         name:"The Soul",
-        text:`Creates a Legendary Joker<br>(Must have room)`
+        text:`Creates a<br>${text_legendary}Legendary${text_end} Joker<br>${text_more}(Must have room)${text_end}`
     },
     {
         id:18,
         name:"Black Hole",
-        text:`Upgrades every poker hand by one level`
+        text:`Upgrade every<br>${text_legendary}poker hand${text_end}<br>by ${text_num}1${text_end} level`
     }
 ];
 
