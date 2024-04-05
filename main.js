@@ -320,6 +320,55 @@ function changeSpectralsSlide(page) {
 
 
 
+const enhancements_data = document.querySelector("#enhancementsData");
+
+
+
+const ul_enhancements = document.createElement("ul");
+const li_enhancements = document.createElement("li");
+enhancements_data.appendChild(ul_enhancements);
+ul_enhancements.appendChild(li_enhancements);
+
+
+
+enhancements.forEach(enhancement => {
+    
+    let enhancement_div = document.createElement("div");
+    enhancement_div.classList.add("enhancement");
+    
+    let img = document.createElement("img");
+    let img_name = enhancement.name.replaceAll(" ", "_");
+    img.src = "assets/enhancements/"+img_name+".webp";
+    img.alt = enhancement.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let enhancement_text = document.createElement("span")
+    enhancement_text.classList.add("enhancementText");
+    enhancement_text.innerHTML = enhancement.text;
+    popup_text.appendChild(enhancement_text);
+    popup.appendChild(popup_text);
+
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagPrimary");
+    popup_tag.classList.add("tagEnhancement");
+    popup_tag.innerText = enhancement.name;
+    popup.appendChild(popup_tag);
+    
+    if (enhancement.id == 5) {
+        enhancements_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    enhancement_div.appendChild(img);
+    enhancement_div.appendChild(popup);
+
+    enhancements_data.lastChild.lastChild.appendChild(enhancement_div);
+});
+
+
 
 
 const seals_data = document.querySelector("#sealsData");

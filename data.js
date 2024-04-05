@@ -1396,8 +1396,48 @@ const spectrals = [
 
 
 
-
-
+const enhancements = [
+    {
+        id:1,
+        name:"Bonus Card",
+        text:``
+    },
+    {
+        id:2,
+        name:"Mult Card",
+        text:``
+    },
+    {
+        id:3,
+        name:"Wild Card",
+        text:``
+    },
+    {
+        id:4,
+        name:"Glass Card",
+        text:``
+    },
+    {
+        id:5,
+        name:"Steel Card",
+        text:``
+    },
+    {
+        id:6,
+        name:"Stone Card",
+        text:``
+    },
+    {
+        id:7,
+        name:"Gold Card",
+        text:``
+    },
+    {
+        id:8,
+        name:"Lucky Card",
+        text:``
+    }
+];
 
 
 const seals = [

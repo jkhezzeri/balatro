@@ -296,7 +296,7 @@ section {
 
 
 
-.joker {
+.joker, .enhancement {
     width: 142px;
     height: 190px;
     position: relative;
@@ -305,7 +305,7 @@ section {
 
 
 
-.joker img {
+.joker img, .enhancement img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -340,10 +340,6 @@ section {
     cursor: pointer;
 }
   
-.joker img:hover + .popup {
-    visibility: visible;
-}
-  
 .popupName {
     font-size: 40px;
     padding: 0 8px;
@@ -360,11 +356,6 @@ section {
     min-height: 60px;
     color: var(--black);
     background-color: var(--white);
-}
-    
-.jokerText {
-    width: 100%;
-    line-height: 26px;
 }
 
 .tagPrimary {
@@ -420,15 +411,15 @@ section {
     background-color: var(--legendary);
 }
 
-.voucher {
+.TagVoucher {
     background-color: var(--voucher);
 }
 
-.booster {
+.tagBooster {
     background-color: var(--booster);
 }
 
-.enhancement {
+.tagEnhancement {
     background-color: var(--enhancement);
 }
 
@@ -592,11 +583,11 @@ section {
     position: relative;
 }
 
-.tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .seal img:hover + .popup {
+.joker img:hover + .popup, .tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .enhancement img:hover + .popup, .seal img:hover + .popup {
     visibility: visible;
 }
 
-.tarotText, .planetText, .spectralText, .sealText {
+.jokerText, .tarotText, .planetText, .spectralText, .enhancementText, .sealText {
     width: 100%;
     line-height: 26px;
 }
