@@ -1400,42 +1400,42 @@ const enhancements = [
     {
         id:1,
         name:"Bonus Card",
-        text:``
+        text:`${text_chip}+30${text_end} extra chips`
     },
     {
         id:2,
         name:"Mult Card",
-        text:``
+        text:`${text_mult}+4${text_end} Mult`
     },
     {
         id:3,
         name:"Wild Card",
-        text:``
+        text:`Can be used<br>as any suit`
     },
     {
         id:4,
         name:"Glass Card",
-        text:``
+        text:`${text_prod}X2${text_end} Mult<br>${text_prob}1 in 4${text_end} chance to<br>destroy card`
     },
     {
         id:5,
         name:"Steel Card",
-        text:``
+        text:`${text_prod}X1.5${text_end} Mult<br>while this card<br>stays in hand`
     },
     {
         id:6,
         name:"Stone Card",
-        text:``
+        text:`${text_chip}+50${text_end} Chips<br>no rank or suit`
     },
     {
         id:7,
         name:"Gold Card",
-        text:``
+        text:`${text_money}$3${text_end} if this<br>card is held in hand<br>at end of round`
     },
     {
         id:8,
         name:"Lucky Card",
-        text:``
+        text:`${text_prob}1 in 5${text_end} chance<br>for ${text_mult}+20${text_end} Mult<br>${text_prob}1 in 15${text_end} chance<br>to win ${text_money}$20${text_end}`
     }
 ];
 
