@@ -579,15 +579,16 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal, .edition {
+.tarot, .planet, .spectral, .seal, .edition, .booster {
     position: relative;
 }
 
-.joker img:hover + .popup, .tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .enhancement img:hover + .popup, .seal img:hover + .popup, .edition img:hover + .popup {
+.joker img:hover + .popup, .tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .enhancement img:hover + .popup, .seal img:hover + .popup,
+.edition img:hover + .popup, .booster img:hover + .popup {
     visibility: visible;
 }
 
-.jokerText, .tarotText, .planetText, .spectralText, .enhancementText, .sealText, .editionText {
+.jokerText, .tarotText, .planetText, .spectralText, .enhancementText, .sealText, .editionText, .boosterText {
     width: 100%;
     line-height: 26px;
 }

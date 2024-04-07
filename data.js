@@ -1492,3 +1492,177 @@ const editions = [
 ];
 
 
+
+
+
+const boosters = [
+    {
+        id:1,
+        name:"Arcana Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:2,
+        name:"Arcana Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:3,
+        name:"Arcana Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:4,
+        name:"Arcana Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:5,
+        name:"Jumbo Arcana Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}5${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:6,
+        name:"Jumbo Arcana Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}5${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:7,
+        name:"Mega Arcana Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}5${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:8,
+        name:"Mega Arcana Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}5${text_end} ${text_tarot}Tarot${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:9,
+        name:"Celestial Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:10,
+        name:"Celestial Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:11,
+        name:"Celestial Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:12,
+        name:"Celestial Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:13,
+        name:"Jumbo Celestial Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}5${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:14,
+        name:"Jumbo Celestial Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}5${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:15,
+        name:"Mega Celestial Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}5${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:16,
+        name:"Mega Celestial Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}5${text_end} ${text_planet}Planet${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:17,
+        name:"Standard Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:18,
+        name:"Standard Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:19,
+        name:"Standard Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:20,
+        name:"Standard Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}3 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:21,
+        name:"Jumbo Standard Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}5 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:22,
+        name:"Jumbo Standard Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}5 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:23,
+        name:"Mega Standard Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}5 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:24,
+        name:"Mega Standard Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}5 Playing${text_end} cards to<br>add to your deck`
+    },
+    {
+        id:25,
+        name:"Buffoon Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}2${text_end} Joker cards`
+    },
+    {
+        id:26,
+        name:"Buffoon Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}2${text_end} Joker cards`
+    },
+    {
+        id:27,
+        name:"Jumbo Buffoon Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}4${text_end} Joker cards`
+    },
+    {
+        id:28,
+        name:"Mega Buffoon Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}4${text_end} Joker cards`
+    },
+    {
+        id:29,
+        name:"Spectral Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}2${text_end} ${text_spectral}Spectral${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:30,
+        name:"Spectral Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}2${text_end} ${text_spectral}Spectral${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:31,
+        name:"Jumbo Spectral Pack",
+        text:`Choose ${text_num}1${text_end} of up to<br>${text_num}4${text_end} ${text_spectral}Spectral${text_end} cards to<br>be used immediately`
+    },
+    {
+        id:32,
+        name:"Mega Spectral Pack",
+        text:`Choose ${text_num}2${text_end} of up to<br>${text_num}4${text_end} ${text_spectral}Spectral${text_end} cards to<br>be used immediately`
+    }
+];
+
+
+
+
+
+
+
+
+

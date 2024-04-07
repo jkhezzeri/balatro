@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <a href="" draggable="false">Vouchers</a>
-                    <a href="" draggable="false">Boosters</a>
+                    <a href="#boosters" draggable="false">Boosters</a>
                     <a href="" draggable="false">Tags</a>
                 </li>
                 <li>
@@ -105,6 +105,17 @@
             <div class="section">
                 <div id="editionsData"></div>
                 <a href="" class="link" title="Editions" draggable="false">Editions Page</a>
+            </div>
+        </section>
+        <section id="boosters">
+            <div class="section">
+                <div id="boostersData"></div>
+                <div id="boostersPagination" class="pagination">
+                    <div id="boostersPrev" class="arrowPage" onclick="changeBoostersSlide(-1)"><</div>
+                    <div id="boostersPage" class="currentPage">Page <span id="pageBoosters"></span>/<span id="pagesBoosters"></span></div>
+                    <div id="boostersNext" class="arrowPage" onclick="changeBoostersSlide(1)">></div>
+                </div>
+                <a href="" class="link" title="Boosters" draggable="false">Boosters Page</a>
             </div>
         </section>
     </div>

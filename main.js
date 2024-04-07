@@ -42,7 +42,7 @@ jokers.forEach(joker => {
     popup.appendChild(popup_rarity);
     
     if (joker.id % 5 == 1 && joker.id != 1) {
-        if (joker.id % 15 == 1 && joker.id != 1) {
+        if (joker.id % 15 == 1) {
             jokers_data.appendChild(document.createElement("ul"));
             jokers_data.lastChild.classList.add("jokersSlide");
         }
@@ -490,5 +490,123 @@ editions.forEach(edition => {
 
     editions_data.lastChild.lastChild.appendChild(edition_div);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const boosters_data = document.querySelector("#boostersData");
+
+
+
+const ul_boosters = document.createElement("ul");
+ul_boosters.classList.add("boostersSlide");
+const li_boosters = document.createElement("li");
+boosters_data.appendChild(ul_boosters);
+ul_boosters.appendChild(li_boosters);
+
+let temp_booster_name = "";
+let i_booster = 1;
+
+boosters.forEach(booster => {
+    
+    let booster_div = document.createElement("div");
+    booster_div.classList.add("booster");
+    
+    let img = document.createElement("img");
+
+    if (temp_booster_name == booster.name) {
+        i_booster ++;
+    } else {
+        temp_booster_name = booster.name;
+        i_booster = 1;
+    }
+
+    let img_name = booster.name.replaceAll(" ", "_");
+    img.src = "assets/boosters/"+img_name+"_"+i_booster+".webp";
+    img.alt = booster.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = booster.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let booster_text = document.createElement("span")
+    booster_text.classList.add("boosterText");
+    booster_text.innerHTML = booster.text;
+    popup_text.appendChild(booster_text);
+    popup.appendChild(popup_text);
+
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagPrimary");
+    popup_tag.classList.add("tagBooster");
+    popup_tag.innerText = "Booster";
+    popup.appendChild(popup_tag);
+    
+    if (booster.id % 4 == 1 && booster.id != 1) {
+        if (booster.id % 8 == 1) {
+            boosters_data.appendChild(document.createElement("ul"));
+            boosters_data.lastChild.classList.add("boostersSlide");
+        }
+        boosters_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    booster_div.appendChild(img);
+    booster_div.appendChild(popup);
+
+    boosters_data.lastChild.lastChild.appendChild(booster_div);
+});
+
+
+
+const boosters_slide = document.querySelectorAll(".boostersSlide");
+const page_boosters = document.querySelector("#pageBoosters");
+const pages_boosters = document.querySelector("#pagesBoosters");
+
+
+boosters_slide.forEach(slide => {
+    slide.style.display = "none";
+});
+boosters_slide[0].style.display = "flex";
+page_boosters.innerHTML = 1;
+pages_boosters.innerHTML = boosters_slide.length;
+
+
+function changeBoostersSlide(page) {
+    let current_page_boosters = parseInt(page_boosters.innerHTML);
+    boosters_slide[current_page_boosters-1].style.display = "none";
+    if (current_page_boosters + page == 0) {
+        current_page_boosters = boosters_slide.length;
+    } else if (current_page_boosters + page > boosters_slide.length) {
+        current_page_boosters = 1;
+    } else {
+        current_page_boosters = current_page_boosters + page;
+    }
+    page_boosters.innerHTML = current_page_boosters;
+    boosters_slide[current_page_boosters-1].style.display = "flex";
+}
+
+
+
+
+
+
+
+
+
 
 
