@@ -411,7 +411,7 @@ section {
     background-color: var(--legendary);
 }
 
-.TagVoucher {
+.tagVoucher {
     background-color: var(--voucher);
 }
 
@@ -579,15 +579,15 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal {
+.tarot, .planet, .spectral, .seal, .edition {
     position: relative;
 }
 
-.joker img:hover + .popup, .tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .enhancement img:hover + .popup, .seal img:hover + .popup {
+.joker img:hover + .popup, .tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .enhancement img:hover + .popup, .seal img:hover + .popup, .edition img:hover + .popup {
     visibility: visible;
 }
 
-.jokerText, .tarotText, .planetText, .spectralText, .enhancementText, .sealText {
+.jokerText, .tarotText, .planetText, .spectralText, .enhancementText, .sealText, .editionText {
     width: 100%;
     line-height: 26px;
 }

@@ -434,3 +434,61 @@ seals.forEach(seal => {
     seals_data.lastChild.lastChild.appendChild(seal_div);
 });
 
+const editions_data = document.querySelector("#editionsData");
+
+
+
+const ul_editions = document.createElement("ul");
+const li_editions = document.createElement("li");
+editions_data.appendChild(ul_editions);
+ul_editions.appendChild(li_editions);
+
+
+
+editions.forEach(edition => {
+    
+    let edition_div = document.createElement("div");
+    edition_div.classList.add("edition");
+    
+    let img = document.createElement("img");
+    let img_name = edition.name.replaceAll(" ", "_");
+    img.src = "assets/editions/"+img_name+".webp";
+    img.alt = edition.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = edition.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let edition_text = document.createElement("span")
+    edition_text.classList.add("editionText");
+    edition_text.innerHTML = edition.text;
+    popup_text.appendChild(edition_text);
+    popup.appendChild(popup_text);
+
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagPrimary");
+    popup_tag.classList.add("negative");
+    popup_tag.innerText = "Edition";
+    popup.appendChild(popup_tag);
+
+    if (edition.id != 1) {
+        let secondary_tag = document.createElement("div");
+        secondary_tag.classList.add("tagSecondary");
+        secondary_tag.classList.add("negative");
+        secondary_tag.innerText = edition.name;
+        popup.appendChild(secondary_tag);
+    }
+
+    edition_div.appendChild(img);
+    edition_div.appendChild(popup);
+
+    editions_data.lastChild.lastChild.appendChild(edition_div);
+});
+
+

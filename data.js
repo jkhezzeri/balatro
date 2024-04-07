@@ -1463,8 +1463,32 @@ const seals = [
     }
 ];
 
-
-
-
+const editions = [
+    {
+        id:1,
+        name:"Base",
+        text:`No extra effects`
+    },
+    {
+        id:2,
+        name:"Foil",
+        text:`${text_chip}+50${text_end} chips`
+    },
+    {
+        id:3,
+        name:"Holographic",
+        text:`${text_mult}+10${text_end} Mult`
+    },
+    {
+        id:4,
+        name:"Polychrome",
+        text:`${text_prod}x1.5${text_end} Mult`
+    },
+    {
+        id:5,
+        name:"Negative",
+        text:`${text_negative}+1${text_end} Joker slot`
+    }
+];
 
 
