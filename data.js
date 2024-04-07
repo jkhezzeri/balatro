@@ -1495,6 +1495,174 @@ const editions = [
 
 
 
+
+
+
+
+
+const vouchers = [
+    {
+        id:1,
+        name:"Overstock",
+        text:``
+    },
+    {
+        id:2,
+        name:"Overstock Plus",
+        text:``
+    },
+    {
+        id:3,
+        name:"Clearance Sale",
+        text:``
+    },
+    {
+        id:4,
+        name:"Liquidation",
+        text:``
+    },
+    {
+        id:5,
+        name:"Hone",
+        text:``
+    },
+    {
+        id:6,
+        name:"Glow Up",
+        text:``
+    },
+    {
+        id:7,
+        name:"Reroll Surplus",
+        text:``
+    },
+    {
+        id:8,
+        name:"Reroll Glut",
+        text:``
+    },
+    {
+        id:9,
+        name:"Crystal Ball",
+        text:``
+    },
+    {
+        id:10,
+        name:"Omen Globe",
+        text:``
+    },
+    {
+        id:11,
+        name:"Telescope",
+        text:``
+    },
+    {
+        id:12,
+        name:"Observatory",
+        text:``
+    },
+    {
+        id:13,
+        name:"Grabber",
+        text:``
+    },
+    {
+        id:14,
+        name:"Nacho Tong",
+        text:``
+    },
+    {
+        id:15,
+        name:"Wasteful",
+        text:``
+    },
+    {
+        id:16,
+        name:"Recyclomancy",
+        text:``
+    },
+    {
+        id:17,
+        name:"Tarot Merchant",
+        text:``
+    },
+    {
+        id:18,
+        name:"Tarot Tycoon",
+        text:``
+    },
+    {
+        id:19,
+        name:"Planet Merchant",
+        text:``
+    },
+    {
+        id:20,
+        name:"Planet Tycoon",
+        text:``
+    },
+    {
+        id:21,
+        name:"Seed Money",
+        text:``
+    },
+    {
+        id:22,
+        name:"Money Tree",
+        text:``
+    },
+    {
+        id:23,
+        name:"Blank",
+        text:``
+    },
+    {
+        id:24,
+        name:"Antimatter",
+        text:``
+    },
+    {
+        id:25,
+        name:"Magic Trick",
+        text:``
+    },
+    {
+        id:26,
+        name:"Illusion",
+        text:``
+    },
+    {
+        id:27,
+        name:"Hieroglyph",
+        text:``
+    },
+    {
+        id:28,
+        name:"Petroglyph",
+        text:``
+    },
+    {
+        id:29,
+        name:"Director's Cut",
+        text:``
+    },
+    {
+        id:30,
+        name:"Retcon",
+        text:``
+    },
+    {
+        id:31,
+        name:"Paint Brush",
+        text:``
+    },
+    {
+        id:32,
+        name:"Palette",
+        text:``
+    }
+];
+
 const boosters = [
     {
         id:1,

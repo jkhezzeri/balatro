@@ -500,7 +500,96 @@ editions.forEach(edition => {
 
 
 
+const vouchers_data = document.querySelector("#vouchersData");
 
+
+
+const ul_vouchers = document.createElement("ul");
+ul_vouchers.classList.add("vouchersSlide");
+const li_vouchers = document.createElement("li");
+vouchers_data.appendChild(ul_vouchers);
+ul_vouchers.appendChild(li_vouchers);
+
+vouchers.forEach(voucher => {
+    
+    let voucher_div = document.createElement("div");
+    voucher_div.classList.add("voucher");
+    
+    let img = document.createElement("img");
+    let img_name = voucher.name.replaceAll(" ", "_");
+    img.src = "assets/vouchers/"+img_name+".webp";
+    img.alt = voucher.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = voucher.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let voucher_text = document.createElement("span")
+    voucher_text.classList.add("voucherText");
+    voucher_text.innerHTML = voucher.text;
+    popup_text.appendChild(voucher_text);
+    popup.appendChild(popup_text);
+
+    let popup_tag = document.createElement("div");
+    popup_tag.classList.add("tagPrimary");
+    popup_tag.classList.add("tagVoucher");
+    popup_tag.innerText = "Voucher";
+    popup.appendChild(popup_tag);
+    
+    if (voucher.id % 4 == 1 && voucher.id != 1) {
+        if (voucher.id % 8 == 1) {
+            vouchers_data.appendChild(document.createElement("ul"));
+            vouchers_data.lastChild.classList.add("vouchersSlide");
+        }
+        vouchers_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    voucher_div.appendChild(img);
+    voucher_div.appendChild(popup);
+
+    vouchers_data.lastChild.lastChild.appendChild(voucher_div);
+
+    if (voucher.id % 4 == 2) {
+        let voucher_separator = document.createElement("div");
+        voucher_separator.classList.add("voucherSeparator");
+        vouchers_data.lastChild.lastChild.appendChild(voucher_separator);
+    }
+});
+
+
+
+const vouchers_slide = document.querySelectorAll(".vouchersSlide");
+const page_vouchers = document.querySelector("#pageVouchers");
+const pages_vouchers = document.querySelector("#pagesVouchers");
+
+
+vouchers_slide.forEach(slide => {
+    slide.style.display = "none";
+});
+vouchers_slide[0].style.display = "flex";
+page_vouchers.innerHTML = 1;
+pages_vouchers.innerHTML = vouchers_slide.length;
+
+
+function changeVouchersSlide(page) {
+    let current_page_vouchers = parseInt(page_vouchers.innerHTML);
+    vouchers_slide[current_page_vouchers-1].style.display = "none";
+    if (current_page_vouchers + page == 0) {
+        current_page_vouchers = vouchers_slide.length;
+    } else if (current_page_vouchers + page > vouchers_slide.length) {
+        current_page_vouchers = 1;
+    } else {
+        current_page_vouchers = current_page_vouchers + page;
+    }
+    page_vouchers.innerHTML = current_page_vouchers;
+    vouchers_slide[current_page_vouchers-1].style.display = "flex";
+}
 
 
 
