@@ -21,6 +21,7 @@ const text_planet = "<span class='textPlanet'>";
 const text_spectral = "<span class='textSpectral'>";
 
 const text_legendary = "<span class='textLegendary'>";
+const text_enhancement = "<span class='textEnhancement'>";
 const text_negative = "<span class='textNegative'>";
 
 const text_end = "</span>";
@@ -1504,162 +1505,162 @@ const vouchers = [
     {
         id:1,
         name:"Overstock",
-        text:``
+        text:`${text_num}+1${text_end} card slot<br>available in shop`
     },
     {
         id:2,
         name:"Overstock Plus",
-        text:``
+        text:`${text_num}+1${text_end} card slot<br>available in shop`
     },
     {
         id:3,
         name:"Clearance Sale",
-        text:``
+        text:`All cards and packs in<br>shop are ${text_num}25%${text_end} off`
     },
     {
         id:4,
         name:"Liquidation",
-        text:``
+        text:`All cards and packs in<br>shop are ${text_num}50%${text_end} off`
     },
     {
         id:5,
         name:"Hone",
-        text:``
+        text:`${text_negative}Foil${text_end}, ${text_negative}Holographic${text_end}, and<br>${text_negative}Polychrome${text_end} cards<br>appear ${text_num}2X${text_end} more often`
     },
     {
         id:6,
         name:"Glow Up",
-        text:``
+        text:`${text_negative}Foil${text_end}, ${text_negative}Holographic${text_end}, and<br>${text_negative}Polychrome${text_end} cards<br>appear ${text_num}4X${text_end} more often`
     },
     {
         id:7,
         name:"Reroll Surplus",
-        text:``
+        text:`Rerolls cost<br> ${text_money}$2${text_end} less`
     },
     {
         id:8,
         name:"Reroll Glut",
-        text:``
+        text:`Rerolls cost<br> ${text_money}$2${text_end} less`
     },
     {
         id:9,
         name:"Crystal Ball",
-        text:``
+        text:`${text_num}+1${text_end} consumable slot`
     },
     {
         id:10,
         name:"Omen Globe",
-        text:``
+        text:`${text_spectral}Spectral${text_end} cards may<br>appear in any of<br>the ${text_num}Arcana Packs${text_end}`
     },
     {
         id:11,
         name:"Telescope",
-        text:``
+        text:`${text_num}Celestial Packs${text_end} always<br>contain the ${text_planet}Planet${text_end}<br>card for your most<br>played ${text_num}poker hand${text_end}`
     },
     {
         id:12,
         name:"Observatory",
-        text:``
+        text:`${text_planet}Planet${text_end} cards in your<br>${text_num}consumable${text_end} area give<br>${text_prod}X1.5${text_end} Mult for their<br>specified ${text_num}poker hand${text_end}`
     },
     {
         id:13,
         name:"Grabber",
-        text:``
+        text:`Permanently<br>gain ${text_chip}+1${text_end} hand<br> per round`
     },
     {
         id:14,
         name:"Nacho Tong",
-        text:``
+        text:`Permanently<br>gain ${text_chip}+1${text_end} hand<br> per round`
     },
     {
         id:15,
         name:"Wasteful",
-        text:``
+        text:`Permanently<br>gain ${text_mult}+1${text_end} discard<br> per round`
     },
     {
         id:16,
         name:"Recyclomancy",
-        text:``
+        text:`Permanently<br>gain ${text_mult}+1${text_end} discard<br> per round`
     },
     {
         id:17,
         name:"Tarot Merchant",
-        text:``
+        text:`${text_tarot}Tarot${text_end} cards appear<br>${text_num}2X${text_end} more frequently<br> in the shop`
     },
     {
         id:18,
         name:"Tarot Tycoon",
-        text:``
+        text:`${text_tarot}Tarot${text_end} cards appear<br>${text_num}4X${text_end} more frequently<br> in the shop`
     },
     {
         id:19,
         name:"Planet Merchant",
-        text:``
+        text:`${text_planet}Planet${text_end} cards appear<br>${text_num}2X${text_end} more frequently<br> in the shop`
     },
     {
         id:20,
         name:"Planet Tycoon",
-        text:``
+        text:`${text_planet}Planet${text_end} cards appear<br>${text_num}4X${text_end} more frequently<br> in the shop`
     },
     {
         id:21,
         name:"Seed Money",
-        text:``
+        text:`Raise the cap on<br>interest earned<br>per round to ${text_money}$10${text_end}`
     },
     {
         id:22,
         name:"Money Tree",
-        text:``
+        text:`Raise the cap on<br>interest earned<br>per round to ${text_money}$20${text_end}`
     },
     {
         id:23,
         name:"Blank",
-        text:``
+        text:`${text_more}Does nothing?${text_end}`
     },
     {
         id:24,
         name:"Antimatter",
-        text:``
+        text:`${text_negative}+1${text_end} Joker Slot`
     },
     {
         id:25,
         name:"Magic Trick",
-        text:``
+        text:`${text_num}Playing cards${text_end} can<br>be purchased<br> from the ${text_num}shop${text_end}`
     },
     {
         id:26,
         name:"Illusion",
-        text:``
+        text:`${text_num}Playing cards${text_end} in shop<br>may have an ${text_enhancement}Enhancement${text_end},<br>${text_negative}Edition${text_end}, and/or a ${text_num}Seal${text_end}`
     },
     {
         id:27,
         name:"Hieroglyph",
-        text:``
+        text:`${text_num}-1${text_end} Ante,<br>${text_chip}-1${text_end} hand<br>per round`
     },
     {
         id:28,
         name:"Petroglyph",
-        text:``
+        text:`${text_num}-1${text_end} Ante,<br>${text_mult}-1${text_end} discard<br>per round`
     },
     {
         id:29,
         name:"Director's Cut",
-        text:``
+        text:`Reroll Boss Blind<br>${text_num}1${text_end} time per Ante,<br>${text_money}$10${text_end} per roll`
     },
     {
         id:30,
         name:"Retcon",
-        text:``
+        text:`Reroll Boss Blind<br>${text_num}unlimited${text_end} times,<br>${text_money}$10${text_end} per roll`
     },
     {
         id:31,
         name:"Paint Brush",
-        text:``
+        text:`${text_num}+1${text_end} hand size`
     },
     {
         id:32,
         name:"Palette",
-        text:``
+        text:`${text_num}+1${text_end} hand size`
     }
 ];
 

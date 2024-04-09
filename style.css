@@ -499,6 +499,10 @@ section {
     color: var(--legendary);
 }
 
+.textEnhancement {
+    color: var(--enhancement);
+}
+
 .textNegative {
     animation: negative-color 6s infinite;
 }
