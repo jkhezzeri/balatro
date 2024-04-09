@@ -30,7 +30,7 @@ jokers.forEach(joker => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let joker_text = document.createElement("span")
-    joker_text.classList.add("jokerText");
+    joker_text.classList.add("popupEffect");
     joker_text.innerHTML = joker.text;
     popup_text.appendChild(joker_text);
     popup.appendChild(popup_text);
@@ -120,7 +120,7 @@ tarots.forEach(tarot => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let tarot_text = document.createElement("span")
-    tarot_text.classList.add("tarotText");
+    tarot_text.classList.add("popupEffect");
     tarot_text.innerHTML = tarot.text;
     popup_text.appendChild(tarot_text);
     popup.appendChild(popup_text);
@@ -209,7 +209,7 @@ planets.forEach(planet => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let planet_text = document.createElement("span")
-    planet_text.classList.add("planetText");
+    planet_text.classList.add("popupEffect");
     planet_text.innerHTML = planet.text;
     popup_text.appendChild(planet_text);
     popup.appendChild(popup_text);
@@ -263,7 +263,7 @@ spectrals.forEach(spectral => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let spectral_text = document.createElement("span")
-    spectral_text.classList.add("spectralText");
+    spectral_text.classList.add("popupEffect");
     spectral_text.innerHTML = spectral.text;
     popup_text.appendChild(spectral_text);
     popup.appendChild(popup_text);
@@ -347,7 +347,7 @@ enhancements.forEach(enhancement => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let enhancement_text = document.createElement("span")
-    enhancement_text.classList.add("enhancementText");
+    enhancement_text.classList.add("popupEffect");
     enhancement_text.innerHTML = enhancement.text;
     popup_text.appendChild(enhancement_text);
     popup.appendChild(popup_text);
@@ -403,7 +403,7 @@ seals.forEach(seal => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let seal_text = document.createElement("span")
-    seal_text.classList.add("sealText");
+    seal_text.classList.add("popupEffect");
     seal_text.innerHTML = seal.text;
     popup_text.appendChild(seal_text);
     popup.appendChild(popup_text);
@@ -466,7 +466,7 @@ editions.forEach(edition => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let edition_text = document.createElement("span")
-    edition_text.classList.add("editionText");
+    edition_text.classList.add("popupEffect");
     edition_text.innerHTML = edition.text;
     popup_text.appendChild(edition_text);
     popup.appendChild(popup_text);
@@ -531,7 +531,7 @@ vouchers.forEach(voucher => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let voucher_text = document.createElement("span")
-    voucher_text.classList.add("voucherText");
+    voucher_text.classList.add("popupEffect");
     voucher_text.innerHTML = voucher.text;
     popup_text.appendChild(voucher_text);
     popup.appendChild(popup_text);
@@ -635,7 +635,7 @@ boosters.forEach(booster => {
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
     let booster_text = document.createElement("span")
-    booster_text.classList.add("boosterText");
+    booster_text.classList.add("popupEffect");
     booster_text.innerHTML = booster.text;
     popup_text.appendChild(booster_text);
     popup.appendChild(popup_text);
@@ -691,7 +691,51 @@ function changeBoostersSlide(page) {
 
 
 
+const tags_data = document.querySelector("#tagsData");
 
+
+
+const ul_tags = document.createElement("ul");
+ul_tags.classList.add("tagsSlide");
+const li_tags = document.createElement("li");
+tags_data.appendChild(ul_tags);
+ul_tags.appendChild(li_tags);
+
+tags.forEach(tag => {
+    
+    let tag_div = document.createElement("div");
+    tag_div.classList.add("tag");
+    
+    let img = document.createElement("img");
+    let img_name = tag.name.replaceAll(" ", "_");
+    img.src = "assets/tags/"+img_name+".webp";
+    img.alt = tag.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = tag.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let tag_text = document.createElement("span")
+    tag_text.classList.add("popupEffect");
+    tag_text.innerHTML = tag.text;
+    popup_text.appendChild(tag_text);
+    popup.appendChild(popup_text);
+    
+    if (tag.id % 6 == 1 && tag.id != 1) {
+        tags_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    tag_div.appendChild(img);
+    tag_div.appendChild(popup);
+
+    tags_data.lastChild.lastChild.appendChild(tag_div);
+});
 
 
 

@@ -336,6 +336,10 @@ section {
     z-index: 20;
 }
 
+.section img:hover + .popup {
+    visibility: visible;
+}
+
 .joker img:hover {
     cursor: pointer;
 }
@@ -356,6 +360,11 @@ section {
     min-height: 60px;
     color: var(--black);
     background-color: var(--white);
+}
+
+.popupEffect {
+    width: 100%;
+    line-height: 26px;
 }
 
 .tagPrimary {
@@ -584,18 +593,12 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster {
+.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster, .tag {
     position: relative;
 }
 
-.joker img:hover + .popup, .tarot img:hover + .popup, .planet img:hover + .popup, .spectral img:hover + .popup, .enhancement img:hover + .popup, .seal img:hover + .popup,
-.edition img:hover + .popup, .voucher img:hover + .popup, .booster img:hover + .popup {
-    visibility: visible;
-}
 
-.jokerText, .tarotText, .planetText, .spectralText, .enhancementText, .sealText, .editionText, .voucherText, .boosterText {
-    width: 100%;
-    line-height: 26px;
-}
+
+
 
 

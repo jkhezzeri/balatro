@@ -1827,9 +1827,128 @@ const boosters = [
     }
 ];
 
-
-
-
+const tags = [
+    {
+        id:1,
+        name:"Uncommon Tag",
+        text:``
+    },
+    {
+        id:2,
+        name:"Rare Tag",
+        text:``
+    },
+    {
+        id:3,
+        name:"Negative Tag",
+        text:``
+    },
+    {
+        id:4,
+        name:"Foil Tag",
+        text:``
+    },
+    {
+        id:5,
+        name:"Holographic Tag",
+        text:``
+    },
+    {
+        id:6,
+        name:"Polychrome Tag",
+        text:``
+    },
+    {
+        id:7,
+        name:"Investment Tag",
+        text:``
+    },
+    {
+        id:8,
+        name:"Voucher Tag",
+        text:``
+    },
+    {
+        id:9,
+        name:"Boss Tag",
+        text:``
+    },
+    {
+        id:10,
+        name:"Standard Tag",
+        text:``
+    },
+    {
+        id:11,
+        name:"Charm Tag",
+        text:``
+    },
+    {
+        id:12,
+        name:"Meteor Tag",
+        text:``
+    },
+    {
+        id:13,
+        name:"Buffoon Tag",
+        text:``
+    },
+    {
+        id:14,
+        name:"Handy Tag",
+        text:``
+    },
+    {
+        id:15,
+        name:"Garbage Tag",
+        text:``
+    },
+    {
+        id:16,
+        name:"Ethereal Tag",
+        text:``
+    },
+    {
+        id:17,
+        name:"Coupon Tag",
+        text:``
+    },
+    {
+        id:18,
+        name:"Double Tag",
+        text:``
+    },
+    {
+        id:19,
+        name:"Juggle Tag",
+        text:``
+    },
+    {
+        id:20,
+        name:"D6 Tag",
+        text:``
+    },
+    {
+        id:21,
+        name:"Top-up Tag",
+        text:``
+    },
+    {
+        id:22,
+        name:"Speed Tag",
+        text:``
+    },
+    {
+        id:23,
+        name:"Orbital Tag",
+        text:``
+    },
+    {
+        id:24,
+        name:"Economy Tag",
+        text:``
+    },
+];
 
 
 
