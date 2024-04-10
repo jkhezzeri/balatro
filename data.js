@@ -1831,122 +1831,122 @@ const tags = [
     {
         id:1,
         name:"Uncommon Tag",
-        text:``
+        text:`Shop has an<br>${text_prob}Uncommon Joker${text_end}`
     },
     {
         id:2,
         name:"Rare Tag",
-        text:``
+        text:`Shop has a<br>${text_mult}Rare Joker${text_end}`
     },
     {
         id:3,
         name:"Negative Tag",
-        text:``
+        text:`Next base edition shop<br>Joker becomes ${text_negative}Negative${text_end}`
     },
     {
         id:4,
         name:"Foil Tag",
-        text:``
+        text:`Next base edition shop<br>Joker becomes ${text_negative}Foil${text_end}`
     },
     {
         id:5,
         name:"Holographic Tag",
-        text:``
+        text:`Next base edition shop<br>Joker becomes ${text_negative}Holographic${text_end}`
     },
     {
         id:6,
         name:"Polychrome Tag",
-        text:``
+        text:`Next base edition shop<br>Joker becomes ${text_negative}Polychrome${text_end}`
     },
     {
         id:7,
         name:"Investment Tag",
-        text:``
+        text:`After defeating<br>the Boss Blind,<br>gain ${text_money}$15${text_end}`
     },
     {
         id:8,
         name:"Voucher Tag",
-        text:``
+        text:`Adds one Voucher<br>to the next shop`
     },
     {
         id:9,
         name:"Boss Tag",
-        text:``
+        text:`Rerolls the<br>${text_num}Boss Blind${text_end}`
     },
     {
         id:10,
         name:"Standard Tag",
-        text:``
+        text:`Gives a free<br>${text_num}Mega Standard Pack${text_end}`
     },
     {
         id:11,
         name:"Charm Tag",
-        text:``
+        text:`Gives a free<br>${text_tarot}Mega Arcana Pack${text_end}`
     },
     {
         id:12,
         name:"Meteor Tag",
-        text:``
+        text:`Gives a free<br>${text_planet}Mega Celestial Pack${text_end}`
     },
     {
         id:13,
         name:"Buffoon Tag",
-        text:``
+        text:`Gives a free<br>${text_num}Mega Buffoon Pack${text_end}`
     },
     {
         id:14,
         name:"Handy Tag",
-        text:``
+        text:`Gives ${text_money}$1${text_end} per played<br>${text_chip}hand${text_end} this run<br>${text_more}(Will give ${text_money}$0${text_end})${text_end}`
     },
     {
         id:15,
         name:"Garbage Tag",
-        text:``
+        text:`Gives ${text_money}$1${text_end} per unused<br>${text_mult}discard${text_end} this run<br>${text_more}(Will give ${text_money}$0${text_end})${text_end}`
     },
     {
         id:16,
         name:"Ethereal Tag",
-        text:``
+        text:`Gives a free<br>${text_spectral}Spectral Pack${text_end}`
     },
     {
         id:17,
         name:"Coupon Tag",
-        text:``
+        text:`Initial cards and<br>booster packs in next<br>shop are free`
     },
     {
         id:18,
         name:"Double Tag",
-        text:``
+        text:`Gives a copy of the<br>next selected ${text_num}Tag${text_end}<br>${text_mini}${text_num}Double Tag${text_end} excluded${text_end}`
     },
     {
         id:19,
         name:"Juggle Tag",
-        text:``
+        text:`${text_num}+3${text_end} hand size<br>next round`
     },
     {
         id:20,
         name:"D6 Tag",
-        text:``
+        text:`Rerolls in next shop<br>start at ${text_money}$0${text_end}`
     },
     {
         id:21,
         name:"Top-up Tag",
-        text:``
+        text:`Create up to ${text_num}2${text_end}<br>${text_chip}Common${text_end} Jokers<br>${text_more}(Must have room)${text_end}`
     },
     {
         id:22,
         name:"Speed Tag",
-        text:``
+        text:`Gives ${text_money}$5${text_end} per skipped<br>Blind this run<br>${text_more}(Will give ${text_money}$5${text_end})${text_end}`
     },
     {
         id:23,
         name:"Orbital Tag",
-        text:``
+        text:`Upgrade ${text_num}[poker hand]${text_end}<br>by ${text_num}3 levels${text_end}`
     },
     {
         id:24,
         name:"Economy Tag",
-        text:``
+        text:`Doubles your money<br>${text_more}(Max of ${text_money}$40${text_end})${text_end}`
     },
 ];
 
