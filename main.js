@@ -86,6 +86,71 @@ function changeJokersSlide(page) {
 
 
 
+const cards_data = document.querySelector("#cardsData");
+
+const ul_cards = document.createElement("ul");
+ul_cards.classList.add("cardsSlide");
+const li_cards = document.createElement("li");
+cards_data.appendChild(ul_cards);
+ul_cards.appendChild(li_cards);
+
+cards.forEach(card => {
+    
+    let card_div = document.createElement("div");
+    card_div.classList.add("card");
+    
+    let img = document.createElement("img");
+    let img_name = card.name.replaceAll(" ", "_");
+    img.src = "assets/cards/"+img_name+".webp";
+    img.alt = card.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("tagSecondary");
+
+    if (card.name.includes("Spades")) {
+        card.name = card.name.replace(" Spades", `&nbsp;${text_spade}Spades${text_end}`);
+    } else if (card.name.includes("Hearts")) {
+        card.name = card.name.replace(" Hearts", `&nbsp;${text_heart}Hearts${text_end}`);
+    } else if (card.name.includes("Clubs")) {
+        card.name = card.name.replace(" Clubs", `&nbsp;${text_club}Clubs${text_end}`);
+    } else if (card.name.includes("Diamonds")) {
+        card.name = card.name.replace(" Diamonds", `&nbsp;${text_diamond}Diamonds${text_end}`);
+    }
+
+    popup_name.innerHTML = card.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let card_text = document.createElement("span")
+    card_text.classList.add("popupEffect");
+
+    if (card.name.includes("Ace")) {
+        card_text.innerHTML = `${text_chip}+11${text_end} chips`;
+    } else if (card.name.includes("King") || card.name.includes("Queen") || card.name.includes("Jack") || card.name.includes("10")) {
+        card_text.innerHTML = `${text_chip}+10${text_end} chips`;
+    } else {
+        card_text.innerHTML = `${text_chip}+` + card.name.charAt(0) + `${text_end} chips`;
+    }
+
+    popup_text.appendChild(card_text);
+    popup.appendChild(popup_text);
+    
+    if (card.id % 13 == 1 && card.id != 1) {
+        cards_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    card_div.appendChild(img);
+    card_div.appendChild(popup);
+
+    cards_data.lastChild.lastChild.appendChild(card_div);
+});
+
+
+
 
 
 

@@ -1108,6 +1108,217 @@ const jokers = [
     }
 ];
 
+const cards = [
+    {
+        id:1,
+        name:"Ace of Spades",
+    },
+    {
+        id:2,
+        name:"King of Spades",
+    },
+    {
+        id:3,
+        name:"Queen of Spades",
+    },
+    {
+        id:4,
+        name:"Jack of Spades",
+    },
+    {
+        id:5,
+        name:"10 of Spades",
+    },
+    {
+        id:6,
+        name:"9 of Spades",
+    },
+    {
+        id:7,
+        name:"8 of Spades",
+    },
+    {
+        id:8,
+        name:"7 of Spades",
+    },
+    {
+        id:9,
+        name:"6 of Spades",
+    },
+    {
+        id:10,
+        name:"5 of Spades",
+    },
+    {
+        id:11,
+        name:"4 of Spades",
+    },
+    {
+        id:12,
+        name:"3 of Spades",
+    },
+    {
+        id:13,
+        name:"2 of Spades",
+    },
+    {
+        id:14,
+        name:"Ace of Hearts",
+    },
+    {
+        id:15,
+        name:"King of Hearts",
+    },
+    {
+        id:16,
+        name:"Queen of Hearts",
+    },
+    {
+        id:17,
+        name:"Jack of Hearts",
+    },
+    {
+        id:18,
+        name:"10 of Hearts",
+    },
+    {
+        id:19,
+        name:"9 of Hearts",
+    },
+    {
+        id:20,
+        name:"8 of Hearts",
+    },
+    {
+        id:21,
+        name:"7 of Hearts",
+    },
+    {
+        id:22,
+        name:"6 of Hearts",
+    },
+    {
+        id:23,
+        name:"5 of Hearts",
+    },
+    {
+        id:24,
+        name:"4 of Hearts",
+    },
+    {
+        id:25,
+        name:"3 of Hearts",
+    },
+    {
+        id:26,
+        name:"2 of Hearts",
+    },
+    {
+        id:27,
+        name:"Ace of Clubs",
+    },
+    {
+        id:28,
+        name:"King of Clubs",
+    },
+    {
+        id:29,
+        name:"Queen of Clubs",
+    },
+    {
+        id:30,
+        name:"Jack of Clubs",
+    },
+    {
+        id:31,
+        name:"10 of Clubs",
+    },
+    {
+        id:32,
+        name:"9 of Clubs",
+    },
+    {
+        id:33,
+        name:"8 of Clubs",
+    },
+    {
+        id:34,
+        name:"7 of Clubs",
+    },
+    {
+        id:35,
+        name:"6 of Clubs",
+    },
+    {
+        id:36,
+        name:"5 of Clubs",
+    },
+    {
+        id:37,
+        name:"4 of Clubs",
+    },
+    {
+        id:38,
+        name:"3 of Clubs",
+    },
+    {
+        id:39,
+        name:"2 of Clubs",
+    },
+    {
+        id:40,
+        name:"Ace of Diamonds",
+    },
+    {
+        id:41,
+        name:"King of Diamonds",
+    },
+    {
+        id:42,
+        name:"Queen of Diamonds",
+    },
+    {
+        id:43,
+        name:"Jack of Diamonds",
+    },
+    {
+        id:44,
+        name:"10 of Diamonds",
+    },
+    {
+        id:45,
+        name:"9 of Diamonds",
+    },
+    {
+        id:46,
+        name:"8 of Diamonds",
+    },
+    {
+        id:47,
+        name:"7 of Diamonds",
+    },
+    {
+        id:48,
+        name:"6 of Diamonds",
+    },
+    {
+        id:49,
+        name:"5 of Diamonds",
+    },
+    {
+        id:50,
+        name:"4 of Diamonds",
+    },
+    {
+        id:51,
+        name:"3 of Diamonds",
+    },
+    {
+        id:52,
+        name:"2 of Diamonds",
+    }
+];
+
 
 
 const tarots = [

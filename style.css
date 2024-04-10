@@ -315,6 +315,71 @@ section {
 
 
 
+#cardsData li {
+    gap: 0;
+    width: calc(138px * 7);
+}
+
+#cardsData .card:nth-of-type(1) {
+    transform: translate(0%);
+}
+
+#cardsData .card:nth-of-type(2) {
+    transform: translate(-50%);
+}
+
+#cardsData .card:nth-of-type(3) {
+    transform: translate(-100%);
+}
+
+#cardsData .card:nth-of-type(4) {
+    transform: translate(-150%);
+}
+
+#cardsData .card:nth-of-type(5) {
+    transform: translate(-200%);
+}
+
+#cardsData .card:nth-of-type(6) {
+    transform: translate(-250%);
+}
+
+#cardsData .card:nth-of-type(7) {
+    transform: translate(-300%);
+}
+
+#cardsData .card:nth-of-type(8) {
+    transform: translate(-350%);
+}
+
+#cardsData .card:nth-of-type(9) {
+    transform: translate(-400%);
+}
+
+#cardsData .card:nth-of-type(10) {
+    transform: translate(-450%);
+}
+
+#cardsData .card:nth-of-type(11) {
+    transform: translate(-500%);
+}
+
+#cardsData .card:nth-of-type(12) {
+    transform: translate(-550%);
+}
+
+#cardsData .card:nth-of-type(13) {
+    transform: translate(-600%);
+}
+
+/* #cardsData .card:hover {
+    z-index: 100;
+} */
+
+
+
+
+
 .popup {
     visibility: hidden;
     display: flex;
@@ -386,6 +451,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+.card .tagSecondary {
+    color: var(--black);
+    background-color: var(--white);
 }
 
 
