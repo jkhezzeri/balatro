@@ -1,4 +1,10 @@
 
+
+
+document.documentElement.setAttribute('data-contrast', localStorage.getItem("contrast"));
+
+
+
 const jokers_data = document.querySelector("#jokersData");
 
 
@@ -94,6 +100,14 @@ const li_cards = document.createElement("li");
 cards_data.appendChild(ul_cards);
 ul_cards.appendChild(li_cards);
 
+const ul_contrast = document.createElement("ul");
+ul_contrast.classList.add("cardsSlide");
+const li_contrast = document.createElement("li");
+cards_data.appendChild(ul_contrast);
+ul_contrast.appendChild(li_contrast);
+
+
+
 cards.forEach(card => {
     
     let card_div = document.createElement("div");
@@ -101,7 +115,7 @@ cards.forEach(card => {
     
     let img = document.createElement("img");
     let img_name = card.name.replaceAll(" ", "_");
-    img.src = "assets/cards/"+img_name+".webp";
+    img.src = "assets/cards/" + img_name + ".webp";
     img.alt = card.name;
 
     let popup = document.createElement("span");
@@ -111,16 +125,16 @@ cards.forEach(card => {
     popup_name.classList.add("tagSecondary");
 
     if (card.name.includes("Spades")) {
-        card.name = card.name.replace(" Spades", `&nbsp;${text_spade}Spades${text_end}`);
+        card_tag = card.name.replace(" Spades", `&nbsp;${text_spade}Spades${text_end}`);
     } else if (card.name.includes("Hearts")) {
-        card.name = card.name.replace(" Hearts", `&nbsp;${text_heart}Hearts${text_end}`);
+        card_tag = card.name.replace(" Hearts", `&nbsp;${text_heart}Hearts${text_end}`);
     } else if (card.name.includes("Clubs")) {
-        card.name = card.name.replace(" Clubs", `&nbsp;${text_club}Clubs${text_end}`);
+        card_tag = card.name.replace(" Clubs", `&nbsp;${text_club}Clubs${text_end}`);
     } else if (card.name.includes("Diamonds")) {
-        card.name = card.name.replace(" Diamonds", `&nbsp;${text_diamond}Diamonds${text_end}`);
+        card_tag = card.name.replace(" Diamonds", `&nbsp;${text_diamond}Diamonds${text_end}`);
     }
 
-    popup_name.innerHTML = card.name;
+    popup_name.innerHTML = card_tag;
     popup.appendChild(popup_name);
 
     let popup_text = document.createElement("div");
@@ -140,15 +154,85 @@ cards.forEach(card => {
     popup.appendChild(popup_text);
     
     if (card.id % 13 == 1 && card.id != 1) {
-        cards_data.lastChild.appendChild(document.createElement("li"));
+        ul_cards.appendChild(document.createElement("li"));
     }
 
     card_div.appendChild(img);
     card_div.appendChild(popup);
 
-    cards_data.lastChild.lastChild.appendChild(card_div);
+    ul_cards.lastChild.appendChild(card_div);
+
+    let contrast_div = document.createElement("div");
+    contrast_div.classList.add("card");
+
+    let img_contrast = document.createElement("img");
+    let img_contrast_name = card.name.replaceAll(" ", "_");
+    img_contrast.src = "assets/cards/contrast/" + img_contrast_name + ".webp";
+    img_contrast.alt = card.name;
+
+    let popup_contrast = popup.cloneNode(true);
+
+    if (card.id % 13 == 1 && card.id != 1) {
+        ul_contrast.appendChild(document.createElement("li"));
+    }
+
+    contrast_div.appendChild(img_contrast);
+    contrast_div.appendChild(popup_contrast);
+
+    ul_contrast.lastChild.appendChild(contrast_div);
 });
 
+
+
+const cards_slide = document.querySelectorAll(".cardsSlide");
+const check_contrast = document.querySelector("#contrast");
+
+cards_slide.forEach(slide => {
+    slide.style.display = "none";
+});
+
+check_contrast.addEventListener('click',()=>{
+    changeContrast();
+});
+
+function changeContrast() {
+    if (check_contrast.checked == true) {
+        cards_slide[0].style.display = "none";
+        cards_slide[1].style.display = "flex";
+    } else {
+        cards_slide[0].style.display = "flex";
+        cards_slide[1].style.display = "none";
+    }
+    document.documentElement.setAttribute('data-contrast', check_contrast.checked);
+    localStorage.setItem("contrast", document.documentElement.getAttribute('data-contrast'));
+}
+
+function setContrast() {
+    if (document.documentElement.getAttribute('data-contrast') == "true") {
+        check_contrast.checked = true;
+    } else {
+        check_contrast.checked = false;
+    }
+    changeContrast();
+}
+
+setContrast();
+
+
+
+// function changeTarotsSlide(page) {
+//     let current_page_tarots = parseInt(page_tarots.innerHTML);
+//     tarots_slide[current_page_tarots-1].style.display = "none";
+//     if (current_page_tarots + page == 0) {
+//         current_page_tarots = tarots_slide.length;
+//     } else if (current_page_tarots + page > tarots_slide.length) {
+//         current_page_tarots = 1;
+//     } else {
+//         current_page_tarots = current_page_tarots + page;
+//     }
+//     page_tarots.innerHTML = current_page_tarots;
+//     tarots_slide[current_page_tarots-1].style.display = "flex";
+// }
 
 
 
