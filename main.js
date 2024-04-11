@@ -220,20 +220,6 @@ setContrast();
 
 
 
-// function changeTarotsSlide(page) {
-//     let current_page_tarots = parseInt(page_tarots.innerHTML);
-//     tarots_slide[current_page_tarots-1].style.display = "none";
-//     if (current_page_tarots + page == 0) {
-//         current_page_tarots = tarots_slide.length;
-//     } else if (current_page_tarots + page > tarots_slide.length) {
-//         current_page_tarots = 1;
-//     } else {
-//         current_page_tarots = current_page_tarots + page;
-//     }
-//     page_tarots.innerHTML = current_page_tarots;
-//     tarots_slide[current_page_tarots-1].style.display = "flex";
-// }
-
 
 
 

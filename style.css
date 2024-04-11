@@ -301,18 +301,21 @@ section {
     width: 142px;
     height: 190px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: blue; */
 }
 
 
 
-.joker img, .enhancement img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* object-fit: none; */
-}
+/* .joker img, .enhancement img { */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* object-fit: content; */
+/* } */
 
 
 
@@ -723,6 +726,94 @@ section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+
+@media all and (max-width: 1080px) {
+
+
+
+    /* section {
+        transform: scale(0.5);
+    } */
+
+
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+
+
+    #cardsData li {
+        width: calc(69px * 7);
+    }
+
+    .joker, .enhancement {
+        width: 71px;
+        height: 95px;
+    }
+
+    .card, .seal, .edition {
+        width: 69px;
+        height: 93px;
+    }
+
+    .tarot, .planet, .spectral {
+        width: 63px;
+        height: 93px;
+    }
+
+    .voucher {
+        width: 59px;
+        height: 93px;
+    }
+
+    .booster {
+        width: 57px;
+        height: 93px;
+    }
+
+    .tag {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .joker img, .enhancement img {
+        transform: scale(0.5);
+    }
+
+    .card img, .tarot img, .planet img, .spectral img, .seal img, .edition img, .voucher img, .booster img, .tag img {
+        transform: scale(0.5);
+        transform-origin: 0 0;
+    }
+
+
+
+}
 
 
 
