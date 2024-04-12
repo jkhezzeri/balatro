@@ -370,6 +370,7 @@ const planets_data = document.querySelector("#planetsData");
 
 
 const ul_planets = document.createElement("ul");
+ul_planets.classList.add("planetsSlide");
 const li_planets = document.createElement("li");
 planets_data.appendChild(ul_planets);
 ul_planets.appendChild(li_planets);
@@ -417,6 +418,44 @@ planets.forEach(planet => {
 
     planets_data.lastChild.lastChild.appendChild(planet_div);
 });
+
+
+
+const planets_slide = document.querySelector(".planetsSlide");
+
+let planets_element = document.querySelectorAll(".planetsSlide li");
+const planets_card = document.querySelectorAll(".planetsSlide .planet");
+
+function responsivePlanets() {
+    if (window.innerWidth <= 570) {
+        if (planets_element.length == 2) {
+            planets_slide.appendChild(document.createElement("li"));
+            planets_element = document.querySelectorAll(".planetsSlide li");
+
+            planets_element[1].prepend(planets_card[5]);
+            planets_element[1].prepend(planets_card[4]);
+            planets_element[2].append(planets_card[8]);
+            planets_element[2].append(planets_card[9]);
+            planets_element[2].append(planets_card[10]);
+            planets_element[2].append(planets_card[11]);
+    
+        }
+    } else {
+        if (planets_element.length == 3) {
+            planets_element[0].append(planets_card[4]);
+            planets_element[0].append(planets_card[5]);
+            planets_element[1].append(planets_card[8]);
+            planets_element[1].append(planets_card[9]);
+            planets_element[1].append(planets_card[10]);
+            planets_element[1].append(planets_card[11]);
+
+            planets_slide.lastChild.remove();
+            planets_element = document.querySelectorAll(".planetsSlide li");
+        }
+    }
+}
+responsivePlanets();
+window.addEventListener("resize", responsivePlanets);
 
 
 
