@@ -861,4 +861,62 @@ section {
         font-size: 24px;
     }
 
+
+
+    #cardsData li {
+        width: calc(69px * 5);
+    }
+
+    #cardsData .card:nth-of-type(1) {
+        transform: translate(0%);
+    }
+    
+    #cardsData .card:nth-of-type(2) {
+        transform: translate(calc(calc(-200%/3)));
+    }
+    
+    #cardsData .card:nth-of-type(3) {
+        transform: translate(calc(calc(-200%/3)*2));
+    }
+    
+    #cardsData .card:nth-of-type(4) {
+        transform: translate(calc(calc(-200%/3)*3));
+    }
+    
+    #cardsData .card:nth-of-type(5) {
+        transform: translate(calc(calc(-200%/3)*4));
+    }
+    
+    #cardsData .card:nth-of-type(6) {
+        transform: translate(calc(calc(-200%/3)*5));
+    }
+    
+    #cardsData .card:nth-of-type(7) {
+        transform: translate(calc(calc(-200%/3)*6));
+    }
+    
+    #cardsData .card:nth-of-type(8) {
+        transform: translate(calc(calc(-200%/3)*7));
+    }
+    
+    #cardsData .card:nth-of-type(9) {
+        transform: translate(calc(calc(-200%/3)*8));
+    }
+    
+    #cardsData .card:nth-of-type(10) {
+        transform: translate(calc(calc(-200%/3)*9));
+    }
+    
+    #cardsData .card:nth-of-type(11) {
+        transform: translate(calc(calc(-200%/3)*10));
+    }
+    
+    #cardsData .card:nth-of-type(12) {
+        transform: translate(calc(calc(-200%/3)*11));
+    }
+    
+    #cardsData .card:nth-of-type(13) {
+        transform: translate(calc(calc(-200%/3)*12));
+    }
+
 }
