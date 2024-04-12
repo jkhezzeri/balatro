@@ -283,6 +283,56 @@ tarots.forEach(tarot => {
 
 
 const tarots_slide = document.querySelectorAll(".tarotsSlide");
+
+let tarots_element = document.querySelectorAll(".tarotsSlide li");
+const tarots_card = document.querySelectorAll(".tarotsSlide .tarot");
+
+function responsiveTarots() {
+    if (window.innerWidth <= 570) {
+        if (tarots_element.length == 4) {
+            tarots_slide.forEach(tarot_slide => {
+                tarot_slide.appendChild(document.createElement("li"));
+            });
+            tarots_element = document.querySelectorAll(".tarotsSlide li");
+
+            tarots_element[1].prepend(tarots_card[4]);
+            tarots_element[2].append(tarots_card[7]);
+            tarots_element[2].append(tarots_card[8]);
+            tarots_element[2].append(tarots_card[9]);
+            tarots_element[2].append(tarots_card[10]);
+    
+            tarots_element[4].prepend(tarots_card[15]);
+            tarots_element[5].append(tarots_card[18]);
+            tarots_element[5].append(tarots_card[19]);
+            tarots_element[5].append(tarots_card[20]);
+            tarots_element[5].append(tarots_card[21]);
+        }
+    } else {
+        if (tarots_element.length == 6) {
+            tarots_element[0].append(tarots_card[4]);
+            tarots_element[1].append(tarots_card[7]);
+            tarots_element[1].append(tarots_card[8]);
+            tarots_element[1].append(tarots_card[9]);
+            tarots_element[1].append(tarots_card[10]);
+
+            tarots_element[3].append(tarots_card[15]);
+            tarots_element[4].append(tarots_card[18]);
+            tarots_element[4].append(tarots_card[19]);
+            tarots_element[4].append(tarots_card[20]);
+            tarots_element[4].append(tarots_card[21]);
+
+            tarots_slide.forEach(tarot_slide => {
+                tarot_slide.lastChild.remove();
+            });
+            tarots_element = document.querySelectorAll(".tarotsSlide li");
+        }
+    }
+}
+responsiveTarots();
+window.addEventListener("resize", responsiveTarots);
+
+
+
 const page_tarots = document.querySelector("#pageTarots");
 const pages_tarots = document.querySelector("#pagesTarots");
 
@@ -308,6 +358,9 @@ function changeTarotsSlide(page) {
     page_tarots.innerHTML = current_page_tarots;
     tarots_slide[current_page_tarots-1].style.display = "flex";
 }
+
+
+
 
 
 
