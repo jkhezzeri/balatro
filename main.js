@@ -518,6 +518,54 @@ spectrals.forEach(spectral => {
 
 
 const spectrals_slide = document.querySelectorAll(".spectralsSlide");
+
+
+
+let spectrals_element = document.querySelectorAll(".spectralsSlide li");
+const spectrals_card = document.querySelectorAll(".spectralsSlide .spectral");
+
+function responsiveSpectrals() {
+    if (window.innerWidth <= 570) {
+        if (spectrals_element.length == 4) {
+            spectrals_slide.forEach(spectral_slide => {
+                spectral_slide.appendChild(document.createElement("li"));
+            });
+            spectrals_element = document.querySelectorAll(".spectralsSlide li");
+
+            spectrals_element[1].prepend(spectrals_card[3]);
+            spectrals_element[2].append(spectrals_card[6]);
+            spectrals_element[2].append(spectrals_card[7]);
+            spectrals_element[2].append(spectrals_card[8]);
+    
+            spectrals_element[4].prepend(spectrals_card[12]);
+            spectrals_element[5].append(spectrals_card[15]);
+            spectrals_element[5].append(spectrals_card[16]);
+            spectrals_element[5].append(spectrals_card[17]);
+        }
+    } else {
+        if (spectrals_element.length == 6) {
+            spectrals_element[0].append(spectrals_card[3]);
+            spectrals_element[1].append(spectrals_card[6]);
+            spectrals_element[1].append(spectrals_card[7]);
+            spectrals_element[1].append(spectrals_card[8]);
+
+            spectrals_element[3].append(spectrals_card[12]);
+            spectrals_element[4].append(spectrals_card[15]);
+            spectrals_element[4].append(spectrals_card[16]);
+            spectrals_element[4].append(spectrals_card[17]);
+
+            spectrals_slide.forEach(spectral_slide => {
+                spectral_slide.lastChild.remove();
+            });
+            spectrals_element = document.querySelectorAll(".spectralsSlide li");
+        }
+    }
+}
+responsiveSpectrals();
+window.addEventListener("resize", responsiveSpectrals);
+
+
+
 const page_spectrals = document.querySelector("#pageSpectrals");
 const pages_spectrals = document.querySelector("#pagesSpectrals");
 
