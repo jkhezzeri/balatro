@@ -435,6 +435,20 @@ section {
 
 
 
+
+
+
+
+
+.achievement img {
+    width: 128px;
+    height: 128px;
+}
+
+
+
+
+
 .popup {
     visibility: hidden;
     display: flex;
@@ -639,6 +653,10 @@ section {
     color: var(--enhancement);
 }
 
+.textVoucher {
+    color: var(--voucher);
+}
+
 .textNegative {
     animation: negative-color 6s infinite;
 }
@@ -709,7 +727,7 @@ section {
 
 
 
-.tarotsSlide li, .spectralsSlide li {
+.tarotsSlide li, .spectralsSlide li, .achievementsSlide li {
     display: flex;
     justify-content: center;
 }
@@ -720,7 +738,7 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster, .tag {
+.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster, .tag, .achievement {
     position: relative;
 }
 
@@ -806,6 +824,11 @@ section {
     .card img, .tarot img, .planet img, .spectral img, .seal img, .edition img, .voucher img, .booster img, .tag img {
         transform: scale(0.5);
         transform-origin: 0 0;
+    }
+
+    .achievement img {
+        width: 64px;
+        height: 64px;
     }
 
 

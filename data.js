@@ -22,6 +22,7 @@ const text_spectral = "<span class='textSpectral'>";
 
 const text_legendary = "<span class='textLegendary'>";
 const text_enhancement = "<span class='textEnhancement'>";
+const text_voucher = "<span class='textVoucher'>";
 const text_negative = "<span class='textNegative'>";
 
 const text_end = "</span>";
@@ -2164,4 +2165,171 @@ const tags = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+const achievements = [
+    {
+        id:1,
+        name:"Ante Up!",
+        text:`Reach ${text_num}Ante 4${text_end}`
+    },
+    {
+        id:2,
+        name:"Ante Upper!",
+        text:`Reach ${text_num}Ante 8${text_end}`
+    },
+    {
+        id:3,
+        name:"Heads Up",
+        text:`Win a Run`
+    },
+    {
+        id:4,
+        name:"Low Stakes",
+        text:`Win a run on at least<br>${text_num}Red Stake${text_end} difficulty`
+    },
+    {
+        id:5,
+        name:"Mid Stakes",
+        text:`Win a run on at least<br>${text_num}Black Stake${text_end} difficulty`
+    },
+    {
+        id:6,
+        name:"High Stakes",
+        text:`Win a run on at least<br>${text_num}Gold Stake${text_end} difficulty`
+    },
+    {
+        id:7,
+        name:"Card Player",
+        text:`Play at least<br>${text_num}2500${text_end} Cards`
+    },
+    {
+        id:8,
+        name:"Card Discarder",
+        text:`Discard at least<br>${text_num}2500${text_end} Cards`
+    },
+    {
+        id:9,
+        name:"Nest Egg",
+        text:`Have ${text_money}$400${text_end} or more<br>during a single run`
+    },
+    {
+        id:10,
+        name:"Flushed",
+        text:`Play a ${text_num}Flush${text_end}<br>with ${text_num}5 Wild Cards${text_end}`
+    },
+    {
+        id:11,
+        name:"Speedrunner",
+        text:`Win a run in<br>${text_num}12${text_end} or fewer rounds`
+    },
+    {
+        id:12,
+        name:"ROI",
+        text:`Buy ${text_num}5${text_end} ${text_voucher}Vouchers${text_end}<br>by the end of ${text_num}Ante 4${text_end}`
+    },
+    {
+        id:13,
+        name:"Shattered",
+        text:`Break ${text_num}2 Glass Cards${text_end}<br>in a single hand`
+    },
+    {
+        id:14,
+        name:"Royale",
+        text:`Play a ${text_num}Royal Flush${text_end}`
+    },
+    {
+        id:15,
+        name:"Retrograde",
+        text:`Get any ${text_num}poker hand${text_end}<br>to level ${text_num}10${text_end}`
+    },
+    {
+        id:16,
+        name:"10K",
+        text:`Score ${text_mult}10,000${text_end} Chips<br>in a single hand`
+    },
+    {
+        id:17,
+        name:"1,000K",
+        text:`Score ${text_mult}1,000,000${text_end} Chips<br>in a single hand`
+    },
+    {
+        id:18,
+        name:"100,000K",
+        text:`Score ${text_mult}100,000,000${text_end} Chips<br>in a single hand`
+    },
+    {
+        id:19,
+        name:"Tiny Hands",
+        text:`Thin your deck down<br>to ${text_num}20${text_end} or fewer cards`
+    },
+    {
+        id:20,
+        name:"Big Hands",
+        text:`Have ${text_num}80${text_end} or more<br>cards in your deck`
+    },
+    {
+        id:21,
+        name:"You Get What You Get",
+        text:`Win a run without<br>${text_prob}rerolling${text_end} the shop`
+    },
+    {
+        id:22,
+        name:"Rule Bender",
+        text:`Complete any<br>challenge run`
+    },
+    {
+        id:23,
+        name:"Rule Breaker",
+        text:`Complete every<br>challenge run`
+    },
+    {
+        id:24,
+        name:"Legendary",
+        text:`Discover a<br>${text_legendary}Legendary${text_end} Joker`
+    },
+    {
+        id:25,
+        name:"Astronomy",
+        text:`Discover every<br>${text_planet}Planet${text_end} card`
+    },
+    {
+        id:26,
+        name:"Cartomancy",
+        text:`Discover every<br>${text_tarot}Tarot${text_end} card`
+    },
+    {
+        id:27,
+        name:"Clairvoyance",
+        text:`Discover every<br>${text_spectral}Spectral${text_end} card`
+    },
+    {
+        id:28,
+        name:"Extreme Couponer",
+        text:`Discover every ${text_voucher}Voucher${text_end}`
+    },
+    {
+        id:29,
+        name:"Completionist",
+        text:`Discover ${text_num}100%${text_end}<br>of your collection`
+    },
+    {
+        id:30,
+        name:"Completionist+",
+        text:`Win with every deck<br>on ${text_num}Gold Stake${text_end} difficulty`
+    },
+    {
+        id:31,
+        name:"Completionist++",
+        text:`Earn a Gold Sticker<br>on every ${text_num}Joker${text_end}`
+    }
+];
 

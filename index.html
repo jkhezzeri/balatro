@@ -46,7 +46,7 @@
                 <li>
                     <a href="" draggable="false">Blinds</a>
                     <a href="" draggable="false">Antes</a>
-                    <a href="" draggable="false">Achievements</a>
+                    <a href="#achievements" draggable="false">Achievements</a>
                 </li>
             </ul>
         </nav>
@@ -144,6 +144,17 @@
             <div class="section">
                 <div id="tagsData"></div>
                 <a href="" class="link" title="Tags" draggable="false">Tags Page</a>
+            </div>
+        </section>
+        <section id="achievements">
+            <div class="section">
+                <div id="achievementsData"></div>
+                <div id="achievementsPagination" class="pagination">
+                    <div id="achievementsPrev" class="arrowPage" onclick="changeAchievementsSlide(-1)"><</div>
+                    <div id="achievementsPage" class="currentPage">Page <span id="pageAchievements"></span>/<span id="pagesAchievements"></span></div>
+                    <div id="achievementsNext" class="arrowPage" onclick="changeAchievementsSlide(1)">></div>
+                </div>
+                <a href="" class="link" title="Achievements" draggable="false">Achievements Page</a>
             </div>
         </section>
     </div>

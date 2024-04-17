@@ -1018,3 +1018,104 @@ tags.forEach(tag => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const achievements_data = document.querySelector("#achievementsData");
+
+
+
+const ul_achievements = document.createElement("ul");
+ul_achievements.classList.add("achievementsSlide");
+const li_achievements = document.createElement("li");
+achievements_data.appendChild(ul_achievements);
+ul_achievements.appendChild(li_achievements);
+
+
+
+achievements.forEach(achievement => {
+    
+    let achievement_div = document.createElement("div");
+    achievement_div.classList.add("achievement");
+    
+    let img = document.createElement("img");
+    let img_name = achievement.name.replaceAll(" ", "_");
+    img.src = "assets/achievements/"+img_name+".webp";
+    img.alt = achievement.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = achievement.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let achievement_text = document.createElement("span")
+    achievement_text.classList.add("popupEffect");
+    achievement_text.innerHTML = achievement.text;
+    popup_text.appendChild(achievement_text);
+    popup.appendChild(popup_text);
+    
+    if (achievement.id == 4 || achievement.id == 8 || achievement.id == 11 || achievement.id == 15 || achievement.id == 18 || achievement.id == 22 || achievement.id == 25 || achievement.id == 29) {
+        if (achievement.id == 11 || achievement.id == 22) {
+            achievements_data.appendChild(document.createElement("ul"));
+            achievements_data.lastChild.classList.add("achievementsSlide");
+        }
+        achievements_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    achievement_div.appendChild(img);
+    achievement_div.appendChild(popup);
+
+    achievements_data.lastChild.lastChild.appendChild(achievement_div);
+});
+
+
+
+const achievements_slide = document.querySelectorAll(".achievementsSlide");
+const page_achievements = document.querySelector("#pageAchievements");
+const pages_achievements = document.querySelector("#pagesAchievements");
+
+
+achievements_slide.forEach(slide => {
+    slide.style.display = "none";
+});
+achievements_slide[0].style.display = "flex";
+page_achievements.innerHTML = 1;
+pages_achievements.innerHTML = achievements_slide.length;
+
+
+function changeAchievementsSlide(page) {
+    let current_page_achievements = parseInt(page_achievements.innerHTML);
+    achievements_slide[current_page_achievements-1].style.display = "none";
+    if (current_page_achievements + page == 0) {
+        current_page_achievements = achievements_slide.length;
+    } else if (current_page_achievements + page > achievements_slide.length) {
+        current_page_achievements = 1;
+    } else {
+        current_page_achievements = current_page_achievements + page;
+    }
+    page_achievements.innerHTML = current_page_achievements;
+    achievements_slide[current_page_achievements-1].style.display = "flex";
+}
