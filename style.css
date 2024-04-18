@@ -436,7 +436,9 @@ section {
 
 
 
-
+.blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
+    padding-left: 38px;
+}
 
 
 
@@ -521,6 +523,57 @@ section {
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+
+.blind .popup {
+    border: 0 solid transparent;
+    background-color: var(--popup-border);
+}
+
+.blind .tagPrimary {
+    width: 100%;
+    padding: 0;
+}
+
+.blind .popupText {
+    flex-direction: column;
+}
+
+.blindScore {
+    font-size: 32px;
+    line-height: 32px;
+    color: var(--red);
+}
+
+.blindReward {
+    line-height: 32px;
+}
+
+.reward {
+    font-size: 32px;
+    color: var(--yellow);
+}
+
+.blind .popupEffect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    border-radius: 12px;
+    padding: 4px;
+    margin: 0 4px;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+
+
+
+
+
 
 
 
@@ -738,7 +791,7 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster, .tag, .achievement {
+.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster, .tag, .blind, .achievement {
     position: relative;
 }
 
@@ -787,6 +840,10 @@ section {
         width: calc(69px * 7);
     }
 
+    .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
+        padding-left: 22px;
+    }
+
     .joker, .enhancement {
         width: 71px;
         height: 95px;
@@ -812,7 +869,7 @@ section {
         height: 93px;
     }
 
-    .tag {
+    .tag, .blind {
         width: 32px;
         height: 32px;
     }
@@ -821,7 +878,7 @@ section {
         transform: scale(0.5);
     }
 
-    .card img, .tarot img, .planet img, .spectral img, .seal img, .edition img, .voucher img, .booster img, .tag img {
+    .card img, .tarot img, .planet img, .spectral img, .seal img, .edition img, .voucher img, .booster img, .tag img, .blind img {
         transform: scale(0.5);
         transform-origin: 0 0;
     }
@@ -993,6 +1050,14 @@ section {
         top: 1px;
         width: 10px;
         height: 20px;
+    }
+
+
+
+
+
+    .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
+        padding-left: 19px;
     }
 
 

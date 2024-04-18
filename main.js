@@ -35,7 +35,7 @@ jokers.forEach(joker => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let joker_text = document.createElement("span")
+    let joker_text = document.createElement("span");
     joker_text.classList.add("popupEffect");
     joker_text.innerHTML = joker.text;
     popup_text.appendChild(joker_text);
@@ -139,7 +139,7 @@ cards.forEach(card => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let card_text = document.createElement("span")
+    let card_text = document.createElement("span");
     card_text.classList.add("popupEffect");
 
     if (card.name.includes("Ace")) {
@@ -254,7 +254,7 @@ tarots.forEach(tarot => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let tarot_text = document.createElement("span")
+    let tarot_text = document.createElement("span");
     tarot_text.classList.add("popupEffect");
     tarot_text.innerHTML = tarot.text;
     popup_text.appendChild(tarot_text);
@@ -397,7 +397,7 @@ planets.forEach(planet => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let planet_text = document.createElement("span")
+    let planet_text = document.createElement("span");
     planet_text.classList.add("popupEffect");
     planet_text.innerHTML = planet.text;
     popup_text.appendChild(planet_text);
@@ -489,7 +489,7 @@ spectrals.forEach(spectral => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let spectral_text = document.createElement("span")
+    let spectral_text = document.createElement("span");
     spectral_text.classList.add("popupEffect");
     spectral_text.innerHTML = spectral.text;
     popup_text.appendChild(spectral_text);
@@ -621,7 +621,7 @@ enhancements.forEach(enhancement => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let enhancement_text = document.createElement("span")
+    let enhancement_text = document.createElement("span");
     enhancement_text.classList.add("popupEffect");
     enhancement_text.innerHTML = enhancement.text;
     popup_text.appendChild(enhancement_text);
@@ -677,7 +677,7 @@ seals.forEach(seal => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let seal_text = document.createElement("span")
+    let seal_text = document.createElement("span");
     seal_text.classList.add("popupEffect");
     seal_text.innerHTML = seal.text;
     popup_text.appendChild(seal_text);
@@ -740,7 +740,7 @@ editions.forEach(edition => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let edition_text = document.createElement("span")
+    let edition_text = document.createElement("span");
     edition_text.classList.add("popupEffect");
     edition_text.innerHTML = edition.text;
     popup_text.appendChild(edition_text);
@@ -805,7 +805,7 @@ vouchers.forEach(voucher => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let voucher_text = document.createElement("span")
+    let voucher_text = document.createElement("span");
     voucher_text.classList.add("popupEffect");
     voucher_text.innerHTML = voucher.text;
     popup_text.appendChild(voucher_text);
@@ -909,7 +909,7 @@ boosters.forEach(booster => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let booster_text = document.createElement("span")
+    let booster_text = document.createElement("span");
     booster_text.classList.add("popupEffect");
     booster_text.innerHTML = booster.text;
     popup_text.appendChild(booster_text);
@@ -996,7 +996,7 @@ tags.forEach(tag => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let tag_text = document.createElement("span")
+    let tag_text = document.createElement("span");
     tag_text.classList.add("popupEffect");
     tag_text.innerHTML = tag.text;
     popup_text.appendChild(tag_text);
@@ -1026,7 +1026,116 @@ tags.forEach(tag => {
 
 
 
+const blinds_data = document.querySelector("#blindsData");
 
+
+
+const ul_blinds = document.createElement("ul");
+ul_blinds.classList.add("blindsSlide");
+const li_blinds = document.createElement("li");
+blinds_data.appendChild(ul_blinds);
+ul_blinds.appendChild(li_blinds);
+
+blinds.forEach(blind => {
+    
+    let blind_div = document.createElement("div");
+    blind_div.classList.add("blind");
+    
+    let img = document.createElement("img");
+    let img_name = blind.name.replaceAll(" ", "_");
+    img.src = "assets/blinds/"+img_name+".webp";
+    img.alt = blind.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("tagPrimary");
+    popup_name.style.backgroundColor = "#" + blind.color;
+    popup_name.innerText = blind.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    popup_text.innerHTML = "Score at least";
+
+    let blind_score = document.createElement("span");
+    blind_score.classList.add("blindScore");
+
+    switch (blind.id) {
+        case 1:
+            value_score = 1;
+            break;
+        case 2:
+            value_score = 1.5;
+            break;
+        case 6:
+            value_score = 4;
+            break;
+        case 21:
+            value_score = 1;
+            break;
+        case 28:
+            value_score = 6;
+            break;
+        default:
+            value_score = 2;
+    }
+
+    blind_score.innerHTML = value_score + "X Base";
+
+    let blind_reward = document.createElement("span");
+    blind_reward.classList.add("blindReward");
+    blind_reward.innerHTML = "Reward: ";
+
+    let reward = document.createElement("span");
+    reward.classList.add("reward");
+
+    switch (blind.id) {
+        case 1:
+            value_reward = 3;
+            break;
+        case 2:
+            value_reward = 4;
+            break;
+        case 26:
+        case 27:
+        case 28:
+        case 29:
+        case 30:
+            value_reward = 8;
+            break;
+        default:
+            value_reward = 5;
+    }
+
+    reward.innerHTML = "$".repeat(value_reward);
+
+    blind_reward.appendChild(reward);
+
+    popup_text.appendChild(blind_score);
+    popup_text.appendChild(blind_reward);
+
+    if (blind.text != "") {
+        let blind_text = document.createElement("span");
+        blind_text.classList.add("popupEffect");
+        blind_text.style.backgroundImage = "linear-gradient(#"+blind.color+"7f, #"+blind.color+"7f), linear-gradient(var(--background-dark), var(--background-dark))";
+        blind_text.innerHTML = blind.text;
+
+        popup_text.appendChild(blind_text);
+    }
+
+    popup.appendChild(popup_text);
+    
+    if (blind.id % 5 == 1 && blind.id != 1) {
+        blinds_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    blind_div.appendChild(img);
+    blind_div.appendChild(popup);
+
+    blinds_data.lastChild.lastChild.appendChild(blind_div);
+});
 
 
 
@@ -1071,7 +1180,7 @@ achievements.forEach(achievement => {
 
     let popup_text = document.createElement("div");
     popup_text.classList.add("popupText");
-    let achievement_text = document.createElement("span")
+    let achievement_text = document.createElement("span");
     achievement_text.classList.add("popupEffect");
     achievement_text.innerHTML = achievement.text;
     popup_text.appendChild(achievement_text);

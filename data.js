@@ -2170,8 +2170,188 @@ const tags = [
 
 
 
-
-
+const blinds = [
+    {
+        id:1,
+        name:"Small Blind",
+        text:``,
+        color:"2240a3"
+    },
+    {
+        id:2,
+        name:"Big Blind",
+        text:``,
+        color:"df9822"
+    },
+    {
+        id:3,
+        name:"The Hook",
+        text:`Discards 2 random<br>cards per hand played`,
+        color:"9f2909"
+    },
+    {
+        id:4,
+        name:"The Ox",
+        text:`Playing a (most played hand)<br>sets money to $0`,
+        color:"b24700"
+    },
+    {
+        id:5,
+        name:"The House",
+        text:`First hand is<br>drawn face down`,
+        color:"3c789f"
+    },
+    {
+        id:6,
+        name:"The Wall",
+        text:`Extra large blind`,
+        color:"7d459c"
+    },
+    {
+        id:7,
+        name:"The Wheel",
+        text:`1 in 7 cards get<br>drawn face down`,
+        color:"3bb96d"
+    },
+    {
+        id:8,
+        name:"The Arm",
+        text:`Decrease level of<br>played poker hand`,
+        color:"5653f5"
+    },
+    {
+        id:9,
+        name:"The Club",
+        text:`All Club cards<br>are debuffed`,
+        color:"b2c786"
+    },
+    {
+        id:10,
+        name:"The Fish",
+        text:`Cards drawn face down<br>after each hand played`,
+        color:"2677b7"
+    },
+    {
+        id:11,
+        name:"The Psychic",
+        text:`Must play 5 cards`,
+        color:"f0ba24"
+    },
+    {
+        id:12,
+        name:"The Goad",
+        text:`All Spade cards<br>are debuffed`,
+        color:"b2488b"
+    },
+    {
+        id:13,
+        name:"The Water",
+        text:`Start with<br>0 discards`,
+        color:"c1dfec"
+    },
+    {
+        id:14,
+        name:"The Window",
+        text:`All Diamond cards<br>are debuffed`,
+        color:"a09889"
+    },
+    {
+        id:15,
+        name:"The Manacle",
+        text:`-1 Hand Size`,
+        color:"434343"
+    },
+    {
+        id:16,
+        name:"The Eye",
+        text:`No repeat hand<br>types this round`,
+        color:"3560e3"
+    },
+    {
+        id:17,
+        name:"The Mouth",
+        text:`Play only 1 hand<br>type this round`,
+        color:"a66081"
+    },
+    {
+        id:18,
+        name:"The Plant",
+        text:`All face cards<br>are debuffed`,
+        color:"5f8676"
+    },
+    {
+        id:19,
+        name:"The Serpent",
+        text:`After Play or Discard,<br>always draw 3 cards`,
+        color:"2c8f3a"
+    },
+    {
+        id:20,
+        name:"The Pillar",
+        text:`Cards played previously<br>this Ante are debuffed`,
+        color:"6f553d"
+    },
+    {
+        id:21,
+        name:"The Needle",
+        text:`Play only 1 hand`,
+        color:"485d17"
+    },
+    {
+        id:22,
+        name:"The Head",
+        text:`All Heart cards<br>are debuffed`,
+        color:"a493ad"
+    },
+    {
+        id:23,
+        name:"The Tooth",
+        text:`Lose $1 per<br>card played`,
+        color:"ae1313"
+    },
+    {
+        id:24,
+        name:"The Flint",
+        text:`Base Chips and<br>Mult are halved`,
+        color:"e55815"
+    },
+    {
+        id:25,
+        name:"The Mark",
+        text:`All face cards are<br>drawn face down`,
+        color:"581f30"
+    },
+    {
+        id:26,
+        name:"Amber Acorn",
+        text:`Flips and shuffles<br>all Joker cards`,
+        color:"ff9800"
+    },
+    {
+        id:27,
+        name:"Verdant Leaf",
+        text:`All cards debuffed<br>until 1 Joker sold`,
+        color:"429e78"
+    },
+    {
+        id:28,
+        name:"Violet Vessel",
+        text:`Very large blind`,
+        color:"7d60e0"
+    },
+    {
+        id:29,
+        name:"Crimson Heart",
+        text:`One random Joker<br>disabled every hand`,
+        color:"a41919"
+    },
+    {
+        id:30,
+        name:"Cerulean Bell",
+        text:`Forces 1 card to<br>always be selected`,
+        color:"0091ff"
+    }
+];
 
 
 
