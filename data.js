@@ -1782,9 +1782,48 @@ const decks = [
     }
 ];
 
-
-
-
+const stakes = [
+    {
+        id:1,
+        name:"White Stake",
+        text:`Base Difficulty`
+    },
+    {
+        id:2,
+        name:"Red Stake",
+        text:`${text_num}Small Blind${text_end} gives<br>no reward money<br>${text_mini}Applies all previous Stakes${text_end}`
+    },
+    {
+        id:3,
+        name:"Green Stake",
+        text:`Required score scales<br>faster for each ${text_num}Ante${text_end}<br>${text_mini}Applies all previous Stakes${text_end}`
+    },
+    {
+        id:4,
+        name:"Black Stake",
+        text:`Shop can have ${text_num}Eternal${text_end} Jokers<br>${text_more}${text_mini}(Can't be sold or destroyed)${text_end}${text_end}<br>${text_mini}Applies all previous Stakes${text_end}`
+    },
+    {
+        id:5,
+        name:"Blue Stake",
+        text:`${text_mult}-1${text_end} Discard<br>${text_mini}Applies all previous Stakes${text_end}`
+    },
+    {
+        id:6,
+        name:"Purple Stake",
+        text:`Required score scales<br>faster for each ${text_num}Ante${text_end}<br>${text_mini}Applies all previous Stakes${text_end}`
+    },
+    {
+        id:7,
+        name:"Orange Stake",
+        text:`${text_num}Booster Packs${text_end} cost<br>${text_money}$1${text_end} more per Ante<br>${text_mini}Applies all previous Stakes${text_end}`
+    },
+    {
+        id:8,
+        name:"Gold Stake",
+        text:`${text_mult}-1${text_end} hand size<br>${text_mini}Applies all previous Stakes${text_end}`
+    }
+];
 
 
 

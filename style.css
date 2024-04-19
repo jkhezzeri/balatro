@@ -536,7 +536,19 @@ section {
     height: calc(100% - 48px);
 }
 
+.stake .popup {
+    width: 372px;
+    height: 138px;
+    border: 0 solid transparent;
+}
 
+.stake .popupName {
+    font-size: 32px;
+}
+
+.stake .popupText {
+    height: calc(100% - 38px);
+}
 
 .blind .popup {
     border: 0 solid transparent;
@@ -553,9 +565,16 @@ section {
 }
 
 .blindScore {
+    display: flex;
     font-size: 32px;
     line-height: 32px;
     color: var(--red);
+}
+
+.blindScore img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
 }
 
 .blindReward {
@@ -801,7 +820,7 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal, .edition, .deck, .voucher, .booster, .tag, .blind, .achievement {
+.tarot, .planet, .spectral, .seal, .edition, .deck, .stake, .voucher, .booster, .tag, .blind, .achievement {
     position: relative;
 }
 

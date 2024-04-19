@@ -818,7 +818,53 @@ decks.forEach(deck => {
 
 
 
+const stakes_data = document.querySelector("#stakesData");
 
+
+
+const ul_stakes = document.createElement("ul");
+ul_stakes.classList.add("stakesSlide");
+const li_stakes = document.createElement("li");
+stakes_data.appendChild(ul_stakes);
+ul_stakes.appendChild(li_stakes);
+
+
+
+stakes.forEach(stake => {
+    
+    let stake_div = document.createElement("div");
+    stake_div.classList.add("stake");
+    
+    let img = document.createElement("img");
+    let img_name = stake.name.replaceAll(" ", "_");
+    img.src = "assets/stakes/"+img_name+".webp";
+    img.alt = stake.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = stake.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let stake_text = document.createElement("span");
+    stake_text.classList.add("popupEffect");
+    stake_text.innerHTML = stake.text;
+    popup_text.appendChild(stake_text);
+    popup.appendChild(popup_text);
+
+    if (stake.id % 4 == 1 && stake.id != 1) {
+        stakes_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    stake_div.appendChild(img);
+    stake_div.appendChild(popup);
+
+    stakes_data.lastChild.lastChild.appendChild(stake_div);
+});
 
 
 
@@ -1110,6 +1156,11 @@ blinds.forEach(blind => {
     let blind_score = document.createElement("span");
     blind_score.classList.add("blindScore");
 
+    let img_chip = document.createElement("img");
+    img_chip.src = "assets/stakes/White_Stake.webp";
+    img_chip.alt = "White Stake";
+    blind_score.appendChild(img_chip);
+
     switch (blind.id) {
         case 1:
             value_score = 1;
@@ -1130,7 +1181,7 @@ blinds.forEach(blind => {
             value_score = 2;
     }
 
-    blind_score.innerHTML = value_score + "X Base";
+    blind_score.innerHTML += value_score + "X Base";
 
     let blind_reward = document.createElement("span");
     blind_reward.classList.add("blindReward");
