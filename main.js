@@ -768,6 +768,54 @@ editions.forEach(edition => {
 
 
 
+const decks_data = document.querySelector("#decksData");
+
+
+
+const ul_decks = document.createElement("ul");
+ul_decks.classList.add("decksSlide");
+const li_decks = document.createElement("li");
+decks_data.appendChild(ul_decks);
+ul_decks.appendChild(li_decks);
+
+
+
+decks.forEach(deck => {
+    
+    let deck_div = document.createElement("div");
+    deck_div.classList.add("deck");
+    
+    let img = document.createElement("img");
+    let img_name = deck.name.replaceAll(" ", "_");
+    img.src = "assets/decks/"+img_name+".webp";
+    img.alt = deck.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+    popup_name.innerText = deck.name;
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let deck_text = document.createElement("span");
+    deck_text.classList.add("popupEffect");
+    deck_text.innerHTML = deck.text;
+    popup_text.appendChild(deck_text);
+    popup.appendChild(popup_text);
+
+    if (deck.id % 5 == 1 && deck.id != 1) {
+        decks_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    deck_div.appendChild(img);
+    deck_div.appendChild(popup);
+
+    decks_data.lastChild.lastChild.appendChild(deck_div);
+});
+
 
 
 

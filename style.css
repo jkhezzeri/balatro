@@ -526,6 +526,16 @@ section {
 
 
 
+.deck .popup {
+    width: 276px;
+    height: 186px;
+    border: 0 solid transparent;
+}
+
+.deck .popupText {
+    height: calc(100% - 48px);
+}
+
 
 
 .blind .popup {
@@ -667,7 +677,7 @@ section {
     color: var(--grey);
 }
 .textMini {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .textHeart {
@@ -791,7 +801,7 @@ section {
 
 
 
-.tarot, .planet, .spectral, .seal, .edition, .voucher, .booster, .tag, .blind, .achievement {
+.tarot, .planet, .spectral, .seal, .edition, .deck, .voucher, .booster, .tag, .blind, .achievement {
     position: relative;
 }
 
@@ -849,7 +859,7 @@ section {
         height: 95px;
     }
 
-    .card, .seal, .edition {
+    .card, .seal, .edition, .deck {
         width: 69px;
         height: 93px;
     }
@@ -878,7 +888,7 @@ section {
         transform: scale(0.5);
     }
 
-    .card img, .tarot img, .planet img, .spectral img, .seal img, .edition img, .voucher img, .booster img, .tag img, .blind img {
+    .card img, .tarot img, .planet img, .spectral img, .seal img, .edition img, .deck img, .voucher img, .booster img, .tag img, .blind img {
         transform: scale(0.5);
         transform-origin: 0 0;
     }
@@ -958,21 +968,21 @@ section {
         font-size: 24px;
     }
 
-    .joker, .edition {
+    .joker, .edition, .deck {
         width: 70px;
         height: 94px;
     }
 
-    #jokers .section, #editions .section {
+    #jokers .section, #editions .section, #decks .section {
         padding: 12px 1px;
     }
 
-    #jokers ul, #editions ul {
+    #jokers ul, #editions ul, #decks ul {
         padding: 2px;
         gap: 0;
     }
 
-    #jokers li, #editions li {
+    #jokers li, #editions li, #decks li {
         gap: 0;
     }
 

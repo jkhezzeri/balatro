@@ -1704,8 +1704,83 @@ const editions = [
     }
 ];
 
-
-
+const decks = [
+    {
+        id:1,
+        name:"Red Deck",
+        text:`${text_mult}+1${text_end} discard<br>every round`
+    },
+    {
+        id:2,
+        name:"Blue Deck",
+        text:`${text_chip}+1${text_end} hand<br>every round`
+    },
+    {
+        id:3,
+        name:"Yellow Deck",
+        text:`Start with<br>extra ${text_money}$10${text_end}`
+    },
+    {
+        id:4,
+        name:"Green Deck",
+        text:`At end of each Round:<br>${text_money}$2${text_end} ${text_mini}per remaining${text_end} ${text_chip}Hand${text_end}<br>${text_money}$1${text_end} ${text_mini}per remaining${text_end} ${text_mult}Discard${text_end}<br>Earn no ${text_num}Interest${text_end}`
+    },
+    {
+        id:5,
+        name:"Black Deck",
+        text:`${text_num}+1${text_end} Joker slot<br>${text_chip}-1${text_end} hand<br>every round`
+    },
+    {
+        id:6,
+        name:"Magic Deck",
+        text:`Start run with the<br>${text_tarot}Crystal Ball${text_end} voucher<br>and ${text_num}2${text_end} copies<br>of ${text_tarot}The Fool${text_end}`
+    },
+    {
+        id:7,
+        name:"Nebula Deck",
+        text:`Start run with the<br>${text_planet}Telescope${text_end} voucher<br>${text_mult}-1${text_end} consumable slot`
+    },
+    {
+        id:8,
+        name:"Ghost Deck",
+        text:`${text_spectral}Spectral${text_end} cards may<br>appear in the shop,<br>start with a ${text_spectral}Hex${text_end} card`
+    },
+    {
+        id:9,
+        name:"Abandoned Deck",
+        text:`Start run with<br>no ${text_num}Face Cards${text_end}<br>in your deck`
+    },
+    {
+        id:10,
+        name:"Checkered Deck",
+        text:`Start run with<br>${text_num}26${text_end} ${text_spade}Spades${text_end} and<br>${text_num}26${text_end} ${text_heart}Hearts${text_end} in deck`
+    },
+    {
+        id:11,
+        name:"Zodiac Deck",
+        text:`Start run with<br>${text_tarot}Tarot Merchant${text_end},<br>${text_planet}Planet Merchant${text_end},<br>and ${text_num}Overstock${text_end}`
+    },
+    {
+        id:12,
+        name:"Painted Deck",
+        text:`${text_num}+2${text_end} hand size,<br>${text_mult}-1${text_end} Joker slot`
+    },
+    {
+        id:13,
+        name:"Anaglyph Deck",
+        text:`After defeating each<br>${text_num}Boss Blind${text_end}, gain a<br>${text_num}Double Tag${text_end}`
+    },
+    {
+        id:14,
+        name:"Plasma Deck",
+        text:`Balance ${text_chip}Chips${text_end} and<br>${text_mult}Mult${text_end} when calculating<br>score for played hand<br>${text_mult}X2${text_end} base Blind size`
+    },
+    {
+        id:15,
+        name:"Erratic Deck",
+        text:`All ${text_num}Ranks${text_end} and<br>${text_num}Suits${text_end} in deck<br>are randomized`
+    }
+];
 
 
 
