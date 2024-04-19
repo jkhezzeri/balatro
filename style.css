@@ -304,7 +304,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: blue; */
 }
 
 
@@ -435,6 +434,16 @@ section {
 
 
 
+.sticker {
+    width: 42px;
+    height: 42px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
     padding-left: 38px;
@@ -548,6 +557,20 @@ section {
 
 .stake .popupText {
     height: calc(100% - 38px);
+}
+
+.sticker .popup {
+    gap: 0;
+    padding: 0;
+    background-color: var(--popup-mini-background);
+}
+
+.sticker .popupName {
+    font-size: inherit;
+}
+
+.sticker .popupText {
+    border-radius: 10px;
 }
 
 .blind .popup {
@@ -809,7 +832,7 @@ section {
 
 
 
-.tarotsSlide li, .spectralsSlide li, .achievementsSlide li {
+.tarotsSlide li, .spectralsSlide li, .stickersSlide li, .achievementsSlide li {
     display: flex;
     justify-content: center;
 }

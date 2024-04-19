@@ -1825,7 +1825,53 @@ const stakes = [
     }
 ];
 
-
+const stickers = [
+    {
+        id:1,
+        name:"White Sticker",
+        text:`Used this Joker<br>to win on ${text_num}White<br>Stake${text_end} difficulty`
+    },
+    {
+        id:2,
+        name:"Red Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Red<br>Stake${text_end} difficulty`
+    },
+    {
+        id:3,
+        name:"Green Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Green<br>Stake${text_end} difficulty`
+    },
+    {
+        id:4,
+        name:"Black Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Black<br>Stake${text_end} difficulty`
+    },
+    {
+        id:5,
+        name:"Blue Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Blue<br>Stake${text_end} difficulty`
+    },
+    {
+        id:6,
+        name:"Purple Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Purple<br>Stake${text_end} difficulty`
+    },
+    {
+        id:7,
+        name:"Orange Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Orange<br>Stake${text_end} difficulty`
+    },
+    {
+        id:8,
+        name:"Gold Sticker",
+        text:`Used this Joker<br>to win on ${text_num}Gold<br>Stake${text_end} difficulty`
+    },
+    {
+        id:9,
+        name:"Eternal Sticker",
+        text:`Can't be sold<br>or destroyed`
+    }
+];
 
 const vouchers = [
     {

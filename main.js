@@ -868,6 +868,61 @@ stakes.forEach(stake => {
 
 
 
+const stickers_data = document.querySelector("#stickersData");
+
+
+
+const ul_stickers = document.createElement("ul");
+ul_stickers.classList.add("stickersSlide");
+const li_stickers = document.createElement("li");
+stickers_data.appendChild(ul_stickers);
+ul_stickers.appendChild(li_stickers);
+
+
+
+stickers.forEach(sticker => {
+    
+    let sticker_div = document.createElement("div");
+    sticker_div.classList.add("sticker");
+    
+    let img = document.createElement("img");
+    let img_name = sticker.name.replaceAll(" ", "_");
+    img.src = "assets/stickers/"+img_name+".webp";
+    img.alt = sticker.name;
+
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
+
+    let popup_name = document.createElement("div");
+    popup_name.classList.add("popupName");
+
+    if (sticker.id >= 9) {
+        popup_name.innerText = sticker.name.replace(" Sticker","");
+    } else {
+        popup_name.innerText = sticker.name;
+    }
+
+    popup.appendChild(popup_name);
+
+    let popup_text = document.createElement("div");
+    popup_text.classList.add("popupText");
+    let sticker_text = document.createElement("span");
+    sticker_text.classList.add("popupEffect");
+    sticker_text.innerHTML = sticker.text;
+    popup_text.appendChild(sticker_text);
+    popup.appendChild(popup_text);
+
+    if (sticker.id % 4 == 1 && sticker.id != 1) {
+        stickers_data.lastChild.appendChild(document.createElement("li"));
+    }
+
+    sticker_div.appendChild(img);
+    sticker_div.appendChild(popup);
+
+    stickers_data.lastChild.lastChild.appendChild(sticker_div);
+});
+
+
 
 const vouchers_data = document.querySelector("#vouchersData");
 
