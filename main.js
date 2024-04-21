@@ -220,7 +220,74 @@ setContrast();
 
 
 
+const hands_data = document.querySelector("#handsData");
 
+
+
+const ul_hands = document.createElement("ul");
+ul_hands.classList.add("handsSlide");
+hands_data.appendChild(ul_hands);
+
+hands.forEach(hand => {
+    let li_hands = document.createElement("li");
+    ul_hands.appendChild(li_hands);
+    
+    let hand_div = document.createElement("div");
+    hand_div.classList.add("hand");
+
+    let hand_stat = document.createElement("div");
+    hand_stat.classList.add("handStat");
+
+    hand_stat.innerHTML = "#";
+
+    let hand_count = document.createElement("span");
+    hand_count.classList.add("handCount");
+    hand_count.innerText = "0";
+    hand_stat.appendChild(hand_count);
+
+    let hand_level = document.createElement("span");
+    hand_level.classList.add("handLevel");
+    hand_level.innerText = "lvl.1";
+    hand_stat.appendChild(hand_level);
+
+    let hand_name = document.createElement("div");
+    hand_name.classList.add("handName");
+    hand_name.innerText = hand.name;
+    
+    let hand_score = document.createElement("div");
+    hand_score.classList.add("handScore");
+
+    let hand_chip = document.createElement("span");
+    hand_chip.classList.add("handChip");
+    hand_chip.innerText = hand.chips;
+    hand_score.appendChild(hand_chip);
+
+    hand_score.innerHTML += "X";
+
+    let hand_mult = document.createElement("span");
+    hand_mult.classList.add("handMult");
+    hand_mult.innerText = hand.mult;
+    hand_score.appendChild(hand_mult);
+
+    hand_div.appendChild(hand_stat);
+    hand_div.appendChild(hand_name);
+    hand_div.appendChild(hand_score);
+
+//     let popup = document.createElement("span");
+//     popup.classList.add("popup");
+
+//     let popup_text = document.createElement("div");
+//     popup_text.classList.add("popupText");
+//     let tarot_text = document.createElement("span");
+//     tarot_text.classList.add("popupEffect");
+//     tarot_text.innerHTML = tarot.text;
+//     popup_text.appendChild(tarot_text);
+//     popup.appendChild(popup_text);
+    
+//     hand_div.appendChild(popup);
+
+    li_hands.appendChild(hand_div);
+});
 
 
 

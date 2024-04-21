@@ -31,7 +31,7 @@ const text_end = "</span>";
 
 const ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
 
-const hands = ["High Card", "Pair", "Two Pair", "Three of a Kind", "Straight", "Flush", "Full House", "Four of a Kind", "Straight Flush", "Five of a Kind", "Flush House", "Flush Five"];
+const poker_hands = ["High Card", "Pair", "Two Pair", "Three of a Kind", "Straight", "Flush", "Full House", "Four of a Kind", "Straight Flush", "Five of a Kind", "Flush House", "Flush Five"];
 
 const rarities = ["Common", "Uncommon", "Rare", "Legendary"];
 
@@ -473,7 +473,7 @@ const jokers = [
     {
         id:60,
         name:"To Do List",
-        text:`Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}${hands[Math.abs(jokerValue % 12)]}${text_end},<br>poker hand changes<br>on every payout`,
+        text:`Earn ${text_money}$5${text_end} if ${text_num}poker hand${text_end}<br>is a ${text_num}${poker_hands[Math.abs(jokerValue % 12)]}${text_end},<br>poker hand changes<br>on every payout`,
         rarity:1,
         price:4
     },
@@ -1320,7 +1320,104 @@ const cards = [
     }
 ];
 
-
+const hands = [
+    {
+        id:1,
+        name:"High Card",
+        text:``,
+        chips:5,
+        mult:1,
+        planet:"Pluto"
+    },
+    {
+        id:2,
+        name:"Pair",
+        text:``,
+        chips:10,
+        mult:2,
+        planet:"Mercury"
+    },
+    {
+        id:3,
+        name:"Two Pair",
+        text:``,
+        chips:20,
+        mult:2,
+        planet:"Uranus"
+    },
+    {
+        id:4,
+        name:"Three of a Kind",
+        text:``,
+        chips:30,
+        mult:3,
+        planet:"Venus"
+    },
+    {
+        id:5,
+        name:"Straight",
+        text:``,
+        chips:30,
+        mult:4,
+        planet:"Saturn"
+    },
+    {
+        id:6,
+        name:"Flush",
+        text:``,
+        chips:35,
+        mult:4,
+        planet:"Jupiter"
+    },
+    {
+        id:7,
+        name:"Full House",
+        text:``,
+        chips:40,
+        mult:4,
+        planet:"Earth"
+    },
+    {
+        id:8,
+        name:"Four of a Kind",
+        text:``,
+        chips:60,
+        mult:7,
+        planet:"Mars"
+    },
+    {
+        id:9,
+        name:"Straight Flush",
+        text:``,
+        chips:100,
+        mult:8,
+        planet:"Neptune"
+    },
+    {
+        id:10,
+        name:"Five of a Kind",
+        text:``,
+        chips:120,
+        mult:12,
+        planet:"Planet X"
+    },
+    {
+        id:11,
+        name:"Flush House",
+        text:``,
+        chips:140,
+        mult:14,
+        planet:"Ceres"
+    },
+    {
+        id:12,
+        name:"Flush Five",
+        text:``,
+        chips:160,
+        mult:16,
+        planet:"Eris"
+    }
+];
 
 const tarots = [
     {
