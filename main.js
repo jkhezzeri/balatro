@@ -273,18 +273,37 @@ hands.forEach(hand => {
     hand_div.appendChild(hand_name);
     hand_div.appendChild(hand_score);
 
-//     let popup = document.createElement("span");
-//     popup.classList.add("popup");
+    let popup = document.createElement("span");
+    popup.classList.add("popup");
 
-//     let popup_text = document.createElement("div");
-//     popup_text.classList.add("popupText");
-//     let tarot_text = document.createElement("span");
-//     tarot_text.classList.add("popupEffect");
-//     tarot_text.innerHTML = tarot.text;
-//     popup_text.appendChild(tarot_text);
-//     popup.appendChild(popup_text);
+    let hand_text = document.createElement("div");
+    hand_text.classList.add("handText");
+    hand_text.innerHTML = hand.text;
+    popup.appendChild(hand_text);
+
+    let hand_cards = document.createElement("ul");
+    hand_cards.classList.add("handCards");
+
+    for (let i_cards = 0; i_cards < 5; i_cards++) {
+        let hand_card = document.createElement("li");
+
+        let card = document.createElement("img");
+        let card_name = hand.example[i_cards].card.replaceAll(" ", "_");
+        card.src = "assets/cards/"+card_name+".webp";
+        card.alt = hand.example[i_cards].card;
+
+        if (!hand.example[i_cards].active) {
+            card.classList.add("unscored");
+        }
+
+        hand_card.appendChild(card);
+
+        hand_cards.appendChild(hand_card);
+    }
+
+    popup.appendChild(hand_cards);
     
-//     hand_div.appendChild(popup);
+    hand_div.appendChild(popup);
 
     li_hands.appendChild(hand_div);
 });

@@ -1324,97 +1324,361 @@ const hands = [
     {
         id:1,
         name:"High Card",
-        text:``,
+        text:`If the played hand is not any of the above<br>hands, only the highest ranked card scores`,
         chips:5,
         mult:1,
+        example:[
+            {
+                card:"Ace of Spades",
+                active:true
+            },
+            {
+                card:"Queen of Diamonds",
+                active:false
+            },
+            {
+                card:"9 of Diamonds",
+                active:false
+            },
+            {
+                card:"4 of Clubs",
+                active:false
+            },
+            {
+                card:"3 of Diamonds",
+                active:false
+            }
+        ],
         planet:"Pluto"
     },
     {
         id:2,
         name:"Pair",
-        text:``,
+        text:`2 cards that share the same rank. They may<br>be played with up to 3 other unscored cards`,
         chips:10,
         mult:2,
+        example:[
+            {
+                card:"King of Spades",
+                active:false
+            },
+            {
+                card:"9 of Spades",
+                active:true
+            },
+            {
+                card:"9 of Diamonds",
+                active:true
+            },
+            {
+                card:"6 of Hearts",
+                active:false
+            },
+            {
+                card:"3 of Diamonds",
+                active:false
+            }
+        ],
         planet:"Mercury"
     },
     {
         id:3,
         name:"Two Pair",
-        text:``,
+        text:`2 pairs of cards with different ranks, may<br>be played with 1 other unscored card`,
         chips:20,
         mult:2,
+        example:[
+            {
+                card:"Ace of Hearts",
+                active:true
+            },
+            {
+                card:"Ace of Diamonds",
+                active:true
+            },
+            {
+                card:"Queen of Clubs",
+                active:false
+            },
+            {
+                card:"4 of Hearts",
+                active:true
+            },
+            {
+                card:"4 of Clubs",
+                active:true
+            }
+        ],
         planet:"Uranus"
     },
     {
         id:4,
         name:"Three of a Kind",
-        text:``,
+        text:`3 cards with the same rank. They may be<br>played with up to 2 other unscored cards`,
         chips:30,
         mult:3,
+        example:[
+            {
+                card:"10 of Spades",
+                active:true
+            },
+            {
+                card:"10 of Clubs",
+                active:true
+            },
+            {
+                card:"10 of Diamonds",
+                active:true
+            },
+            {
+                card:"6 of Hearts",
+                active:false
+            },
+            {
+                card:"5 of Diamonds",
+                active:false
+            }
+        ],
         planet:"Venus"
     },
     {
         id:5,
         name:"Straight",
-        text:``,
+        text:`5 cards in a row (consecutive ranks)`,
         chips:30,
         mult:4,
+        example:[
+            {
+                card:"Jack of Diamonds",
+                active:true
+            },
+            {
+                card:"10 of Clubs",
+                active:true
+            },
+            {
+                card:"9 of Clubs",
+                active:true
+            },
+            {
+                card:"8 of Spades",
+                active:true
+            },
+            {
+                card:"7 of Hearts",
+                active:true
+            }
+        ],
         planet:"Saturn"
     },
     {
         id:6,
         name:"Flush",
-        text:``,
+        text:`5 cards that share the same suit`,
         chips:35,
         mult:4,
+        example:[
+            {
+                card:"Ace of Hearts",
+                active:true
+            },
+            {
+                card:"King of Hearts",
+                active:true
+            },
+            {
+                card:"10 of Hearts",
+                active:true
+            },
+            {
+                card:"5 of Hearts",
+                active:true
+            },
+            {
+                card:"4 of Hearts",
+                active:true
+            }
+        ],
         planet:"Jupiter"
     },
     {
         id:7,
         name:"Full House",
-        text:``,
+        text:`A Three of a Kind and a Pair`,
         chips:40,
         mult:4,
+        example:[
+            {
+                card:"King of Hearts",
+                active:true
+            },
+            {
+                card:"King of Clubs",
+                active:true
+            },
+            {
+                card:"King of Diamonds",
+                active:true
+            },
+            {
+                card:"2 of Spades",
+                active:true
+            },
+            {
+                card:"2 of Diamonds",
+                active:true
+            }
+        ],
         planet:"Earth"
     },
     {
         id:8,
         name:"Four of a Kind",
-        text:``,
+        text:`4 cards with the same rank. They may<br>be played with 1 other unscored card`,
         chips:60,
         mult:7,
+        example:[
+            {
+                card:"Jack of Spades",
+                active:true
+            },
+            {
+                card:"Jack of Hearts",
+                active:true
+            },
+            {
+                card:"Jack of Clubs",
+                active:true
+            },
+            {
+                card:"Jack of Diamonds",
+                active:true
+            },
+            {
+                card:"3 of Clubs",
+                active:false
+            }
+        ],
         planet:"Mars"
     },
     {
         id:9,
         name:"Straight Flush",
-        text:``,
+        text:`5 cards in a row (consecutive ranks) with<br>all cards sharing the same suit`,
         chips:100,
         mult:8,
+        example:[
+            {
+                card:"Queen of Spades",
+                active:true
+            },
+            {
+                card:"Jack of Spades",
+                active:true
+            },
+            {
+                card:"10 of Spades",
+                active:true
+            },
+            {
+                card:"9 of Spades",
+                active:true
+            },
+            {
+                card:"8 of Spades",
+                active:true
+            }
+        ],
         planet:"Neptune"
     },
     {
         id:10,
         name:"Five of a Kind",
-        text:``,
+        text:`5 cards with the same rank`,
         chips:120,
         mult:12,
+        example:[
+            {
+                card:"Ace of Spades",
+                active:true
+            },
+            {
+                card:"Ace of Hearts",
+                active:true
+            },
+            {
+                card:"Ace of Hearts",
+                active:true
+            },
+            {
+                card:"Ace of Clubs",
+                active:true
+            },
+            {
+                card:"Ace of Diamonds",
+                active:true
+            }
+        ],
         planet:"Planet X"
     },
     {
         id:11,
         name:"Flush House",
-        text:``,
+        text:`A Three of a Kind and a Pair with<br>all cards sharing the same suit`,
         chips:140,
         mult:14,
+        example:[
+            {
+                card:"7 of Diamonds",
+                active:true
+            },
+            {
+                card:"7 of Diamonds",
+                active:true
+            },
+            {
+                card:"7 of Diamonds",
+                active:true
+            },
+            {
+                card:"4 of Diamonds",
+                active:true
+            },
+            {
+                card:"4 of Diamonds",
+                active:true
+            }
+        ],
         planet:"Ceres"
     },
     {
         id:12,
         name:"Flush Five",
-        text:``,
+        text:`5 cards with the same rank and suit`,
         chips:160,
         mult:16,
+        example:[
+            {
+                card:"Ace of Spades",
+                active:true
+            },
+            {
+                card:"Ace of Spades",
+                active:true
+            },
+            {
+                card:"Ace of Spades",
+                active:true
+            },
+            {
+                card:"Ace of Spades",
+                active:true
+            },
+            {
+                card:"Ace of Spades",
+                active:true
+            }
+        ],
         planet:"Eris"
     }
 ];
