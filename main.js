@@ -100,14 +100,6 @@ const li_cards = document.createElement("li");
 cards_data.appendChild(ul_cards);
 ul_cards.appendChild(li_cards);
 
-const ul_contrast = document.createElement("ul");
-ul_contrast.classList.add("cardsSlide");
-const li_contrast = document.createElement("li");
-cards_data.appendChild(ul_contrast);
-ul_contrast.appendChild(li_contrast);
-
-
-
 cards.forEach(card => {
     
     let card_div = document.createElement("div");
@@ -161,62 +153,7 @@ cards.forEach(card => {
     card_div.appendChild(popup);
 
     ul_cards.lastChild.appendChild(card_div);
-
-    let contrast_div = document.createElement("div");
-    contrast_div.classList.add("card");
-
-    let img_contrast = document.createElement("img");
-    let img_contrast_name = card.name.replaceAll(" ", "_");
-    img_contrast.src = "assets/cards/contrast/" + img_contrast_name + ".webp";
-    img_contrast.alt = card.name;
-
-    let popup_contrast = popup.cloneNode(true);
-
-    if (card.id % 13 == 1 && card.id != 1) {
-        ul_contrast.appendChild(document.createElement("li"));
-    }
-
-    contrast_div.appendChild(img_contrast);
-    contrast_div.appendChild(popup_contrast);
-
-    ul_contrast.lastChild.appendChild(contrast_div);
 });
-
-
-
-const cards_slide = document.querySelectorAll(".cardsSlide");
-const check_contrast = document.querySelector("#contrast");
-
-cards_slide.forEach(slide => {
-    slide.style.display = "none";
-});
-
-check_contrast.addEventListener('click',()=>{
-    changeContrast();
-});
-
-function changeContrast() {
-    if (check_contrast.checked == true) {
-        cards_slide[0].style.display = "none";
-        cards_slide[1].style.display = "flex";
-    } else {
-        cards_slide[0].style.display = "flex";
-        cards_slide[1].style.display = "none";
-    }
-    document.documentElement.setAttribute('data-contrast', check_contrast.checked);
-    localStorage.setItem("contrast", document.documentElement.getAttribute('data-contrast'));
-}
-
-function setContrast() {
-    if (document.documentElement.getAttribute('data-contrast') == "true") {
-        check_contrast.checked = true;
-    } else {
-        check_contrast.checked = false;
-    }
-    changeContrast();
-}
-
-setContrast();
 
 
 
@@ -1468,3 +1405,48 @@ function changeAchievementsSlide(page) {
     page_achievements.innerHTML = current_page_achievements;
     achievements_slide[current_page_achievements-1].style.display = "flex";
 }
+
+
+
+
+
+
+
+const check_contrast = document.querySelector("#contrast");
+
+check_contrast.addEventListener('click',()=>{
+    changeContrast();
+});
+
+function changeContrast() {
+    if (check_contrast.checked == true) {
+        old_path_cards = "assets/cards/";
+        path_cards = "assets/cards/contrast/";
+    } else {
+        old_path_cards = "assets/cards/contrast/";
+        path_cards = "assets/cards/";
+    }
+    document.documentElement.setAttribute('data-contrast', check_contrast.checked);
+    localStorage.setItem("contrast", document.documentElement.getAttribute('data-contrast'));
+
+    let img_cards = document.querySelectorAll("img");
+    img_cards.forEach(img_card => {
+        img_card.src = img_card.src.replace(old_path_cards, path_cards);
+    });
+}
+
+function setContrast() {
+    if (document.documentElement.getAttribute('data-contrast') == "true") {
+        check_contrast.checked = true;
+    } else {
+        check_contrast.checked = false;
+    }
+    changeContrast();
+}
+
+setContrast();
+
+
+
+
+
