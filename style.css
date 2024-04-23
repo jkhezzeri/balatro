@@ -1056,6 +1056,14 @@ section {
         width: calc(69px * 7);
     }
 
+
+
+    .hand {
+        width: 480px;
+    }
+
+
+
     .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
         padding-left: 22px;
     }
@@ -1266,6 +1274,20 @@ section {
         top: 1px;
         width: 10px;
         height: 20px;
+    }
+
+
+
+    #hands .section {
+        padding: 12px 6px;
+    }
+
+    .hand {
+        width: 320px;
+    }
+
+    .handStat {
+        display: none;
     }
 
 
