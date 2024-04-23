@@ -473,7 +473,7 @@ section {
     width: 32px;
     height: 32px;
     padding: 0 8px;
-    border-radius: 12px;
+    border-radius: 14px;
     background-color: var(--background-dark);
 }
 
@@ -486,7 +486,7 @@ section {
     height: 24px;
     padding: 0 4px;
     border: 4px solid var(--white);
-    border-radius: 12px;
+    border-radius: 14px;
     background-color: var(--lvl1);
 }
 
@@ -497,11 +497,11 @@ section {
     gap: 4px;
     height: 24px;
     padding: 4px;
-    border-radius: 12px;
+    border-radius: 14px;
     background-color: var(--background-darker);
 }
 
-.handChip {
+.handChip, .planetChip {
     color: var(--white);
     display: flex;
     align-items: center;
@@ -513,7 +513,7 @@ section {
     background-color: var(--blue);
 }
 
-.handMult {
+.handMult, .planetMult {
     color: var(--white);
     display: flex;
     align-items: center;
@@ -525,7 +525,17 @@ section {
     background-color: var(--red);
 }
 
+.planetScore {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 24px;
+}
 
+.planetChip, .planetMult {
+    justify-content: center;
+    width: 32px;
+}
 
 
 
@@ -608,7 +618,7 @@ section {
 
 .popupEffect {
     width: 100%;
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .tagPrimary {
@@ -635,12 +645,28 @@ section {
 
 
 .hand .popup {
-    border: 4px solid var(--red);
+    flex-direction: row;
+    align-items: end;
+    gap: 0;
+    padding: 0;
+    border: 0 solid transparent;
+    background-color: transparent;
+}
+
+.hand .popupHand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 2px solid var(--red);
+    border-radius: 12px;
     background-color: var(--white);
+    color: var(--black);
 }
 
 .handText {
-    color: var(--black);
+    line-height: 24px;
 }
 
 .handCards {
@@ -653,6 +679,19 @@ section {
 .unscored {
     transform: scale(0.5);
 }
+
+.hand .popupPlanet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 2px solid var(--popup-border);
+    border-radius: 12px;
+    background-color: var(--white);
+}
+
+
 
 .hand:hover .popup {
     visibility: visible;

@@ -213,10 +213,13 @@ hands.forEach(hand => {
     let popup = document.createElement("span");
     popup.classList.add("popup");
 
+    let popup_hand = document.createElement("div");
+    popup_hand.classList.add("popupHand");
+
     let hand_text = document.createElement("div");
     hand_text.classList.add("handText");
     hand_text.innerHTML = hand.text;
-    popup.appendChild(hand_text);
+    popup_hand.appendChild(hand_text);
 
     let hand_cards = document.createElement("ul");
     hand_cards.classList.add("handCards");
@@ -238,9 +241,44 @@ hands.forEach(hand => {
         hand_cards.appendChild(hand_card);
     }
 
-    popup.appendChild(hand_cards);
+    popup_hand.appendChild(hand_cards);
+
+    let popup_planet = document.createElement("div");
+    popup_planet.classList.add("popupPlanet");
+
+
+
+    let planet_score = document.createElement("div");
+    planet_score.classList.add("planetScore");
+
+    let planet_chip = document.createElement("span");
+    planet_chip.classList.add("planetChip");
+    planet_chip.innerHTML = "+" + hand.planet.chip;
+
+    let planet_mult = document.createElement("span");
+    planet_mult.classList.add("planetMult");
+    planet_mult.innerHTML = "+" + hand.planet.mult;
+
+    planet_score.appendChild(planet_chip);
+    planet_score.appendChild(planet_mult);
+
+    popup_planet.appendChild(planet_score);
+
+    let planet_card = document.createElement("img");
+    let planet_name = hand.planet.name.replaceAll(" ", "_");
+    planet_card.src = "assets/planets/"+planet_name+".webp";
+    planet_card.alt = hand.planet.name;
+
+    popup_planet.appendChild(planet_card);
+
+
+
+    popup.appendChild(popup_hand);
+    popup.appendChild(popup_planet);
     
     hand_div.appendChild(popup);
+
+
 
     li_hands.appendChild(hand_div);
 });

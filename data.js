@@ -1349,7 +1349,12 @@ const hands = [
                 active:false
             }
         ],
-        planet:"Pluto"
+        planet:
+            {
+                name:"Pluto",
+                chip:10,
+                mult:1
+            }
     },
     {
         id:2,
@@ -1379,7 +1384,12 @@ const hands = [
                 active:false
             }
         ],
-        planet:"Mercury"
+        planet:
+            {
+                name:"Mercury",
+                chip:15,
+                mult:1
+            }
     },
     {
         id:3,
@@ -1409,7 +1419,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Uranus"
+        planet:
+            {
+                name:"Uranus",
+                chip:20,
+                mult:1
+            }
     },
     {
         id:4,
@@ -1439,7 +1454,12 @@ const hands = [
                 active:false
             }
         ],
-        planet:"Venus"
+        planet:
+            {
+                name:"Venus",
+                chip:20,
+                mult:2
+            }
     },
     {
         id:5,
@@ -1469,7 +1489,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Saturn"
+        planet:
+            {
+                name:"Saturn",
+                chip:30,
+                mult:2
+            }
     },
     {
         id:6,
@@ -1499,7 +1524,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Jupiter"
+        planet:
+            {
+                name:"Jupiter",
+                chip:15,
+                mult:2
+            }
     },
     {
         id:7,
@@ -1529,7 +1559,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Earth"
+        planet:
+            {
+                name:"Earth",
+                chip:25,
+                mult:2
+            }
     },
     {
         id:8,
@@ -1559,7 +1594,12 @@ const hands = [
                 active:false
             }
         ],
-        planet:"Mars"
+        planet:
+            {
+                name:"Mars",
+                chip:30,
+                mult:3
+            }
     },
     {
         id:9,
@@ -1589,7 +1629,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Neptune"
+        planet:
+            {
+                name:"Neptune",
+                chip:40,
+                mult:3
+            }
     },
     {
         id:10,
@@ -1619,7 +1664,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Planet X"
+        planet:
+            {
+                name:"Planet X",
+                chip:35,
+                mult:3
+            }
     },
     {
         id:11,
@@ -1649,7 +1699,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Ceres"
+        planet:
+            {
+                name:"Ceres",
+                chip:40,
+                mult:3
+            }
     },
     {
         id:12,
@@ -1679,7 +1734,12 @@ const hands = [
                 active:true
             }
         ],
-        planet:"Eris"
+        planet:
+            {
+                name:"Eris",
+                chip:40,
+                mult:3
+            }
     }
 ];
 
