@@ -245,7 +245,7 @@ section {
     background-color: var(--background-dark);
 }
 
-.section ul {
+.section ul, .section table {
     margin: 0;
     padding: 12px;
     border-radius: 12px;
@@ -557,6 +557,31 @@ section {
 .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
     padding-left: 38px;
 }
+
+
+
+
+#antesData table {
+    color: var(--red);
+    text-align: right;
+}
+
+th {
+    width: 200px;
+    font-weight: inherit;
+    text-transform: uppercase;
+}
+
+tr th:first-of-type, tr td:first-of-type {
+    color: var(--orange);
+    width: inherit;
+    text-align: center;
+}
+
+
+
+
+
 
 
 

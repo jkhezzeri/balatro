@@ -1354,10 +1354,86 @@ blinds.forEach(blind => {
 
 
 
+const antes_data = document.querySelector("#antesData");
 
 
 
+// const ul_stakes = document.createElement("ul");
+// ul_stakes.classList.add("stakesSlide");
+// const li_stakes = document.createElement("li");
+// stakes_data.appendChild(ul_stakes);
+// ul_stakes.appendChild(li_stakes);
 
+
+
+const antes_table = document.createElement("table");
+
+const antes_thead = document.createElement("thead");
+
+const antes_tr = document.createElement("tr");
+
+for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(antes[0]).length; nb_antes_columns++) {
+    const antes_th = document.createElement("th");
+    antes_th.innerHTML = Object.keys(antes[0])[nb_antes_columns].replace("id", "ante");
+    antes_tr.appendChild(antes_th);
+}
+
+antes_thead.appendChild(antes_tr);
+
+antes_table.appendChild(antes_thead);
+
+const antes_tbody = document.createElement("tbody");
+
+
+
+antes.forEach(ante => {
+console.log(ante);
+    const antes_tr = document.createElement("tr");
+
+    for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(ante).length; nb_antes_columns++) {
+        const antes_td = document.createElement("td");
+        antes_td.innerHTML = Object.values(ante)[nb_antes_columns];
+        antes_tr.appendChild(antes_td);
+
+
+
+        
+    }
+
+    antes_tbody.appendChild(antes_tr);
+    
+    // let img = document.createElement("img");
+    // let img_name = stake.name.replaceAll(" ", "_");
+    // img.src = "assets/stakes/"+img_name+".webp";
+    // img.alt = stake.name;
+
+    // let popup = document.createElement("span");
+    // popup.classList.add("popup");
+
+    // let popup_name = document.createElement("div");
+    // popup_name.classList.add("popupName");
+    // popup_name.innerText = stake.name;
+    // popup.appendChild(popup_name);
+
+    // let popup_text = document.createElement("div");
+    // popup_text.classList.add("popupText");
+    // let stake_text = document.createElement("span");
+    // stake_text.classList.add("popupEffect");
+    // stake_text.innerHTML = stake.text;
+    // popup_text.appendChild(stake_text);
+    // popup.appendChild(popup_text);
+
+    // stake_div.appendChild(img);
+    // stake_div.appendChild(popup);
+
+    // stakes_data.lastChild.lastChild.appendChild(stake_div);
+});
+
+
+
+antes_table.appendChild(antes_tbody);
+
+antes_data.appendChild(antes_table);
 
 
 

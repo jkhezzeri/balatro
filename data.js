@@ -2745,12 +2745,6 @@ const tags = [
 
 
 
-
-
-
-
-
-
 const blinds = [
     {
         id:1,
@@ -2934,6 +2928,106 @@ const blinds = [
     }
 ];
 
+
+
+const antes = [
+    {
+        id:1,
+        base:"300",
+        green:"300",
+        purple:"300"
+    },
+    {
+        id:2,
+        base:"800",
+        green:"1,000",
+        purple:"1,200"
+    },
+    {
+        id:3,
+        base:"2,800",
+        green:"3,200",
+        purple:"3,600"
+    },
+    {
+        id:4,
+        base:"6,000",
+        green:"9,000",
+        purple:"10,000"
+    },
+    {
+        id:5,
+        base:"11,000",
+        green:"18,000",
+        purple:"25,000"
+    },
+    {
+        id:6,
+        base:"20,000",
+        green:"32,000",
+        purple:"50,000"
+    },
+    {
+        id:7,
+        base:"35,000",
+        green:"56,000",
+        purple:"90,000"
+    },
+    {
+        id:8,
+        base:"50,000",
+        green:"90,000",
+        purple:"180,000"
+    },
+    {
+        id:9,
+        base:"110,000",
+        green:"200,000",
+        purple:"410,000"
+    },
+    {
+        id:10,
+        base:"560,000",
+        green:"1,000,000",
+        purple:"2,000,000"
+    },
+    {
+        id:11,
+        base:"7,200,000",
+        green:"13,000,000",
+        purple:"26,000,000"
+    },
+    {
+        id:12,
+        base:"300,000,000",
+        green:"540,000,000",
+        purple:"1,000,000,000"
+    },
+    {
+        id:13,
+        base:"47,000,000,000",
+        green:"84,000,000,000",
+        purple:"1.600e11"
+    },
+    {
+        id:14,
+        base:"2.900e13",
+        green:"5.300e13",
+        purple:"1.000e14"
+    },
+    {
+        id:15,
+        base:"7.700e16",
+        green:"1.300e17",
+        purple:"2.700e17"
+    },
+    {
+        id:16,
+        base:"8.600e20",
+        green:"1.500e21",
+        purple:"3.100e21"
+    }
+];
 
 
 const achievements = [
