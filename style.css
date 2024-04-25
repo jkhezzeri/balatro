@@ -608,10 +608,51 @@ td:hover .popup {
 #antesData .popup {
     color: var(--white);
     width: 192px;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
+}
+
+.popupAntesDatas {
+    width: 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--background-darker);
+}
+
+.popupAntesScores {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupAntesDatas div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 32px;
+}
+
+.popupAntesScores div {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupAntesDatas img {
+    width: 32px;
+    height: 32px;
 }
 
 .popupAnte {
     color: var(--orange);
+    font-size: 32px;
 }
 
 .popupScore {

@@ -1426,17 +1426,27 @@ antes.forEach(ante => {
         if (nb_antes_columns != 0) {
             let popup = document.createElement("span");
             popup.classList.add("popup");
-    
+
+            let popup_datas = document.createElement("div");
+            popup_datas.classList.add("popupAntesDatas");
+
             let popup_ante = document.createElement("div");
+            popup_ante.innerHTML = "Ante";
+            popup_datas.appendChild(popup_ante);
+
+            let poput_ante_count = document.createElement("div");
+
             let popup_nb_ante = document.createElement("span");
             popup_nb_ante.classList.add("popupAnte");
             popup_nb_ante.innerHTML = ante.id;
-            popup_ante.innerHTML = "Ante ";
-            popup_ante.appendChild(popup_nb_ante);
-            popup_ante.innerHTML += "/8";
-            popup.appendChild(popup_ante);
+            poput_ante_count.appendChild(popup_nb_ante);
+
+            poput_ante_count.innerHTML += "/8";
+
+            popup_ante.appendChild(poput_ante_count);
 
             let popup_base = document.createElement("div");
+
             switch (nb_antes_columns) {
                 case 1:
                     color_chip = "White";
@@ -1448,40 +1458,54 @@ antes.forEach(ante => {
                     color_chip = "Purple";
                     break;
             }
-            popup_base.innerHTML = "Base " + color_chip + " Stake";
-            popup.appendChild(popup_base);
+
+            let popup_img = document.createElement("img");
+            popup_img.src = "assets/stakes/" + color_chip + "_Stake.webp";
+            popup_img.alt = "Purple Stake";
+            popup_base.appendChild(popup_img);
+
+            popup_base.innerHTML += "Base<br>" + color_chip + "<br>Stake";
+
+            popup_datas.appendChild(popup_base);
+
+            popup.appendChild(popup_datas);
+
+            let popup_scores = document.createElement("div");
+            popup_scores.classList.add("popupAntesScores");
 
             let popup_small = document.createElement("div");
             popup_small.innerHTML = "Small Blind";
-            popup.appendChild(popup_small);
+            popup_scores.appendChild(popup_small);
 
             let popup_score_small = document.createElement("div");
             popup_score_small.classList.add("popupScore");
             popup_score_small.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns]);
-            popup.appendChild(popup_score_small);
+            popup_scores.appendChild(popup_score_small);
 
             let popup_big = document.createElement("div");
             popup_big.innerHTML = "Big Blind";
-            popup.appendChild(popup_big);
+            popup_scores.appendChild(popup_big);
 
             let popup_score_big = document.createElement("div");
             popup_score_big.classList.add("popupScore");
             popup_score_big.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns] * 1.5);
-            popup.appendChild(popup_score_big);
+            popup_scores.appendChild(popup_score_big);
 
             let popup_boss = document.createElement("div");
             if (ante.id % 8 == 0) {
-                popup_boss.innerHTML = "Finisher Boss Blind";
+                popup_boss.innerHTML = "Finisher Blind";
             } else {
                 popup_boss.innerHTML = "Boss Blind";
             }
-            popup.appendChild(popup_boss);
+            popup_scores.appendChild(popup_boss);
 
             let popup_score_boss = document.createElement("div");
             popup_score_boss.classList.add("popupScore");
             popup_score_boss.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns] * 2);
-            popup.appendChild(popup_score_boss);
-    
+            popup_scores.appendChild(popup_score_boss);
+
+            popup.appendChild(popup_scores);
+
             antes_td.appendChild(popup);
         }
 
@@ -1490,8 +1514,6 @@ antes.forEach(ante => {
     antes_tbody.appendChild(antes_tr);
     
 });
-
-
 
 antes_table.appendChild(antes_tbody);
 
