@@ -567,17 +567,56 @@ section {
 }
 
 th {
-    width: 200px;
+    width: 192px;
+    height: 32px;
+    padding: 0;
     font-weight: inherit;
     text-transform: uppercase;
 }
 
+th:first-of-type {
+    width: 48px;
+}
+
+th div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+th img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+td {
+    height: 32px;
+    padding: 0;
+    position: relative;
+}
+
 tr th:first-of-type, tr td:first-of-type {
     color: var(--orange);
-    width: inherit;
     text-align: center;
 }
 
+td:hover .popup {
+    visibility: visible;
+}
+
+#antesData .popup {
+    color: var(--white);
+    width: 192px;
+}
+
+.popupAnte {
+    color: var(--orange);
+}
+
+.popupScore {
+    color: var(--red);
+}
 
 
 

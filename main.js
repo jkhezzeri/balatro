@@ -1358,14 +1358,6 @@ const antes_data = document.querySelector("#antesData");
 
 
 
-// const ul_stakes = document.createElement("ul");
-// ul_stakes.classList.add("stakesSlide");
-// const li_stakes = document.createElement("li");
-// stakes_data.appendChild(ul_stakes);
-// ul_stakes.appendChild(li_stakes);
-
-
-
 const antes_table = document.createElement("table");
 
 const antes_thead = document.createElement("thead");
@@ -1374,7 +1366,43 @@ const antes_tr = document.createElement("tr");
 
 for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(antes[0]).length; nb_antes_columns++) {
     const antes_th = document.createElement("th");
-    antes_th.innerHTML = Object.keys(antes[0])[nb_antes_columns].replace("id", "ante");
+
+    
+    
+    const img_chip = document.createElement("img");
+    const div_chip = document.createElement("div");
+
+
+
+    switch (nb_antes_columns) {
+        case 0:
+            antes_th.innerHTML = "Ante";
+            break;
+        case 1:
+            img_chip.src = "assets/stakes/White_Stake.webp";
+            img_chip.alt = "White Stake";
+            div_chip.appendChild(img_chip);
+            div_chip.innerHTML += "Base";
+            antes_th.appendChild(div_chip);
+            break;
+        case 2:
+            img_chip.src = "assets/stakes/Green_Stake.webp";
+            img_chip.alt = "Green Stake";
+            div_chip.appendChild(img_chip);
+            div_chip.innerHTML += "Base";
+            antes_th.appendChild(div_chip);
+            break;
+        case 3:
+            img_chip.src = "assets/stakes/Purple_Stake.webp";
+            img_chip.alt = "Purple Stake";
+            div_chip.appendChild(img_chip);
+            div_chip.innerHTML += "Base";
+            antes_th.appendChild(div_chip);
+            break;
+    }
+
+
+
     antes_tr.appendChild(antes_th);
 }
 
@@ -1387,46 +1415,80 @@ const antes_tbody = document.createElement("tbody");
 
 
 antes.forEach(ante => {
-console.log(ante);
+
     const antes_tr = document.createElement("tr");
 
     for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(ante).length; nb_antes_columns++) {
         const antes_td = document.createElement("td");
-        antes_td.innerHTML = Object.values(ante)[nb_antes_columns];
+        antes_td.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns]);
         antes_tr.appendChild(antes_td);
 
+        if (nb_antes_columns != 0) {
+            let popup = document.createElement("span");
+            popup.classList.add("popup");
+    
+            let popup_ante = document.createElement("div");
+            let popup_nb_ante = document.createElement("span");
+            popup_nb_ante.classList.add("popupAnte");
+            popup_nb_ante.innerHTML = ante.id;
+            popup_ante.innerHTML = "Ante ";
+            popup_ante.appendChild(popup_nb_ante);
+            popup_ante.innerHTML += "/8";
+            popup.appendChild(popup_ante);
 
+            let popup_base = document.createElement("div");
+            switch (nb_antes_columns) {
+                case 1:
+                    color_chip = "White";
+                    break;
+                case 2:
+                    color_chip = "Green";
+                    break;
+                case 3:
+                    color_chip = "Purple";
+                    break;
+            }
+            popup_base.innerHTML = "Base " + color_chip + " Stake";
+            popup.appendChild(popup_base);
 
-        
+            let popup_small = document.createElement("div");
+            popup_small.innerHTML = "Small Blind";
+            popup.appendChild(popup_small);
+
+            let popup_score_small = document.createElement("div");
+            popup_score_small.classList.add("popupScore");
+            popup_score_small.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns]);
+            popup.appendChild(popup_score_small);
+
+            let popup_big = document.createElement("div");
+            popup_big.innerHTML = "Big Blind";
+            popup.appendChild(popup_big);
+
+            let popup_score_big = document.createElement("div");
+            popup_score_big.classList.add("popupScore");
+            popup_score_big.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns] * 1.5);
+            popup.appendChild(popup_score_big);
+
+            let popup_boss = document.createElement("div");
+            if (ante.id % 8 == 0) {
+                popup_boss.innerHTML = "Finisher Boss Blind";
+            } else {
+                popup_boss.innerHTML = "Boss Blind";
+            }
+            popup.appendChild(popup_boss);
+
+            let popup_score_boss = document.createElement("div");
+            popup_score_boss.classList.add("popupScore");
+            popup_score_boss.innerHTML = convertNumber(Object.values(ante)[nb_antes_columns] * 2);
+            popup.appendChild(popup_score_boss);
+    
+            antes_td.appendChild(popup);
+        }
+
     }
 
     antes_tbody.appendChild(antes_tr);
     
-    // let img = document.createElement("img");
-    // let img_name = stake.name.replaceAll(" ", "_");
-    // img.src = "assets/stakes/"+img_name+".webp";
-    // img.alt = stake.name;
-
-    // let popup = document.createElement("span");
-    // popup.classList.add("popup");
-
-    // let popup_name = document.createElement("div");
-    // popup_name.classList.add("popupName");
-    // popup_name.innerText = stake.name;
-    // popup.appendChild(popup_name);
-
-    // let popup_text = document.createElement("div");
-    // popup_text.classList.add("popupText");
-    // let stake_text = document.createElement("span");
-    // stake_text.classList.add("popupEffect");
-    // stake_text.innerHTML = stake.text;
-    // popup_text.appendChild(stake_text);
-    // popup.appendChild(popup_text);
-
-    // stake_div.appendChild(img);
-    // stake_div.appendChild(popup);
-
-    // stakes_data.lastChild.lastChild.appendChild(stake_div);
 });
 
 
@@ -1436,6 +1498,14 @@ antes_table.appendChild(antes_tbody);
 antes_data.appendChild(antes_table);
 
 
+
+function convertNumber(number) {
+    if (Math.ceil(Math.log10(number + 1)) >= 12) {
+        return Number(number).toExponential(3).replace("+","");
+    } else {
+        return number.toLocaleString('en');
+    }
+}
 
 
 
