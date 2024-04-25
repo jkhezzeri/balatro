@@ -1202,6 +1202,10 @@ td:hover .popup {
         width: 32px;
         height: 32px;
     }
+
+    th {
+        width: 144px;
+    }
     
     .joker img, .enhancement img {
         transform: scale(0.5);
@@ -1401,6 +1405,14 @@ td:hover .popup {
 
     .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
         padding-left: 19px;
+    }
+
+    th {
+        width: 192px;
+    }
+
+    th:nth-of-type(3), td:nth-of-type(3), th:nth-of-type(4), td:nth-of-type(4) {
+        display: none;
     }
 
 
