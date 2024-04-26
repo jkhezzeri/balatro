@@ -1371,6 +1371,7 @@ for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(antes[0]).length; 
     
     const img_chip = document.createElement("img");
     const div_chip = document.createElement("div");
+    div_chip.classList.add("thAntes");
 
 
 
@@ -1401,10 +1402,39 @@ for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(antes[0]).length; 
             break;
     }
 
+    if (nb_antes_columns != 0) {
+        let menu_stakes = document.createElement("div");
+        menu_stakes.classList.add("menuStakes");
+        for (let nb_stakes = 1; nb_stakes <= 3; nb_stakes++) {
+            let img_stake = document.createElement("img");
+
+            switch (nb_stakes) {
+                case 1:
+                    stake_color = "White";
+                    break;
+                case 2:
+                    stake_color = "Green";
+                    break;
+                case 3:
+                    stake_color = "Purple";
+                    break;
+            }
+
+            img_stake.src = "assets/stakes/" + stake_color + "_Stake.webp";
+            img_stake.alt = stake_color + " Stake";
+            
+            menu_stakes.appendChild(img_stake);
+
+            antes_th.appendChild(menu_stakes);
+        }
+    }
+
 
 
     antes_tr.appendChild(antes_th);
 }
+
+
 
 antes_thead.appendChild(antes_tr);
 
@@ -1461,7 +1491,7 @@ antes.forEach(ante => {
 
             let popup_img = document.createElement("img");
             popup_img.src = "assets/stakes/" + color_chip + "_Stake.webp";
-            popup_img.alt = "Purple Stake";
+            popup_img.alt = color_chip + " Stake";
             popup_base.appendChild(popup_img);
 
             popup_base.innerHTML += "Base<br>" + color_chip + "<br>Stake";
@@ -1528,6 +1558,77 @@ function convertNumber(number) {
         return number.toLocaleString('en');
     }
 }
+
+document.querySelectorAll(".thAntes img").forEach(stake_img => {
+    stake_img.addEventListener('click',()=>{
+        if (window.innerWidth <= 570) {
+            stake_img.parentNode.nextSibling.style.display = "flex";
+        }
+    });
+});
+
+function displayAntesTable() {
+    if (window.innerWidth > 570) {
+        document.querySelectorAll("th").forEach(th => {
+            th.style.removeProperty('display');
+        });
+        document.querySelectorAll("td").forEach(td => {
+            td.style.removeProperty('display');
+        });
+        document.querySelectorAll(".menuStakes").forEach(menu_stake => {
+            menu_stake.style.display = "none";
+        });
+    }
+}
+window.addEventListener("resize", displayAntesTable);
+
+document.querySelectorAll(".menuStakes").forEach(menu_stake => {
+    menu_stake.children[0].addEventListener('click',()=>{
+        document.querySelector("th:nth-of-type(2)").style.display = "block";
+        document.querySelector("th:nth-of-type(3)").style.display = "none";
+        document.querySelector("th:nth-of-type(4)").style.display = "none";
+        document.querySelectorAll("td:nth-of-type(2)").forEach(td => {
+            td.style.display = "inline";
+        });
+        document.querySelectorAll("td:nth-of-type(3)").forEach(td => {
+            td.style.display = "none";
+        });
+        document.querySelectorAll("td:nth-of-type(4)").forEach(td => {
+            td.style.display = "none";
+        });
+        menu_stake.style.display = "none";
+    });
+    menu_stake.children[1].addEventListener('click',()=>{
+        document.querySelector("th:nth-of-type(2)").style.display = "none";
+        document.querySelector("th:nth-of-type(3)").style.display = "block";
+        document.querySelector("th:nth-of-type(4)").style.display = "none";
+        document.querySelectorAll("td:nth-of-type(2)").forEach(td => {
+            td.style.display = "none";
+        });
+        document.querySelectorAll("td:nth-of-type(3)").forEach(td => {
+            td.style.display = "inline";
+        });
+        document.querySelectorAll("td:nth-of-type(4)").forEach(td => {
+            td.style.display = "none";
+        });
+        menu_stake.style.display = "none";
+    });
+    menu_stake.children[2].addEventListener('click',()=>{
+        document.querySelector("th:nth-of-type(2)").style.display = "none";
+        document.querySelector("th:nth-of-type(3)").style.display = "none";
+        document.querySelector("th:nth-of-type(4)").style.display = "block";
+        document.querySelectorAll("td:nth-of-type(2)").forEach(td => {
+            td.style.display = "none";
+        });
+        document.querySelectorAll("td:nth-of-type(3)").forEach(td => {
+            td.style.display = "none";
+        });
+        document.querySelectorAll("td:nth-of-type(4)").forEach(td => {
+            td.style.display = "inline";
+        });
+        menu_stake.style.display = "none";
+    });
+});
 
 
 

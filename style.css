@@ -572,6 +572,7 @@ th {
     padding: 0;
     font-weight: inherit;
     text-transform: uppercase;
+    position: relative;
 }
 
 th:first-of-type {
@@ -603,6 +604,17 @@ tr th:first-of-type, tr td:first-of-type {
 
 td:hover .popup {
     visibility: visible;
+}
+
+.menuStakes {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 42px;
+}
+
+.menuStakes img {
+    cursor: pointer;
 }
 
 #antesData .popup {
@@ -1415,6 +1427,11 @@ td:hover .popup {
         display: none;
     }
 
+    th img {
+        cursor: pointer;
+    }
+
+    
 
 
 }
