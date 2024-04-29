@@ -389,6 +389,39 @@ section {
 
 
 
+#cardsRepartitions {
+    font-size: 32px;
+    display: flex;
+    gap: 16px;
+}
+
+#cardsRanks, #cardsSuits {
+    display: flex;
+    gap: 16px;
+}
+
+.cardsType {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cardsType img{
+    padding: 8px;
+    border-radius: 12px;
+    background-color: var(--border-color);
+}
+
+.cardsType:hover .popup {
+    visibility: visible;
+    color: var(--black);
+    border: 2px solid var(--red);
+    background-color: var(--white);
+}
+
+
+
 #cardsCheckbox {
     display: flex;
     justify-content: center;
@@ -1377,6 +1410,11 @@ td:hover .popup {
     
     #cardsData .card:nth-of-type(13) {
         transform: translate(-900%);
+    }
+
+    #cardsRepartitions {
+        flex-direction: column;
+        align-items: center;
     }
 
     #cardsCheckbox {

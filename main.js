@@ -1729,16 +1729,25 @@ function changeContrast() {
     if (check_contrast.checked == true) {
         old_path_cards = "assets/cards/";
         path_cards = "assets/cards/contrast/";
+        old_path_icons = "assets/icons/";
+        path_icons = "assets/icons/contrast/";
     } else {
         old_path_cards = "assets/cards/contrast/";
         path_cards = "assets/cards/";
+        old_path_icons = "assets/icons/contrast/";
+        path_icons = "assets/icons/";
     }
     document.documentElement.setAttribute('data-contrast', check_contrast.checked);
     localStorage.setItem("contrast", document.documentElement.getAttribute('data-contrast'));
 
-    let img_cards = document.querySelectorAll("img");
+    let img_cards = document.querySelectorAll("#cardsData img");
     img_cards.forEach(img_card => {
         img_card.src = img_card.src.replace(old_path_cards, path_cards);
+    });
+
+    let icon_cards = document.querySelectorAll("#cardsSuits img");
+    icon_cards.forEach(icon_card => {
+        icon_card.src = icon_card.src.replace(old_path_icons, path_icons);
     });
 }
 
