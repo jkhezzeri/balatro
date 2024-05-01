@@ -7,14 +7,6 @@ document.documentElement.setAttribute('data-contrast', localStorage.getItem("con
 
 const jokers_data = document.querySelector("#jokersData");
 
-
-
-const ul_jokers = document.createElement("ul");
-ul_jokers.classList.add("jokersSlide");
-const li_jokers = document.createElement("li");
-jokers_data.appendChild(ul_jokers);
-ul_jokers.appendChild(li_jokers);
-
 jokers.forEach(joker => {
     
     let joker_div = document.createElement("div");
@@ -47,7 +39,7 @@ jokers.forEach(joker => {
     popup_rarity.innerText = rarities[joker.rarity - 1];
     popup.appendChild(popup_rarity);
     
-    if (joker.id % 5 == 1 && joker.id != 1) {
+    if (joker.id % 5 == 1) {
         if (joker.id % 15 == 1) {
             jokers_data.appendChild(document.createElement("ul"));
             jokers_data.lastChild.classList.add("jokersSlide");
@@ -67,14 +59,12 @@ const jokers_slide = document.querySelectorAll(".jokersSlide");
 const page_jokers = document.querySelector("#pageJokers");
 const pages_jokers = document.querySelector("#pagesJokers");
 
-
 jokers_slide.forEach(slide => {
     slide.style.display = "none";
 });
 jokers_slide[0].style.display = "flex";
 page_jokers.innerHTML = 1;
 pages_jokers.innerHTML = jokers_slide.length;
-
 
 function changeJokersSlide(page) {
     let current_page_jokers = parseInt(page_jokers.innerHTML);
@@ -96,9 +86,7 @@ const cards_data = document.querySelector("#cardsData");
 
 const ul_cards = document.createElement("ul");
 ul_cards.classList.add("cardsSlide");
-const li_cards = document.createElement("li");
 cards_data.appendChild(ul_cards);
-ul_cards.appendChild(li_cards);
 
 cards.forEach(card => {
     
@@ -145,7 +133,7 @@ cards.forEach(card => {
     popup_text.appendChild(card_text);
     popup.appendChild(popup_text);
     
-    if (card.id % 13 == 1 && card.id != 1) {
+    if (card.id % 13 == 1) {
         ul_cards.appendChild(document.createElement("li"));
     }
 
@@ -158,8 +146,6 @@ cards.forEach(card => {
 
 
 const hands_data = document.querySelector("#handsData");
-
-
 
 const ul_hands = document.createElement("ul");
 ul_hands.classList.add("handsSlide");
@@ -246,8 +232,6 @@ hands.forEach(hand => {
     let popup_planet = document.createElement("div");
     popup_planet.classList.add("popupPlanet");
 
-
-
     let planet_score = document.createElement("div");
     planet_score.classList.add("planetScore");
 
@@ -271,14 +255,10 @@ hands.forEach(hand => {
 
     popup_planet.appendChild(planet_card);
 
-
-
     popup.appendChild(popup_hand);
     popup.appendChild(popup_planet);
     
     hand_div.appendChild(popup);
-
-
 
     li_hands.appendChild(hand_div);
 });
@@ -286,14 +266,6 @@ hands.forEach(hand => {
 
 
 const tarots_data = document.querySelector("#tarotsData");
-
-
-
-const ul_tarots = document.createElement("ul");
-ul_tarots.classList.add("tarotsSlide");
-const li_tarots = document.createElement("li");
-tarots_data.appendChild(ul_tarots);
-ul_tarots.appendChild(li_tarots);
 
 tarots.forEach(tarot => {
     
@@ -327,8 +299,8 @@ tarots.forEach(tarot => {
     popup_tag.innerText = "Tarot";
     popup.appendChild(popup_tag);
     
-    if (tarot.id == 6 || tarot.id == 12 || tarot.id == 17) {
-        if (tarot.id == 12) {
+    if (tarot.id == 1 || tarot.id == 6 || tarot.id == 12 || tarot.id == 17) {
+        if (tarot.id == 1 || tarot.id == 12) {
             tarots_data.appendChild(document.createElement("ul"));
             tarots_data.lastChild.classList.add("tarotsSlide");
         }
@@ -397,14 +369,12 @@ window.addEventListener("resize", responsiveTarots);
 const page_tarots = document.querySelector("#pageTarots");
 const pages_tarots = document.querySelector("#pagesTarots");
 
-
 tarots_slide.forEach(slide => {
     slide.style.display = "none";
 });
 tarots_slide[0].style.display = "flex";
 page_tarots.innerHTML = 1;
 pages_tarots.innerHTML = tarots_slide.length;
-
 
 function changeTarotsSlide(page) {
     let current_page_tarots = parseInt(page_tarots.innerHTML);
@@ -422,21 +392,11 @@ function changeTarotsSlide(page) {
 
 
 
-
-
-
-
 const planets_data = document.querySelector("#planetsData");
-
-
 
 const ul_planets = document.createElement("ul");
 ul_planets.classList.add("planetsSlide");
-const li_planets = document.createElement("li");
 planets_data.appendChild(ul_planets);
-ul_planets.appendChild(li_planets);
-
-
 
 planets.forEach(planet => {
     
@@ -470,14 +430,14 @@ planets.forEach(planet => {
     popup_tag.innerText = planet.tag;
     popup.appendChild(popup_tag);
     
-    if (planet.id % 6 == 1 && planet.id != 1) {
-        planets_data.lastChild.appendChild(document.createElement("li"));
+    if (planet.id % 6 == 1) {
+        ul_planets.appendChild(document.createElement("li"));
     }
 
     planet_div.appendChild(img);
     planet_div.appendChild(popup);
 
-    planets_data.lastChild.lastChild.appendChild(planet_div);
+    ul_planets.lastChild.appendChild(planet_div);
 });
 
 
@@ -522,14 +482,6 @@ window.addEventListener("resize", responsivePlanets);
 
 const spectrals_data = document.querySelector("#spectralsData");
 
-
-
-const ul_spectrals = document.createElement("ul");
-ul_spectrals.classList.add("spectralsSlide");
-const li_spectrals = document.createElement("li");
-spectrals_data.appendChild(ul_spectrals);
-ul_spectrals.appendChild(li_spectrals);
-
 spectrals.forEach(spectral => {
     
     let spectral_div = document.createElement("div");
@@ -562,8 +514,8 @@ spectrals.forEach(spectral => {
     popup_tag.innerText = "Spectral";
     popup.appendChild(popup_tag);
     
-    if (spectral.id == 5 || spectral.id == 10 || spectral.id == 14) {
-        if (spectral.id == 10) {
+    if (spectral.id == 1 || spectral.id == 5 || spectral.id == 10 || spectral.id == 14) {
+        if (spectral.id == 1 || spectral.id == 10) {
             spectrals_data.appendChild(document.createElement("ul"));
             spectrals_data.lastChild.classList.add("spectralsSlide");
         }
@@ -579,8 +531,6 @@ spectrals.forEach(spectral => {
 
 
 const spectrals_slide = document.querySelectorAll(".spectralsSlide");
-
-
 
 let spectrals_element = document.querySelectorAll(".spectralsSlide li");
 const spectrals_card = document.querySelectorAll(".spectralsSlide .spectral");
@@ -630,14 +580,12 @@ window.addEventListener("resize", responsiveSpectrals);
 const page_spectrals = document.querySelector("#pageSpectrals");
 const pages_spectrals = document.querySelector("#pagesSpectrals");
 
-
 spectrals_slide.forEach(slide => {
     slide.style.display = "none";
 });
 spectrals_slide[0].style.display = "flex";
 page_spectrals.innerHTML = 1;
 pages_spectrals.innerHTML = spectrals_slide.length;
-
 
 function changeSpectralsSlide(page) {
     let current_page_spectrals = parseInt(page_spectrals.innerHTML);
@@ -655,17 +603,10 @@ function changeSpectralsSlide(page) {
 
 
 
-
 const enhancements_data = document.querySelector("#enhancementsData");
 
-
-
 const ul_enhancements = document.createElement("ul");
-const li_enhancements = document.createElement("li");
 enhancements_data.appendChild(ul_enhancements);
-ul_enhancements.appendChild(li_enhancements);
-
-
 
 enhancements.forEach(enhancement => {
     
@@ -694,29 +635,24 @@ enhancements.forEach(enhancement => {
     popup_tag.innerText = enhancement.name;
     popup.appendChild(popup_tag);
     
-    if (enhancement.id == 5) {
-        enhancements_data.lastChild.appendChild(document.createElement("li"));
+    if (enhancement.id % 4 == 1) {
+        ul_enhancements.appendChild(document.createElement("li"));
     }
 
     enhancement_div.appendChild(img);
     enhancement_div.appendChild(popup);
 
-    enhancements_data.lastChild.lastChild.appendChild(enhancement_div);
+    ul_enhancements.lastChild.appendChild(enhancement_div);
 });
-
 
 
 
 const seals_data = document.querySelector("#sealsData");
 
-
-
 const ul_seals = document.createElement("ul");
 const li_seals = document.createElement("li");
 seals_data.appendChild(ul_seals);
 ul_seals.appendChild(li_seals);
-
-
 
 seals.forEach(seal => {
     
@@ -767,19 +703,17 @@ seals.forEach(seal => {
     seal_div.appendChild(img);
     seal_div.appendChild(popup);
 
-    seals_data.lastChild.lastChild.appendChild(seal_div);
+    li_seals.appendChild(seal_div);
 });
 
+
+
 const editions_data = document.querySelector("#editionsData");
-
-
 
 const ul_editions = document.createElement("ul");
 const li_editions = document.createElement("li");
 editions_data.appendChild(ul_editions);
 ul_editions.appendChild(li_editions);
-
-
 
 editions.forEach(edition => {
     
@@ -824,22 +758,16 @@ editions.forEach(edition => {
     edition_div.appendChild(img);
     edition_div.appendChild(popup);
 
-    editions_data.lastChild.lastChild.appendChild(edition_div);
+    li_editions.appendChild(edition_div);
 });
 
 
 
 const decks_data = document.querySelector("#decksData");
 
-
-
 const ul_decks = document.createElement("ul");
 ul_decks.classList.add("decksSlide");
-const li_decks = document.createElement("li");
 decks_data.appendChild(ul_decks);
-ul_decks.appendChild(li_decks);
-
-
 
 decks.forEach(deck => {
     
@@ -867,29 +795,23 @@ decks.forEach(deck => {
     popup_text.appendChild(deck_text);
     popup.appendChild(popup_text);
 
-    if (deck.id % 5 == 1 && deck.id != 1) {
-        decks_data.lastChild.appendChild(document.createElement("li"));
+    if (deck.id % 5 == 1) {
+        ul_decks.appendChild(document.createElement("li"));
     }
 
     deck_div.appendChild(img);
     deck_div.appendChild(popup);
 
-    decks_data.lastChild.lastChild.appendChild(deck_div);
+    ul_decks.lastChild.appendChild(deck_div);
 });
 
 
 
 const stakes_data = document.querySelector("#stakesData");
 
-
-
 const ul_stakes = document.createElement("ul");
 ul_stakes.classList.add("stakesSlide");
-const li_stakes = document.createElement("li");
 stakes_data.appendChild(ul_stakes);
-ul_stakes.appendChild(li_stakes);
-
-
 
 stakes.forEach(stake => {
     
@@ -917,29 +839,23 @@ stakes.forEach(stake => {
     popup_text.appendChild(stake_text);
     popup.appendChild(popup_text);
 
-    if (stake.id % 4 == 1 && stake.id != 1) {
-        stakes_data.lastChild.appendChild(document.createElement("li"));
+    if (stake.id % 4 == 1) {
+        ul_stakes.appendChild(document.createElement("li"));
     }
 
     stake_div.appendChild(img);
     stake_div.appendChild(popup);
 
-    stakes_data.lastChild.lastChild.appendChild(stake_div);
+    ul_stakes.lastChild.appendChild(stake_div);
 });
 
 
 
 const stickers_data = document.querySelector("#stickersData");
 
-
-
 const ul_stickers = document.createElement("ul");
 ul_stickers.classList.add("stickersSlide");
-const li_stickers = document.createElement("li");
 stickers_data.appendChild(ul_stickers);
-ul_stickers.appendChild(li_stickers);
-
-
 
 stickers.forEach(sticker => {
     
@@ -973,27 +889,19 @@ stickers.forEach(sticker => {
     popup_text.appendChild(sticker_text);
     popup.appendChild(popup_text);
 
-    if (sticker.id % 4 == 1 && sticker.id != 1) {
-        stickers_data.lastChild.appendChild(document.createElement("li"));
+    if (sticker.id % 4 == 1) {
+        ul_stickers.appendChild(document.createElement("li"));
     }
 
     sticker_div.appendChild(img);
     sticker_div.appendChild(popup);
 
-    stickers_data.lastChild.lastChild.appendChild(sticker_div);
+    ul_stickers.lastChild.appendChild(sticker_div);
 });
 
 
 
 const vouchers_data = document.querySelector("#vouchersData");
-
-
-
-const ul_vouchers = document.createElement("ul");
-ul_vouchers.classList.add("vouchersSlide");
-const li_vouchers = document.createElement("li");
-vouchers_data.appendChild(ul_vouchers);
-ul_vouchers.appendChild(li_vouchers);
 
 vouchers.forEach(voucher => {
     
@@ -1027,7 +935,7 @@ vouchers.forEach(voucher => {
     popup_tag.innerText = "Voucher";
     popup.appendChild(popup_tag);
     
-    if (voucher.id % 4 == 1 && voucher.id != 1) {
+    if (voucher.id % 4 == 1) {
         if (voucher.id % 8 == 1) {
             vouchers_data.appendChild(document.createElement("ul"));
             vouchers_data.lastChild.classList.add("vouchersSlide");
@@ -1053,14 +961,12 @@ const vouchers_slide = document.querySelectorAll(".vouchersSlide");
 const page_vouchers = document.querySelector("#pageVouchers");
 const pages_vouchers = document.querySelector("#pagesVouchers");
 
-
 vouchers_slide.forEach(slide => {
     slide.style.display = "none";
 });
 vouchers_slide[0].style.display = "flex";
 page_vouchers.innerHTML = 1;
 pages_vouchers.innerHTML = vouchers_slide.length;
-
 
 function changeVouchersSlide(page) {
     let current_page_vouchers = parseInt(page_vouchers.innerHTML);
@@ -1079,14 +985,6 @@ function changeVouchersSlide(page) {
 
 
 const boosters_data = document.querySelector("#boostersData");
-
-
-
-const ul_boosters = document.createElement("ul");
-ul_boosters.classList.add("boostersSlide");
-const li_boosters = document.createElement("li");
-boosters_data.appendChild(ul_boosters);
-ul_boosters.appendChild(li_boosters);
 
 let temp_booster_name = "";
 let i_booster = 1;
@@ -1131,7 +1029,7 @@ boosters.forEach(booster => {
     popup_tag.innerText = "Booster";
     popup.appendChild(popup_tag);
     
-    if (booster.id % 4 == 1 && booster.id != 1) {
+    if (booster.id % 4 == 1) {
         if (booster.id % 8 == 1) {
             boosters_data.appendChild(document.createElement("ul"));
             boosters_data.lastChild.classList.add("boostersSlide");
@@ -1150,7 +1048,6 @@ boosters.forEach(booster => {
 const boosters_slide = document.querySelectorAll(".boostersSlide");
 const page_boosters = document.querySelector("#pageBoosters");
 const pages_boosters = document.querySelector("#pagesBoosters");
-
 
 boosters_slide.forEach(slide => {
     slide.style.display = "none";
@@ -1178,13 +1075,9 @@ function changeBoostersSlide(page) {
 
 const tags_data = document.querySelector("#tagsData");
 
-
-
 const ul_tags = document.createElement("ul");
 ul_tags.classList.add("tagsSlide");
-const li_tags = document.createElement("li");
 tags_data.appendChild(ul_tags);
-ul_tags.appendChild(li_tags);
 
 tags.forEach(tag => {
     
@@ -1212,7 +1105,7 @@ tags.forEach(tag => {
     popup_text.appendChild(tag_text);
     popup.appendChild(popup_text);
     
-    if (tag.id % 6 == 1 && tag.id != 1) {
+    if (tag.id % 6 == 1) {
         tags_data.lastChild.appendChild(document.createElement("li"));
     }
 
@@ -1224,27 +1117,12 @@ tags.forEach(tag => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 const blinds_data = document.querySelector("#blindsData");
-
-
 
 const ul_blinds = document.createElement("ul");
 ul_blinds.classList.add("blindsSlide");
-const li_blinds = document.createElement("li");
 blinds_data.appendChild(ul_blinds);
-ul_blinds.appendChild(li_blinds);
+
 
 blinds.forEach(blind => {
     
@@ -1342,7 +1220,7 @@ blinds.forEach(blind => {
 
     popup.appendChild(popup_text);
     
-    if (blind.id % 5 == 1 && blind.id != 1) {
+    if (blind.id % 5 == 1) {
         blinds_data.lastChild.appendChild(document.createElement("li"));
     }
 
@@ -1356,8 +1234,6 @@ blinds.forEach(blind => {
 
 const antes_data = document.querySelector("#antesData");
 
-
-
 const antes_table = document.createElement("table");
 
 const antes_thead = document.createElement("thead");
@@ -1367,13 +1243,9 @@ const antes_tr = document.createElement("tr");
 for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(antes[0]).length; nb_antes_columns++) {
     const antes_th = document.createElement("th");
 
-    
-    
     const img_chip = document.createElement("img");
     const div_chip = document.createElement("div");
     div_chip.classList.add("thAntes");
-
-
 
     switch (nb_antes_columns) {
         case 0:
@@ -1429,20 +1301,14 @@ for (let nb_antes_columns = 0; nb_antes_columns < Object.keys(antes[0]).length; 
         }
     }
 
-
-
     antes_tr.appendChild(antes_th);
 }
-
-
 
 antes_thead.appendChild(antes_tr);
 
 antes_table.appendChild(antes_thead);
 
 const antes_tbody = document.createElement("tbody");
-
-
 
 antes.forEach(ante => {
 
@@ -1634,16 +1500,6 @@ document.querySelectorAll(".menuStakes").forEach(menu_stake => {
 
 const achievements_data = document.querySelector("#achievementsData");
 
-
-
-const ul_achievements = document.createElement("ul");
-ul_achievements.classList.add("achievementsSlide");
-const li_achievements = document.createElement("li");
-achievements_data.appendChild(ul_achievements);
-ul_achievements.appendChild(li_achievements);
-
-
-
 achievements.forEach(achievement => {
     
     let achievement_div = document.createElement("div");
@@ -1670,8 +1526,8 @@ achievements.forEach(achievement => {
     popup_text.appendChild(achievement_text);
     popup.appendChild(popup_text);
     
-    if (achievement.id == 4 || achievement.id == 8 || achievement.id == 11 || achievement.id == 15 || achievement.id == 18 || achievement.id == 22 || achievement.id == 25 || achievement.id == 29) {
-        if (achievement.id == 11 || achievement.id == 22) {
+    if (achievement.id == 1 || achievement.id == 4 || achievement.id == 8 || achievement.id == 11 || achievement.id == 15 || achievement.id == 18 || achievement.id == 22 || achievement.id == 25 || achievement.id == 29) {
+        if (achievement.id == 1 || achievement.id == 11 || achievement.id == 22) {
             achievements_data.appendChild(document.createElement("ul"));
             achievements_data.lastChild.classList.add("achievementsSlide");
         }
@@ -1712,8 +1568,6 @@ function changeAchievementsSlide(page) {
     page_achievements.innerHTML = current_page_achievements;
     achievements_slide[current_page_achievements-1].style.display = "flex";
 }
-
-
 
 
 

@@ -41,6 +41,7 @@ const jokerValue = 0;
 const toggleJokerc = 0;
 
 
+
 let random_number = "<span id='randNum'></span>";
 let random_mult = "<span id='randMult'></span>";
 const arrayRand = ["&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult","&nbsp;Mult",`${text_more}rand()${text_end}`,`${text_mult}#@11D${text_end}`];
@@ -51,8 +52,6 @@ setInterval(function(){
 setInterval(function(){
     document.querySelector("#randMult").innerHTML = arrayRand[Math.floor(Math.random() * arrayRand.length)];
 }, 100);
-
-
 
 
 
@@ -1109,6 +1108,8 @@ const jokers = [
     }
 ];
 
+
+
 const cards = [
     {
         id:1,
@@ -1319,6 +1320,8 @@ const cards = [
         name:"2 of Diamonds",
     }
 ];
+
+
 
 const hands = [
     {
@@ -1743,6 +1746,8 @@ const hands = [
     }
 ];
 
+
+
 const tarots = [
     {
         id:1,
@@ -1984,7 +1989,7 @@ const spectrals = [
     {
         id:10,
         name:"Immolate",
-        text:`Destroys ${text_num}5${text_end} random cards in hand, gain ${text_money}$20${text_end}`
+        text:`Destroys ${text_num}5${text_end} random<br>cards in hand,<br>gain ${text_money}$20${text_end}`
     },
     {
         id:11,
@@ -2074,6 +2079,7 @@ const enhancements = [
 ];
 
 
+
 const seals = [
     {
         id:1,
@@ -2096,6 +2102,8 @@ const seals = [
         text:`Creates a ${text_tarot}Tarot${text_end} card<br>when ${text_num}discarded${text_end}<br>${text_more}(Must have room)${text_end}`
     }
 ];
+
+
 
 const editions = [
     {
@@ -2124,6 +2132,8 @@ const editions = [
         text:`${text_negative}+1${text_end} Joker slot`
     }
 ];
+
+
 
 const decks = [
     {
@@ -2203,6 +2213,8 @@ const decks = [
     }
 ];
 
+
+
 const stakes = [
     {
         id:1,
@@ -2245,6 +2257,8 @@ const stakes = [
         text:`${text_mult}-1${text_end} hand size<br>${text_mini}Applies all previous Stakes${text_end}`
     }
 ];
+
+
 
 const stickers = [
     {
@@ -2293,6 +2307,8 @@ const stickers = [
         text:`Can't be sold<br>or destroyed`
     }
 ];
+
+
 
 const vouchers = [
     {
@@ -2457,6 +2473,8 @@ const vouchers = [
     }
 ];
 
+
+
 const boosters = [
     {
         id:1,
@@ -2619,6 +2637,8 @@ const boosters = [
         text:`Choose ${text_num}2${text_end} of up to<br>${text_num}4${text_end} ${text_spectral}Spectral${text_end} cards to<br>be used immediately`
     }
 ];
+
+
 
 const tags = [
     {
@@ -3030,6 +3050,7 @@ const antes = [
 ];
 
 
+
 const achievements = [
     {
         id:1,
@@ -3187,4 +3208,5 @@ const achievements = [
         text:`Earn a Gold Sticker<br>on every ${text_num}Joker${text_end}`
     }
 ];
+
 

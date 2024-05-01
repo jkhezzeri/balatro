@@ -297,14 +297,6 @@ section {
 
 
 
-
-
-
-
-
-
-
-
 .joker, .enhancement {
     width: 142px;
     height: 190px;
@@ -572,10 +564,6 @@ section {
 
 
 
-
-
-
-
 .sticker {
     width: 42px;
     height: 42px;
@@ -590,7 +578,6 @@ section {
 .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
     padding-left: 38px;
 }
-
 
 
 
@@ -706,16 +693,10 @@ td:hover .popup {
 
 
 
-
-
-
-
 .achievement img {
     width: 128px;
     height: 128px;
 }
-
-
 
 
 
@@ -937,12 +918,6 @@ td:hover .popup {
 
 
 
-
-
-
-
-
-
 .card .tagSecondary {
     color: var(--black);
     background-color: var(--white);
@@ -1104,8 +1079,6 @@ td:hover .popup {
 
 
 
-
-
 #randNum {
     width: 20px;
     text-align: center;
@@ -1117,7 +1090,6 @@ td:hover .popup {
     text-align: left;
     display: inline-block;
 }
-
 
 
 
@@ -1144,16 +1116,10 @@ td:hover .popup {
 
 
 
-
-
 .tarotsSlide li, .spectralsSlide li, .stickersSlide li, .achievementsSlide li {
     display: flex;
     justify-content: center;
 }
-
-
-
-
 
 
 
@@ -1167,29 +1133,9 @@ td:hover .popup {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsive Design */
 
 @media all and (max-width: 1080px) {
-
-
-
 
 
 
@@ -1275,10 +1221,6 @@ td:hover .popup {
 @media all and (max-width: 570px) {
 
 
-
-    /* nav {
-        margin: 24px 0;
-    } */
     
     nav ul {
         gap: 10px;
@@ -1451,8 +1393,6 @@ td:hover .popup {
 
 
 
-
-
     .blindsSlide li:nth-of-type(2), .blindsSlide li:nth-of-type(4), .blindsSlide li:nth-of-type(6) {
         padding-left: 19px;
     }
@@ -1468,7 +1408,6 @@ td:hover .popup {
     th img {
         cursor: pointer;
     }
-
     
 
 
